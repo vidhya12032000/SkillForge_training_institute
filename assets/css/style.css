@@ -641,6 +641,8 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 .hero-avatars {
     display: flex;
+    margin:20px 0;
+  
 }
 
 .hero-avatar {
@@ -704,6 +706,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     box-shadow: var(--shadow-lg);
 
     transform: rotate(2deg);
+      margin-left: 100px;
 }
 
 .hero-main-image {
