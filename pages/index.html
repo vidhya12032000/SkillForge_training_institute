@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="SkillForge is a modern computer education and LMS platform offering practical training in Tally, MS Office, Excel, typing, computing and digital skills.">
+
+    <meta name="keywords"
+        content="computer education, Tally course, MS Office course, Excel course, typing course, computer training, LMS">
+
+    <meta name="author" content="SkillForge">
+
+    <meta name="theme-color" content="#f97316">
+
+    <title>SkillForge | Modern Computer Education & LMS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+
+    <!-- RTL -->
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         PAGE LOADER
+    ========================================================== -->
+
+    <!-- <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-spinner"></div>
+    </div> -->
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container">
+
+            <nav class="navbar" aria-label="Main navigation">
+
+                <!-- Brand -->
+                <a href="index.html" class="brand" aria-label="SkillForge Home">
+
+                    <span class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Skill<span>Forge</span>
+                    </span>
+
+                </a>
+
+
+                <!-- Search -->
+                <div class="header-search">
+
+                    <form class="search-form" role="search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="globalSearch"
+                            placeholder="Search courses..."
+                            aria-label="Search courses">
+
+                        <button type="submit" aria-label="Search">
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+
+                    <a href="index.html" class="nav-link active">
+                        Home
+                    </a>
+
+                    <a href="home2.html" class="nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html" class="nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html" class="nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+
+                    <!-- Theme -->
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                        aria-pressed="false"
+                        title="Toggle theme">
+
+                        <i data-lucide="sun" id="themeIcon"></i>
+
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="icon-button rtl-button"
+                        id="rtlToggle"
+                        type="button"
+                        aria-label="Switch to right-to-left layout"
+                        aria-pressed="false"
+                        title="Toggle RTL">
+
+                        <i data-lucide="languages"></i>
+
+                    </button>
+
+
+                    <!-- Login -->
+                    <a href="login.html" class="login-link">
+                        Login
+                    </a>
+
+
+                    <!-- Sign Up -->
+                    <a href="signup.html" class="btn btn-primary btn-small">
+                        Sign Up
+                    </a>
+
+
+                    <!-- Mobile Menu -->
+                    <button
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNav">
+
+                        <i data-lucide="menu"></i>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+
+            <div class="container">
+
+                <div class="mobile-nav-content">
+
+                    <a href="index.html" class="mobile-nav-link active">
+                        Home
+                    </a>
+
+                    <a href="home-2.html" class="mobile-nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html" class="mobile-nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html" class="mobile-nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html" class="mobile-nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="mobile-nav-link">
+                        Contact
+                    </a>
+
+                    <div class="mobile-nav-buttons">
+
+                        <a href="login.html" class="btn btn-outline">
+                            Login
+                        </a>
+
+                        <a href="signup.html" class="btn btn-primary">
+                            Sign Up
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-background-shape hero-shape-one"></div>
+            <div class="hero-background-shape hero-shape-two"></div>
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+
+                    <!-- Hero Content -->
+                    <div class="hero-content reveal">
+
+                        <div class="hero-badge">
+
+                            <span class="hero-badge-dot"></span>
+
+                            Practical Computer Education
+
+                        </div>
+
+
+                        <h1>
+
+                            Build Skills.
+                            <span>Build Confidence.</span>
+                            Build Your Career.
+
+                        </h1>
+
+
+                        <p class="hero-description">
+
+                            Learn practical computer skills with expert guidance,
+                            hands-on practice, flexible batches and a powerful
+                            student learning platform.
+
+                        </p>
+
+
+                        <div class="hero-buttons">
+
+                            <a href="courses.html" class="btn btn-primary">
+
+                                Explore Courses
+
+                                <i data-lucide="arrow-up-right"></i>
+
+                            </a>
+
+
+                            <a href="signup.html" class="btn btn-outline">
+
+                                Join Now
+
+                                <i data-lucide="user-plus"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- Trust -->
+                        <div class="hero-trust">
+
+                            <div class="hero-avatars">
+
+                                <span class="hero-avatar">
+                                    <img src="../assets/images/profile1.jpg"
+                                        alt="Student">
+                                </span>
+
+                                <span class="hero-avatar">
+                                    <img src="../assets/images/profile2.jpg"
+                                        alt="Student">
+                                </span>
+
+                                <span class="hero-avatar">
+                                    <img src="../assets/images/profile3.jpg"
+                                        alt="Student">
+                                </span>
+
+                                <span class="hero-avatar">
+                                    <img src="../assets/images/profile4.jpg"
+                                        alt="Student">
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong>5,000+ learners</strong>
+
+                                <span>already building their skills</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hero Visual -->
+                    <div class="hero-visual reveal">
+
+                        <div class="hero-image-wrapper">
+
+                            <div class="hero-image-glow"></div>
+
+                            <img
+                                src="../assets/images/vertical-shot-young-freelancer-woman-working-from-home-typing-laptop-looking-screen.jpg"
+                                alt="Students learning computer skills"
+                                class="hero-main-image">
+
+                        </div>
+
+
+                        <!-- Floating Card 1 -->
+                        <div class="floating-card floating-card-one">
+
+                            <div class="floating-card-icon">
+                                <i data-lucide="award"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>Certificate</strong>
+
+                                <span>Course completed</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Floating Card 2 -->
+                        <div class="floating-card floating-card-two">
+
+                            <div class="floating-card-icon">
+                                <i data-lucide="trending-up"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>95%</strong>
+
+                                <span>Completion rate</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Decorative Circle -->
+                        <div class="hero-decoration hero-decoration-one"></div>
+                        <div class="hero-decoration hero-decoration-two"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+
+                <span>Scroll to explore</span>
+
+                <i data-lucide="mouse"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             STATS
+        ====================================================== -->
+
+        <section class="stats-section">
+
+            <div class="container">
+
+                <div class="stats-grid reveal">
+
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                <span class="counter" data-target="10">0</span>+
+                            </strong>
+
+                            <span>Practical Courses</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                <span class="counter" data-target="5000">0</span>+
+                            </strong>
+
+                            <span>Happy Learners</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <i data-lucide="users-round"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                <span class="counter" data-target="10">0</span>+
+                            </strong>
+
+                            <span>Expert Faculty</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <div class="stat-icon">
+                            <i data-lucide="badge-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                <span class="counter" data-target="95">0</span>%
+                            </strong>
+
+                            <span>Course Completion</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             POPULAR COURSES
+        ====================================================== -->
+
+        <section class="section courses-section">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            Learn & Grow
+                        </span>
+
+                        <h2 class="section-heading">
+                            Explore Our Popular Courses
+                        </h2>
+
+                    </div>
+
+                    <a href="courses.html" class="text-link">
+
+                        View All Courses
+
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="courses-grid">
+
+
+                    <!-- Basic Computing -->
+                    <article class="course-card reveal">
+
+                        <div class="course-image">
+
+                            <img
+                                src="../assets/images/basicComputing.jpg"
+                                alt="Basic Computing course"
+                                loading="lazy">
+
+                            <span class="course-category">
+                                Beginner
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <div class="course-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    4 Weeks
+                                </span>
+
+                                <span>
+                                    <i data-lucide="bar-chart-3"></i>
+                                    Beginner
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Basic Computing
+                            </h3>
+
+                            <p>
+                                Build strong computer fundamentals,
+                                internet, email, files and digital skills.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span class="course-rating">
+                                    <i data-lucide="star"></i>
+                                    4.9
+                                </span>
+
+                                <a href="course-detail.html?course=basic-computing"
+                                    class="btn btn-outline btn-small">
+                                    Explore Course
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MS Office -->
+                    <article class="course-card reveal">
+
+                        <div class="course-image">
+
+                            <img
+                                src="../assets/images/msoffice.jpg"
+                                alt="MS Office course"
+                                loading="lazy">
+
+                            <span class="course-category">
+                                Popular
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <div class="course-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    6 Weeks
+                                </span>
+
+                                <span>
+                                    <i data-lucide="bar-chart-3"></i>
+                                    Beginner
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                MS Office
+                            </h3>
+
+                            <p>
+                                Master Word, Excel, PowerPoint and
+                                essential workplace productivity tools.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span class="course-rating">
+                                    <i data-lucide="star"></i>
+                                    4.8
+                                </span>
+
+                                <a href="course-detail.html?course=ms-office"
+                                    class="btn btn-outline btn-small">
+                                    Explore Course
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Tally -->
+                    <article class="course-card reveal">
+
+                        <div class="course-image">
+
+                            <img
+                                src="../assets/images/tally.jpg"
+                                alt="Tally Prime course"
+                                loading="lazy">
+
+                            <span class="course-category">
+                                Career
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <div class="course-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    8 Weeks
+                                </span>
+
+                                <span>
+                                    <i data-lucide="bar-chart-3"></i>
+                                    Intermediate
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Tally Prime
+                            </h3>
+
+                            <p>
+                                Learn accounting, GST, inventory,
+                                vouchers and practical business reports.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span class="course-rating">
+                                    <i data-lucide="star"></i>
+                                    4.9
+                                </span>
+
+                                <a href="course-detail.html?course=tally-prime"
+                                    class="btn btn-outline btn-small">
+                                    Explore Course
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Advanced Excel -->
+                    <article class="course-card reveal">
+
+                        <div class="course-image">
+
+                            <img
+                                src="../assets/images/advExcel.jpg"
+                                alt="Advanced Excel course"
+                                loading="lazy">
+
+                            <span class="course-category">
+                                Advanced
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <div class="course-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    6 Weeks
+                                </span>
+
+                                <span>
+                                    <i data-lucide="bar-chart-3"></i>
+                                    Intermediate
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Advanced Excel
+                            </h3>
+
+                            <p>
+                                Work with formulas, dashboards, data
+                                analysis, pivot tables and automation.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span class="course-rating">
+                                    <i data-lucide="star"></i>
+                                    4.9
+                                </span>
+
+                                <a href="course-detail.html?course=advanced-excel"
+                                    class="btn btn-outline btn-small">
+                                    Explore Course
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Typing -->
+                    <article class="course-card reveal">
+
+                        <div class="course-image">
+
+                            <img
+                                src="../assets/images/videoframe_2867.png"
+                                alt="Typing course"
+                                loading="lazy">
+
+                            <span class="course-category">
+                                Practice
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <div class="course-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    3 Weeks
+                                </span>
+
+                                <span>
+                                    <i data-lucide="bar-chart-3"></i>
+                                    All Levels
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Typing Skills
+                            </h3>
+
+                            <p>
+                                Improve typing speed, accuracy and
+                                confidence through daily practice.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span class="course-rating">
+                                    <i data-lucide="star"></i>
+                                    4.8
+                                </span>
+
+                                <a href="course-detail.html?course=typing"
+                                    class="btn btn-outline btn-small">
+                                    Explore Course
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Web Development -->
+                    <article class="course-card reveal">
+
+                        <div class="course-image">
+
+                            <img
+                                src="../assets/images/webdev.jpg"
+                                alt="Web Development course"
+                                loading="lazy">
+
+                            <span class="course-category">
+                                Career
+                            </span>
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <div class="course-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    12 Weeks
+                                </span>
+
+                                <span>
+                                    <i data-lucide="bar-chart-3"></i>
+                                    Advanced
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Web Development
+                            </h3>
+
+                            <p>
+                                Learn HTML, CSS, JavaScript and modern
+                                frontend development through projects.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span class="course-rating">
+                                    <i data-lucide="star"></i>
+                                    4.9
+                                </span>
+
+                                <a href="course-detail.html?course=web-development"
+                                    class="btn btn-outline btn-small">
+                                    Explore Course
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHY CHOOSE US
+        ====================================================== -->
+
+        <section class="section why-section">
+
+            <div class="container">
+
+                <div class="why-grid">
+
+
+                    <div class="why-visual reveal">
+
+                        <div class="why-image-wrapper">
+
+                            <img
+                                src="../assets/images/class.jpg"
+                                alt="Computer training classroom"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="why-experience">
+
+                            <strong>10+</strong>
+
+                            <span>
+                                Years of
+                                <br>
+                                Learning Excellence
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-content reveal">
+
+                        <span class="section-eyebrow">
+                            Why SkillForge
+                        </span>
+
+                        <h2 class="section-heading">
+                            Learn Skills That You Can Actually Use
+                        </h2>
+
+                        <p>
+                            We focus on practical computer education that
+                            helps students become confident in real-world
+                            academic and professional environments.
+                        </p>
+
+
+                        <div class="why-list">
+
+
+                            <div class="why-item">
+
+                                <div class="why-icon">
+                                    <i data-lucide="monitor-play"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Practical Training
+                                    </h3>
+
+                                    <p>
+                                        Learn through hands-on tasks,
+                                        exercises and real-world examples.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="why-item">
+
+                                <div class="why-icon">
+                                    <i data-lucide="users"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Expert Faculty
+                                    </h3>
+
+                                    <p>
+                                        Get guidance from experienced
+                                        trainers and mentors.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="why-item">
+
+                                <div class="why-icon">
+                                    <i data-lucide="calendar-clock"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Flexible Batches
+                                    </h3>
+
+                                    <p>
+                                        Choose morning, evening or weekend
+                                        batches based on your schedule.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="why-item">
+
+                                <div class="why-icon">
+                                    <i data-lucide="bar-chart-3"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Track Your Progress
+                                    </h3>
+
+                                    <p>
+                                        Monitor lessons, quizzes, practice
+                                        scores and course completion.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LEARNING PROCESS
+        ====================================================== -->
+
+        <section class="section process-section">
+
+            <div class="container">
+
+                <div class="section-header centered reveal">
+
+                    <span class="section-eyebrow">
+                        Simple Learning Journey
+                    </span>
+
+                    <h2 class="section-heading">
+                        From Learning to Achievement
+                    </h2>
+
+                    <p>
+                        Follow a simple learning process designed to
+                        turn knowledge into practical skills.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-item reveal">
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+                        <div class="process-icon">
+                            <i data-lucide="search"></i>
+                        </div>
+
+                        <h3>
+                            Choose a Course
+                        </h3>
+
+                        <p>
+                            Explore courses and find the right skill
+                            for your goals.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item reveal">
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+                        <div class="process-icon">
+                            <i data-lucide="user-plus"></i>
+                        </div>
+
+                        <h3>
+                            Enroll
+                        </h3>
+
+                        <p>
+                            Select your preferred batch and enroll
+                            in the course.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item reveal">
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+                        <div class="process-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
+
+                        <h3>
+                            Learn & Practice
+                        </h3>
+
+                        <p>
+                            Complete lessons, practice tasks and
+                            interactive exercises.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item reveal">
+
+                        <span class="process-number">
+                            04
+                        </span>
+
+                        <div class="process-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+
+                        <h3>
+                            Get Certified
+                        </h3>
+
+                        <p>
+                            Complete your course and download your
+                            SkillForge certificate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TYPING TEST CTA
+        ====================================================== -->
+
+        <section class="typing-cta-section">
+
+            <div class="container">
+
+                <div class="typing-cta reveal">
+
+                    <div class="typing-cta-content">
+
+                        <span class="section-eyebrow">
+                            Free Practice Tool
+                        </span>
+
+                        <h2>
+                            Test Your Typing Speed & Accuracy
+                        </h2>
+
+                        <p>
+                            Challenge yourself with our interactive
+                            typing test and track your WPM, accuracy,
+                            errors and performance.
+                        </p>
+
+                        <a href="typing-test.html"
+                            class="btn btn-light">
+
+                            Start Typing Test
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="typing-cta-visual">
+
+                        <div class="typing-speed-card">
+
+                            <div class="typing-card-icon">
+                                <i data-lucide="keyboard"></i>
+                            </div>
+
+                            <div>
+
+                                <span>Current Speed</span>
+
+                                <strong>
+                                    62 WPM
+                                </strong>
+
+                            </div>
+
+                            <div class="typing-progress">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TESTIMONIALS
+        ====================================================== -->
+
+        <section class="section testimonials-section">
+
+            <div class="container">
+
+                <div class="section-header centered reveal">
+
+                    <span class="section-eyebrow">
+                        Student Stories
+                    </span>
+
+                    <h2 class="section-heading">
+                        What Our Learners Say
+                    </h2>
+
+                    <p>
+                        Real learning experiences from students who
+                        chose SkillForge to build their skills.
+                    </p>
+
+                </div>
+
+
+                <div class="testimonials-grid">
+
+
+                    <article class="testimonial-card reveal">
+
+                        <div class="testimonial-rating">
+
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+
+                        </div>
+
+                        <p>
+                            "The practical Excel sessions helped me
+                            become much more confident with reports
+                            and workplace tasks."
+                        </p>
+
+                        <div class="testimonial-author">
+
+                            <img
+                                src="../assets/images/profile2.jpg"
+                                alt="Priya">
+
+                            <div>
+
+                                <strong>
+                                    Priya Kumar
+                                </strong>
+
+                                <span>
+                                    Advanced Excel Student
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial-card reveal">
+
+                        <div class="testimonial-rating">
+
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+
+                        </div>
+
+                        <p>
+                            "I joined Tally training as a beginner.
+                            The step-by-step practical approach made
+                            accounting concepts much easier."
+                        </p>
+
+                        <div class="testimonial-author">
+
+                            <img
+                                src="../assets/images/profile4.jpg"
+                                alt="Rahul">
+
+                            <div>
+
+                                <strong>
+                                    Rahul S
+                                </strong>
+
+                                <span>
+                                    Tally Prime Student
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial-card reveal">
+
+                        <div class="testimonial-rating">
+
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+
+                        </div>
+
+                        <p>
+                            "The typing practice helped me improve
+                            both speed and accuracy. I liked being
+                            able to see my progress."
+                        </p>
+
+                        <div class="testimonial-author">
+
+                            <img
+                                src="../assets/images/profile3.jpg"
+                                alt="Anith">
+
+                            <div>
+
+                                <strong>
+                                    Anith R
+                                </strong>
+
+                                <span>
+                                    Typing Student
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="section faq-section">
+
+            <div class="container">
+
+                <div class="faq-grid">
+
+
+                    <div class="faq-intro reveal">
+
+                        <span class="section-eyebrow">
+                            FAQ
+                        </span>
+
+                        <h2 class="section-heading">
+                            Frequently Asked Questions
+                        </h2>
+
+                        <p>
+                            Have questions about courses, batches,
+                            enrollment or certificates? Find quick
+                            answers here.
+                        </p>
+
+                        <a href="contact.html" class="btn btn-outline">
+
+                            Ask a Question
+
+                            <i data-lucide="message-circle"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="faq-list reveal">
+
+
+                        <div class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+
+                                <span>
+                                    How do I enroll in a course?
+                                </span>
+
+                                <i data-lucide="plus"></i>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <p>
+                                    Choose a course, open its course
+                                    details page and select your preferred
+                                    batch. You can then continue with the
+                                    enrollment process after logging in.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+
+                                <span>
+                                    Do you offer online and offline classes?
+                                </span>
+
+                                <i data-lucide="plus"></i>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <p>
+                                    Yes. Selected courses can be offered
+                                    through online and classroom batches.
+                                    Check the Batches page for available
+                                    schedules.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+
+                                <span>
+                                    Can I track my course progress?
+                                </span>
+
+                                <i data-lucide="plus"></i>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <p>
+                                    Yes. Students can use the learning
+                                    portal to track completed lessons,
+                                    quiz scores, practice activities and
+                                    overall course progress.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+
+                                <span>
+                                    Will I receive a certificate?
+                                </span>
+
+                                <i data-lucide="plus"></i>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <p>
+                                    Students who successfully complete
+                                    eligible courses can access and
+                                    download their course certificate
+                                    through the student portal.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+
+                                <span>
+                                    Can beginners join the courses?
+                                </span>
+
+                                <i data-lucide="plus"></i>
+
+                            </button>
+
+                            <div class="faq-answer">
+
+                                <p>
+                                    Absolutely. Basic Computing and
+                                    beginner-level courses are designed
+                                    for students with little or no prior
+                                    computer experience.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FINAL CTA
+        ====================================================== -->
+
+        <section class="section cta-section">
+
+            <div class="container">
+
+                <div class="cta-box reveal">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            Start Your Learning Journey
+                        </span>
+
+                        <h2>
+                            Ready to Build Your Next Skill?
+                        </h2>
+
+                        <p>
+                            Choose a course, join a batch and start
+                            learning practical computer skills today.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-buttons">
+
+                        <a href="courses.html" class="btn btn-primary">
+
+                            Explore Courses
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </a>
+
+                        <a href="contact.html" class="btn btn-outline">
+
+                            Contact Us
+
+                            <i data-lucide="message-circle"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <a href="index.html" class="brand footer-logo">
+
+                        <span class="brand-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </span>
+
+                        <span class="brand-text">
+                            Skill<span>Forge</span>
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Modern computer education and learning
+                        platform designed to help students build
+                        practical skills and career confidence.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="#"
+                            aria-label="Facebook">
+                         <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg>
+                        </a>
+
+                        <a href="#"
+                            aria-label="LinkedIn">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z"/></svg>
+                        </a>
+
+                        <a href="#"
+                            aria-label="Instagram">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M290.4 275.7C274 286 264.5 304.5 265.5 323.8C266.6 343.2 278.2 360.4 295.6 368.9C313.1 377.3 333.8 375.5 349.6 364.3C366 354 375.5 335.5 374.5 316.2C373.4 296.8 361.8 279.6 344.4 271.1C326.9 262.7 306.2 264.5 290.4 275.7zM432.7 207.3C427.5 202.1 421.2 198 414.3 195.3C396.2 188.2 356.7 188.5 331.2 188.8C327.1 188.8 323.3 188.9 320 188.9C316.7 188.9 312.8 188.9 308.6 188.8C283.1 188.5 243.8 188.1 225.7 195.3C218.8 198 212.6 202.1 207.3 207.3C202 212.5 198 218.8 195.3 225.7C188.2 243.8 188.6 283.4 188.8 308.9C188.8 313 188.9 316.8 188.9 320C188.9 323.2 188.9 327 188.8 331.1C188.6 356.6 188.2 396.2 195.3 414.3C198 421.2 202.1 427.4 207.3 432.7C212.5 438 218.8 442 225.7 444.7C243.8 451.8 283.3 451.5 308.8 451.2C312.9 451.2 316.7 451.1 320 451.1C323.3 451.1 327.2 451.1 331.4 451.2C356.9 451.5 396.2 451.9 414.3 444.7C421.2 442 427.4 437.9 432.7 432.7C438 427.5 442 421.2 444.7 414.3C451.9 396.3 451.5 356.9 451.2 331.3C451.2 327.1 451.1 323.2 451.1 319.9C451.1 316.6 451.1 312.8 451.2 308.5C451.5 283 451.9 243.6 444.7 225.5C442 218.6 437.9 212.4 432.7 207.1L432.7 207.3zM365.6 251.8C383.7 263.9 396.2 282.7 400.5 304C404.8 325.3 400.3 347.5 388.2 365.6C382.2 374.6 374.5 382.2 365.6 388.2C356.7 394.2 346.6 398.3 336 400.4C314.7 404.6 292.5 400.2 274.4 388.1C256.3 376 243.8 357.2 239.5 335.9C235.2 314.6 239.7 292.4 251.7 274.3C263.7 256.2 282.6 243.7 303.9 239.4C325.2 235.1 347.4 239.6 365.5 251.6L365.6 251.6zM394.8 250.5C391.7 248.4 389.2 245.4 387.7 241.9C386.2 238.4 385.9 234.6 386.6 230.8C387.3 227 389.2 223.7 391.8 221C394.4 218.3 397.9 216.5 401.6 215.8C405.3 215.1 409.2 215.4 412.7 216.9C416.2 218.4 419.2 220.8 421.3 223.9C423.4 227 424.5 230.7 424.5 234.5C424.5 237 424 239.5 423.1 241.8C422.2 244.1 420.7 246.2 419 248C417.3 249.8 415.1 251.2 412.8 252.2C410.5 253.2 408 253.7 405.5 253.7C401.7 253.7 398 252.6 394.9 250.5L394.8 250.5zM544 160C544 124.7 515.3 96 480 96L160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160zM453 453C434.3 471.7 411.6 477.6 386 478.9C359.6 480.4 280.4 480.4 254 478.9C228.4 477.6 205.7 471.7 187 453C168.3 434.3 162.4 411.6 161.2 386C159.7 359.6 159.7 280.4 161.2 254C162.5 228.4 168.3 205.7 187 187C205.7 168.3 228.5 162.4 254 161.2C280.4 159.7 359.6 159.7 386 161.2C411.6 162.5 434.3 168.3 453 187C471.7 205.7 477.6 228.4 478.8 254C480.3 280.3 480.3 359.4 478.8 385.9C477.5 411.5 471.7 434.2 453 452.9L453 453z"/></svg>
+                        </a>
+
+                        <a href="#"
+                            aria-label="YouTube">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/></svg>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="courses.html">
+                        Courses
+                    </a>
+
+                    <a href="faculty.html">
+                        Faculty
+                    </a>
+
+                    <a href="batches.html">
+                        Batches
+                    </a>
+
+                    <a href="fees.html">
+                        Fees
+                    </a>
+
+                </div>
+
+
+                <!-- Courses -->
+                <div class="footer-column">
+
+                    <h3>
+                        Popular Courses
+                    </h3>
+
+                    <a href="course-detail.html?course=basic-computing">
+                        Basic Computing
+                    </a>
+
+                    <a href="course-detail.html?course=ms-office">
+                        MS Office
+                    </a>
+
+                    <a href="course-detail.html?course=tally-prime">
+                        Tally Prime
+                    </a>
+
+                    <a href="course-detail.html?course=advanced-excel">
+                        Advanced Excel
+                    </a>
+
+                    <a href="course-detail.html?course=typing">
+                        Typing Skills
+                    </a>
+
+                    <a href="course-detail.html?course=web-development">
+                        Web Development
+                    </a>
+
+                </div>
+
+
+                <!-- Student -->
+                <div class="footer-column">
+
+                    <h3>
+                        Student Portal
+                    </h3>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="student-dashboard.html">
+                        My Dashboard
+                    </a>
+
+                    <a href="practice.html">
+                        Practice
+                    </a>
+
+                    <a href="typing-test.html">
+                        Typing Test
+                    </a>
+
+                    <a href="progress.html">
+                        Track Progress
+                    </a>
+
+                    <a href="certificates.html">
+                        Certificates
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Contact -->
+            <div class="footer-contact">
+
+                <div>
+
+                    <i data-lucide="map-pin"></i>
+
+                    <span>
+                        Chennai, Tamil Nadu, India
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <i data-lucide="phone"></i>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <i data-lucide="mail"></i>
+
+                    <span>
+                        hello@skillforge.in
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 SkillForge. All rights reserved.
+                </p>
+
+                <div>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back To Top -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top">
+
+        <i data-lucide="arrow-up"></i>
+
+    </button>
+
+
+    <!-- Main JavaScript -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

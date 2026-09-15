@@ -1,0 +1,385 @@
+/* =========================================================
+   SKILLFORGE - DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg-primary: #0f172a;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1e293b;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-light: #64748b;
+
+    --white: #ffffff;
+
+    --border-color: #334155;
+    --border-light: #1e293b;
+
+    /* Orange theme */
+    --primary-light: #431407;
+    --primary-soft: #7c2d12;
+
+    --success-light: #052e16;
+    --warning-light: #451a03;
+    --danger-light: #450a0a;
+
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 12px 35px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+
+    --shadow-orange: 0 15px 35px rgba(249, 115, 22, 0.15);
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+html[data-theme="dark"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+html[data-theme="dark"] .site-header {
+    background: rgba(15, 23, 42, 0.92);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .site-header.scrolled {
+    background: rgba(15, 23, 42, 0.96);
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] p {
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+html[data-theme="dark"] .nav-link {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .nav-link:hover,
+html[data-theme="dark"] .nav-link.active {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+html[data-theme="dark"] .search-form {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .search-form input {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .search-form input::placeholder {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+html[data-theme="dark"] .btn-outline {
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+html[data-theme="dark"] .hero {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(249, 115, 22, 0.10),
+            transparent 35%
+        ),
+        var(--bg-primary);
+}
+
+html[data-theme="dark"] .hero-badge {
+    background: rgba(249, 115, 22, 0.12);
+    color: #fb923c;
+    border-color: rgba(249, 115, 22, 0.25);
+}
+
+html[data-theme="dark"] .hero-description {
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+html[data-theme="dark"] .section {
+    background: var(--bg-primary);
+}
+
+html[data-theme="dark"] .section-alt {
+    background: var(--bg-secondary);
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+html[data-theme="dark"] .stat-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .stat-number {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .stat-label {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   COURSE CARDS
+   ========================================================= */
+
+html[data-theme="dark"] .course-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+html[data-theme="dark"] .course-card:hover {
+    border-color: rgba(249, 115, 22, 0.45);
+    box-shadow: var(--shadow-orange);
+}
+
+html[data-theme="dark"] .course-card h3 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .course-card p {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .course-meta {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   WHY SECTION / FEATURE CARDS
+   ========================================================= */
+
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .why-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .feature-card h3,
+html[data-theme="dark"] .why-card h3 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .feature-card p,
+html[data-theme="dark"] .why-card p {
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+html[data-theme="dark"] .process-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+
+/* =========================================================
+   TYPING CTA
+   ========================================================= */
+
+html[data-theme="dark"] .typing-section {
+    background: var(--bg-secondary);
+}
+
+html[data-theme="dark"] .typing-card {
+    background: linear-gradient(
+        135deg,
+        #431407,
+        #1c1917
+    );
+    border-color: rgba(249, 115, 22, 0.25);
+}
+
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
+html[data-theme="dark"] .testimonial-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .testimonial-card p {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .testimonial-name {
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+html[data-theme="dark"] .faq-item {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .faq-question {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .faq-answer {
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+html[data-theme="dark"] .final-cta {
+    background: var(--bg-secondary);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+html[data-theme="dark"] .site-footer {
+    background: #020617;
+    border-top-color: var(--border-color);
+}
+
+html[data-theme="dark"] .footer-title {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .footer-text,
+html[data-theme="dark"] .footer-link {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .footer-link:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+html[data-theme="dark"] .mobile-nav {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .mobile-nav a {
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] input:focus,
+html[data-theme="dark"] textarea:focus,
+html[data-theme="dark"] select:focus {
+    border-color: var(--primary);
+    outline-color: rgba(249, 115, 22, 0.2);
+}
+
+
+/* =========================================================
+   SCROLL TO TOP
+   ========================================================= */
+
+html[data-theme="dark"] .back-to-top {
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+html[data-theme="dark"] ::selection {
+    background: var(--primary);
+    color: #ffffff;
+}
