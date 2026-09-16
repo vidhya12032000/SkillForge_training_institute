@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Create your SkillForge account and start learning computer skills, MS Office, Excel, Tally and career-focused courses.">
+
+    <meta name="keywords"
+        content="SkillForge signup, computer courses, online learning, MS Office, Excel, Tally">
+
+    <meta name="author" content="SkillForge">
+    <meta name="theme-color" content="#f97316">
+
+    <title>Sign Up | SkillForge</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+    <!-- Signup CSS -->
+    <link rel="stylesheet" href="../assets/css/signup.css">
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container">
+
+            <nav class="navbar" aria-label="Main navigation">
+
+                <!-- Brand -->
+                <a href="../index.html"
+                    class="brand"
+                    aria-label="SkillForge Home">
+
+                    <span class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Skill<span>Forge</span>
+                    </span>
+
+                </a>
+
+
+                <!-- Search -->
+                <div class="header-search">
+
+                    <form class="search-form"
+                        id="globalSearchForm"
+                        role="search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="globalSearch"
+                            placeholder="Search courses..."
+                            aria-label="Search courses">
+
+                        <button type="submit"
+                            aria-label="Search">
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+
+                    <a href="../index.html"
+                        class="nav-link">
+                        Home
+                    </a>
+
+                    <a href="home2.html"
+                        class="nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html"
+                        class="nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html"
+                        class="nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html"
+                        class="nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html"
+                        class="nav-link">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+
+                    <!-- Theme -->
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                        aria-pressed="false"
+                        title="Toggle theme">
+
+                        <i data-lucide="sun"
+                            id="themeIcon"></i>
+
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="icon-button rtl-button"
+                        id="rtlToggle"
+                        type="button"
+                        aria-label="Switch to right-to-left layout"
+                        aria-pressed="false"
+                        title="Toggle RTL">
+
+                        <i data-lucide="languages"></i>
+
+                    </button>
+
+
+                    <!-- Login -->
+                    <a href="login.html"
+                        class="login-link">
+
+                        Login
+
+                    </a>
+
+
+                    <!-- Sign Up -->
+                    <a href="signup.html"
+                        class="btn btn-primary btn-small active">
+
+                        Sign Up
+
+                    </a>
+
+
+                    <!-- Mobile Menu -->
+                    <button
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNav">
+
+                        <i data-lucide="menu"></i>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav"
+            id="mobileNav">
+
+            <div class="container">
+
+                <div class="mobile-nav-content">
+
+                    <a href="../index.html"
+                        class="mobile-nav-link">
+                        Home
+                    </a>
+
+                    <a href="home2.html"
+                        class="mobile-nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html"
+                        class="mobile-nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html"
+                        class="mobile-nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html"
+                        class="mobile-nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html"
+                        class="mobile-nav-link">
+                        Contact
+                    </a>
+
+
+                    <div class="mobile-nav-buttons">
+
+                        <a href="login.html"
+                            class="btn btn-outline">
+                            Login
+                        </a>
+
+                        <a href="signup.html"
+                            class="btn btn-primary">
+                            Sign Up
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main>
+
+        <!-- Signup Hero -->
+        <section class="signup-page">
+
+            <div class="signup-decoration signup-decoration-one"></div>
+            <div class="signup-decoration signup-decoration-two"></div>
+
+            <div class="container">
+
+                <div class="signup-layout">
+
+                    <!-- Left Content -->
+                    <div class="signup-intro reveal">
+
+                        <span class="section-eyebrow">
+                            Join SkillForge
+                        </span>
+
+                        <h1>
+                            Start Your
+                            <span>Learning Journey.</span>
+                        </h1>
+
+                        <p>
+                            Create your SkillForge account and get access
+                            to practical computer education, career-focused
+                            courses and learning resources.
+                        </p>
+
+
+                        <div class="signup-benefits">
+
+                            <div class="signup-benefit">
+
+                                <span class="benefit-icon">
+                                    <i data-lucide="book-open"></i>
+                                </span>
+
+                                <div>
+                                    <h3>Practical Courses</h3>
+                                    <p>
+                                        Learn skills that can be applied
+                                        in real workplace situations.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="signup-benefit">
+
+                                <span class="benefit-icon">
+                                    <i data-lucide="chart-no-axes-combined"></i>
+                                </span>
+
+                                <div>
+                                    <h3>Track Your Progress</h3>
+                                    <p>
+                                        Keep track of your learning
+                                        activities and course progress.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="signup-benefit">
+
+                                <span class="benefit-icon">
+                                    <i data-lucide="award"></i>
+                                </span>
+
+                                <div>
+                                    <h3>Build Your Skills</h3>
+                                    <p>
+                                        Develop useful skills for academic
+                                        and professional growth.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Signup Card -->
+                    <div class="signup-card reveal">
+
+                        <div class="signup-card-header">
+
+                            <div class="signup-card-icon">
+                                <i data-lucide="user-plus"></i>
+                            </div>
+
+                            <div>
+                                <h2>Create Account</h2>
+
+                                <p>
+                                    Fill in your details to get started.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Form -->
+                        <form
+                            id="signupForm"
+                            class="signup-form"
+                            novalidate>
+
+
+                            <!-- Full Name -->
+                            <div class="form-group">
+
+                                <label for="fullName">
+                                    Full Name
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i data-lucide="user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        name="fullName"
+                                        placeholder="Enter your full name"
+                                        autocomplete="name">
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="fullNameError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Email -->
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i data-lucide="mail"></i>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Enter your email"
+                                        autocomplete="email">
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="emailError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Phone -->
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i data-lucide="phone"></i>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="Enter 10-digit phone number"
+                                        maxlength="10"
+                                        inputmode="numeric"
+                                        autocomplete="tel">
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="phoneError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Course -->
+                            <div class="form-group">
+
+                                <label for="course">
+                                    Interested Course
+                                </label>
+
+                                <div class="input-wrapper select-wrapper">
+
+                                    <i data-lucide="graduation-cap"></i>
+
+                                    <select
+                                        id="course"
+                                        name="course">
+
+                                        <option value="">
+                                            Select a course
+                                        </option>
+
+                                        <option value="basic-computing">
+                                            Basic Computing
+                                        </option>
+
+                                        <option value="ms-office">
+                                            MS Office
+                                        </option>
+
+                                        <option value="advanced-excel">
+                                            Advanced Excel
+                                        </option>
+
+                                        <option value="tally">
+                                            Tally Prime
+                                        </option>
+
+                                        <option value="typing">
+                                            Typing Practice
+                                        </option>
+
+                                        <option value="digital-skills">
+                                            Digital Skills
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="courseError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Password -->
+                            <div class="form-group">
+
+                                <label for="password">
+                                    Password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i data-lucide="lock"></i>
+
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Create a password"
+                                        autocomplete="new-password">
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="password"
+                                        aria-label="Show password">
+
+                                        <i data-lucide="eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                                <small
+                                    class="password-hint">
+                                    Use at least 8 characters.
+                                </small>
+
+                                <small
+                                    class="form-error"
+                                    id="passwordError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Confirm Password -->
+                            <div class="form-group">
+
+                                <label for="confirmPassword">
+                                    Confirm Password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i data-lucide="shield-check"></i>
+
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Confirm your password"
+                                        autocomplete="new-password">
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="confirmPassword"
+                                        aria-label="Show password">
+
+                                        <i data-lucide="eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="confirmPasswordError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Terms -->
+                            <div class="terms-group">
+
+                                <label class="checkbox-label">
+
+                                    <input
+                                        type="checkbox"
+                                        id="terms"
+                                        name="terms">
+
+                                    <span>
+                                        I agree to the
+                                        <a href="terms.html">
+                                            Terms & Conditions
+                                        </a>
+                                        and
+                                        <a href="privacy-policy.html">
+                                            Privacy Policy
+                                        </a>.
+                                    </span>
+
+                                </label>
+
+                                <small
+                                    class="form-error"
+                                    id="termsError">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Submit -->
+                            <button
+                                type="submit"
+                                class="btn btn-primary signup-submit"
+                                id="signupSubmit">
+
+                                <span>Create Account</span>
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </button>
+
+
+                            <!-- Message -->
+                            <div
+                                class="signup-message"
+                                id="signupMessage"
+                                role="alert"
+                                aria-live="polite">
+                            </div>
+
+
+                        </form>
+
+
+                        <!-- Login -->
+                        <div class="login-prompt">
+
+                            <span>
+                                Already have an account?
+                            </span>
+
+                            <a href="login.html">
+                                Login here
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TRUST SECTION
+        ====================================================== -->
+
+        <section class="signup-trust">
+
+            <div class="container">
+
+                <div class="trust-grid">
+
+                    <div class="trust-item">
+
+                        <i data-lucide="shield-check"></i>
+
+                        <div>
+                            <strong>
+                                Secure Account
+                            </strong>
+
+                            <span>
+                                Your account details stay protected.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i data-lucide="headphones"></i>
+
+                        <div>
+                            <strong>
+                                Learning Support
+                            </strong>
+
+                            <span>
+                                Get guidance throughout your learning.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i data-lucide="smartphone"></i>
+
+                        <div>
+                            <strong>
+                                Learn Anywhere
+                            </strong>
+
+                            <span>
+                                Access learning resources across devices.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="brand">
+
+                        <span class="brand-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </span>
+
+                        <span class="brand-text">
+                            Skill<span>Forge</span>
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        Modern computer education and practical
+                        career training for students, beginners
+                        and professionals.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="#"
+                            aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="courses.html">
+                        Courses
+                    </a>
+
+                    <a href="instructors.html">
+                        Faculty
+                    </a>
+
+                    <a href="batches.html">
+                        Batches
+                    </a>
+
+                    <a href="fees.html">
+                        Fees
+                    </a>
+
+                </div>
+
+
+                <!-- Popular Courses -->
+                <div class="footer-column">
+
+                    <h3>
+                        Popular Courses
+                    </h3>
+
+                    <a href="course-detail.html?course=basic-computing">
+                        Basic Computing
+                    </a>
+
+                    <a href="course-detail.html?course=ms-office">
+                        MS Office
+                    </a>
+
+                    <a href="course-detail.html?course=tally">
+                        Tally Prime
+                    </a>
+
+                    <a href="course-detail.html?course=advanced-excel">
+                        Advanced Excel
+                    </a>
+
+                    <a href="typing-test.html">
+                        Typing Practice
+                    </a>
+
+                </div>
+
+
+                <!-- Student Portal -->
+                <div class="footer-column">
+
+                    <h3>
+                        Student Portal
+                    </h3>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="student-dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="typing-test.html">
+                        Practice
+                    </a>
+
+                    <a href="progress.html">
+                        Progress
+                    </a>
+
+                    <a href="certificates.html">
+                        Certificates
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Contact -->
+            <div class="footer-contact">
+
+                <div>
+
+                    <i data-lucide="map-pin"></i>
+
+                    <span>
+                        Chennai, Tamil Nadu
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i data-lucide="phone"></i>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i data-lucide="mail"></i>
+
+                    <span>
+                        hello@skillforge.in
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 SkillForge. All rights reserved.
+                </p>
+
+                <div>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back To Top -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top">
+
+        <i data-lucide="arrow-up"></i>
+
+    </button>
+
+
+    <!-- Common JS -->
+    <script src="../assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>

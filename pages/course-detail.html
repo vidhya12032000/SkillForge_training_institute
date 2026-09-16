@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Details | SkillForge</title>
+
+    <meta
+        name="description"
+        content="Explore SkillForge course details, curriculum, learning outcomes, requirements and enrollment information."
+    >
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+    
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+   <header class="site-header" id="siteHeader">
+
+        <div class="container">
+
+            <nav class="navbar" aria-label="Main navigation">
+
+                <!-- Brand -->
+                <a href="index.html" class="brand" aria-label="SkillForge Home">
+
+                    <span class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Skill<span>Forge</span>
+                    </span>
+
+                </a>
+
+
+                <!-- Search -->
+                <div class="header-search">
+
+                    <form class="search-form" id="globalSearchForm" role="search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="globalSearch"
+                            placeholder="Search courses..."
+                            aria-label="Search courses"
+                        >
+
+                        <button
+                            type="submit"
+                            aria-label="Search"
+                        >
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+
+                    <a href="../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                    <a href="home2.html" class="nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html" class="nav-link active">
+                        Courses
+                    </a>
+
+                    <a href="blog.html" class="nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+
+                    <!-- Theme -->
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                        aria-pressed="false"
+                        title="Toggle theme"
+                    >
+                        <i data-lucide="sun" id="themeIcon"></i>
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="icon-button rtl-button"
+                        id="rtlToggle"
+                        type="button"
+                        aria-label="Switch to right-to-left layout"
+                        aria-pressed="false"
+                        title="Toggle RTL"
+                    >
+                        <i data-lucide="languages"></i>
+                    </button>
+
+
+                    <!-- Login -->
+                    <a href="login.html" class="login-link">
+                        Login
+                    </a>
+
+
+                    <!-- Sign Up -->
+                    <a href="signup.html" class="btn btn-primary btn-small">
+                        Sign Up
+                    </a>
+
+
+                    <!-- Mobile Menu -->
+                    <button
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNav"
+                    >
+                        <i data-lucide="menu"></i>
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+
+            <div class="container">
+
+                <div class="mobile-nav-content">
+
+                    <a href="../index.html" class="mobile-nav-link">
+                        Home
+                    </a>
+
+                    <a href="home2.html" class="mobile-nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html" class="mobile-nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html" class="mobile-nav-link active">
+                        Courses
+                    </a>
+
+                    <a href="blog.html" class="mobile-nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="mobile-nav-link">
+                        Contact
+                    </a>
+
+                    <div class="mobile-nav-buttons">
+
+                        <a href="login.html" class="btn btn-outline">
+                            Login
+                        </a>
+
+                        <a href="signup.html" class="btn btn-primary">
+                            Sign Up
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+<main>
+
+<!-- =====================================================
+     COURSE HERO
+====================================================== -->
+
+<section class="course-detail-hero">
+
+    <div class="container">
+
+        <div class="course-breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <i data-lucide="chevron-right"></i>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <i data-lucide="chevron-right"></i>
+
+            <span id="breadcrumbCourse">
+                Course Details
+            </span>
+
+        </div>
+
+
+        <div class="course-hero-grid">
+
+            <!-- Hero Content -->
+            <div class="course-hero-content">
+
+                <span
+                    class="course-category"
+                    id="courseCategory"
+                >
+                    Computer Skills
+                </span>
+
+
+                <h1 id="courseTitle">
+                    Practical Computer Skills
+                </h1>
+
+
+                <p
+                    class="course-description"
+                    id="courseDescription"
+                >
+                    Build practical computer skills that you can use
+                    in education, office work and everyday professional
+                    tasks.
+                </p>
+
+
+                <!-- Rating -->
+                <div class="course-rating-row">
+
+                    <div class="rating">
+
+                        <strong id="courseRating">
+                            4.8
+                        </strong>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span id="courseReviews">
+                            128 reviews
+                        </span>
+
+                    </div>
+
+                    <span class="rating-divider"></span>
+
+                    <span>
+                        <i data-lucide="users"></i>
+                        <span id="courseStudents">
+                            500+ students
+                        </span>
+                    </span>
+
+                </div>
+
+
+                <!-- Meta -->
+                <div class="course-meta-grid">
+
+                    <div class="course-meta-item">
+
+                        <div class="meta-icon">
+                            <i data-lucide="clock-3"></i>
+                        </div>
+
+                        <div>
+                            <span>Duration</span>
+                            <strong id="courseDuration">
+                                6 Weeks
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-meta-item">
+
+                        <div class="meta-icon">
+                            <i data-lucide="signal"></i>
+                        </div>
+
+                        <div>
+                            <span>Level</span>
+                            <strong id="courseLevel">
+                                Beginner
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-meta-item">
+
+                        <div class="meta-icon">
+                            <i data-lucide="video"></i>
+                        </div>
+
+                        <div>
+                            <span>Lessons</span>
+                            <strong id="courseLessons">
+                                24 Lessons
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-meta-item">
+
+                        <div class="meta-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+
+                        <div>
+                            <span>Certificate</span>
+                            <strong>
+                                Included
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Course Preview -->
+            <div class="course-preview-card">
+
+                <div class="course-preview-image">
+
+                    <img
+                        id="courseImage"
+                        src="../assets/images/basicComputing.jpg"
+                        alt="Course preview"
+                    >
+
+                    <button
+                        class="preview-play"
+                        id="previewPlayButton"
+                        type="button"
+                        aria-label="Preview course"
+                    >
+                        <i data-lucide="play"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COURSE BODY
+====================================================== -->
+
+<section class="course-body-section">
+
+    <div class="container course-body-grid">
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <div class="course-main-content">
+
+
+            <!-- Overview -->
+            <section class="course-content-card">
+
+                <h2>
+                    Course Overview
+                </h2>
+
+                <p id="overviewText">
+                    This practical course is designed to help beginners
+                    develop confidence using computers and common digital
+                    tools. You will learn through practical exercises,
+                    guided lessons and real-world examples.
+                </p>
+
+                <p>
+                    The course focuses on useful skills that can be applied
+                    in education, office environments, job preparation and
+                    everyday computer usage.
+                </p>
+
+            </section>
+
+
+            <!-- What You'll Learn -->
+            <section class="course-content-card">
+
+                <div class="content-heading">
+
+                    <div>
+                        <span class="content-label">
+                            Learning Outcomes
+                        </span>
+
+                        <h2>
+                            What You'll Learn
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="learning-grid"
+                    id="learningGrid"
+                >
+
+                    <div class="learning-item">
+
+                        <i data-lucide="check-circle-2"></i>
+
+                        <span>
+                            Understand computer fundamentals
+                        </span>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <i data-lucide="check-circle-2"></i>
+
+                        <span>
+                            Work confidently with files and folders
+                        </span>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <i data-lucide="check-circle-2"></i>
+
+                        <span>
+                            Use common productivity tools
+                        </span>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <i data-lucide="check-circle-2"></i>
+
+                        <span>
+                            Improve everyday digital skills
+                        </span>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <i data-lucide="check-circle-2"></i>
+
+                        <span>
+                            Complete practical computer exercises
+                        </span>
+
+                    </div>
+
+
+                    <div class="learning-item">
+
+                        <i data-lucide="check-circle-2"></i>
+
+                        <span>
+                            Build confidence for office tasks
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Curriculum -->
+            <section class="course-content-card">
+
+                <div class="curriculum-header">
+
+                    <div>
+
+                        <span class="content-label">
+                            Course Structure
+                        </span>
+
+                        <h2>
+                            Course Curriculum
+                        </h2>
+
+                    </div>
+
+
+                    <div class="curriculum-summary">
+
+                        <span id="curriculumLessons">
+                            24 Lessons
+                        </span>
+
+                        <span>•</span>
+
+                        <span id="curriculumDuration">
+                            6 Weeks
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="curriculum-list"
+                    id="curriculumList"
+                >
+
+                    <!-- Module 1 -->
+                    <div class="curriculum-module">
+
+                        <button
+                            class="module-header"
+                            type="button"
+                            aria-expanded="true"
+                        >
+
+                            <div class="module-title">
+
+                                <span class="module-number">
+                                    01
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Computer Fundamentals
+                                    </strong>
+
+                                    <span>
+                                        4 Lessons • 1 Week
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <i data-lucide="chevron-down"></i>
+
+                        </button>
+
+
+                        <div class="module-lessons">
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Introduction to Computers
+                                    </span>
+
+                                </div>
+
+                                <span>
+                                    15 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Hardware and Software
+                                    </span>
+
+                                </div>
+
+                                <span>
+                                    20 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Operating Systems
+                                    </span>
+
+                                </div>
+
+                                <span>
+                                    18 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+
+                                    <i data-lucide="file-text"></i>
+
+                                    <span>
+                                        Practical Exercise
+                                    </span>
+
+                                </div>
+
+                                <span>
+                                    25 min
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Module 2 -->
+                    <div class="curriculum-module">
+
+                        <button
+                            class="module-header"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <div class="module-title">
+
+                                <span class="module-number">
+                                    02
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Files & Digital Skills
+                                    </strong>
+
+                                    <span>
+                                        5 Lessons • 1 Week
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <i data-lucide="chevron-down"></i>
+
+                        </button>
+
+
+                        <div class="module-lessons">
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Files and Folders
+                                    </span>
+                                </div>
+
+                                <span>
+                                    20 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        File Management
+                                    </span>
+                                </div>
+
+                                <span>
+                                    18 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Internet Basics
+                                    </span>
+                                </div>
+
+                                <span>
+                                    20 min
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Module 3 -->
+                    <div class="curriculum-module">
+
+                        <button
+                            class="module-header"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <div class="module-title">
+
+                                <span class="module-number">
+                                    03
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Productivity Tools
+                                    </strong>
+
+                                    <span>
+                                        6 Lessons • 2 Weeks
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <i data-lucide="chevron-down"></i>
+
+                        </button>
+
+
+                        <div class="module-lessons">
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Document Creation
+                                    </span>
+                                </div>
+
+                                <span>
+                                    25 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Spreadsheet Basics
+                                    </span>
+                                </div>
+
+                                <span>
+                                    30 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="play-circle"></i>
+
+                                    <span>
+                                        Presentation Basics
+                                    </span>
+                                </div>
+
+                                <span>
+                                    25 min
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Module 4 -->
+                    <div class="curriculum-module">
+
+                        <button
+                            class="module-header"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <div class="module-title">
+
+                                <span class="module-number">
+                                    04
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Practical Projects
+                                    </strong>
+
+                                    <span>
+                                        5 Lessons • 2 Weeks
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <i data-lucide="chevron-down"></i>
+
+                        </button>
+
+
+                        <div class="module-lessons">
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="file-text"></i>
+
+                                    <span>
+                                        Practical Assignment
+                                    </span>
+                                </div>
+
+                                <span>
+                                    30 min
+                                </span>
+
+                            </div>
+
+
+                            <div class="lesson">
+
+                                <div class="lesson-left">
+                                    <i data-lucide="file-check-2"></i>
+
+                                    <span>
+                                        Final Assessment
+                                    </span>
+                                </div>
+
+                                <span>
+                                    40 min
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Requirements -->
+            <section class="course-content-card">
+
+                <h2>
+                    Requirements
+                </h2>
+
+                <ul class="requirements-list">
+
+                    <li>
+                        <i data-lucide="check"></i>
+                        Basic reading and writing skills
+                    </li>
+
+                    <li>
+                        <i data-lucide="check"></i>
+                        Access to a computer or laptop
+                    </li>
+
+                    <li>
+                        <i data-lucide="check"></i>
+                        Willingness to practise regularly
+                    </li>
+
+                    <li>
+                        <i data-lucide="check"></i>
+                        No previous technical experience required
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- Instructor -->
+            <section class="course-content-card">
+
+                <span class="content-label">
+                    Your Instructor
+                </span>
+
+                <h2>
+                    Meet Your Instructor
+                </h2>
+
+
+                <div class="instructor-box">
+
+                    <div class="instructor-avatar">
+                        <i data-lucide="user-round"></i>
+                    </div>
+
+
+                    <div class="instructor-info">
+
+                        <h3>
+                            SkillForge Training Team
+                        </h3>
+
+                        <span>
+                            Computer & Career Skills Trainer
+                        </span>
+
+                        <p>
+                            Our training team focuses on practical,
+                            beginner-friendly learning with exercises
+                            that help students apply concepts in real
+                            situations.
+                        </p>
+
+
+                        <div class="instructor-stats">
+
+                            <span>
+                                <strong>4.8</strong>
+                                Instructor Rating
+                            </span>
+
+                            <span>
+                                <strong>500+</strong>
+                                Students
+                            </span>
+
+                            <span>
+                                <strong>20+</strong>
+                                Courses
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FAQ -->
+            <section class="course-content-card">
+
+                <span class="content-label">
+                    Questions
+                </span>
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+
+                <div class="course-faq">
+
+                    <div class="course-faq-item">
+
+                        <button
+                            type="button"
+                            class="course-faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Is this course suitable for beginners?
+                            </span>
+
+                            <i data-lucide="plus"></i>
+
+                        </button>
+
+
+                        <div class="course-faq-answer">
+
+                            <p>
+                                Yes. The course is designed for beginners
+                                and focuses on practical learning from
+                                the fundamentals.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-faq-item">
+
+                        <button
+                            type="button"
+                            class="course-faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Will I receive a certificate?
+                            </span>
+
+                            <i data-lucide="plus"></i>
+
+                        </button>
+
+
+                        <div class="course-faq-answer">
+
+                            <p>
+                                Students who complete the required course
+                                activities and assessment can receive a
+                                SkillForge course certificate.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="course-faq-item">
+
+                        <button
+                            type="button"
+                            class="course-faq-question"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Can I practise outside class hours?
+                            </span>
+
+                            <i data-lucide="plus"></i>
+
+                        </button>
+
+
+                        <div class="course-faq-answer">
+
+                            <p>
+                                Yes. Students can use the available
+                                practice activities to reinforce their
+                                learning.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             ENROLL SIDEBAR
+        ================================================== -->
+
+        <aside class="enrollment-sidebar">
+
+            <div class="enrollment-card">
+
+                <div class="enrollment-price">
+
+                    <span>
+                        Course Fee
+                    </span>
+
+                    <div>
+
+                        <strong id="coursePrice">
+                            ₹2,999
+                        </strong>
+
+                        <del id="courseOldPrice">
+                            ₹4,999
+                        </del>
+
+                    </div>
+
+                    <small id="courseDiscount">
+                        Limited-time offer
+                    </small>
+
+                </div>
+
+
+                <a
+                    href="signup.html"
+                    class="btn btn-primary enroll-button"
+                    id="enrollButton"
+                >
+                    Enroll Now
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+
+                <button
+                    type="button"
+                    class="wishlist-button"
+                    id="wishlistButton"
+                    aria-pressed="false"
+                >
+                    <i data-lucide="heart"></i>
+                    <span>
+                        Add to Wishlist
+                    </span>
+                </button>
+
+
+                <div class="enrollment-divider"></div>
+
+
+                <h3>
+                    This course includes:
+                </h3>
+
+
+                <ul class="course-includes">
+
+                    <li>
+                        <i data-lucide="play-circle"></i>
+                        <span>
+                            On-demand learning materials
+                        </span>
+                    </li>
+
+                    <li>
+                        <i data-lucide="book-open"></i>
+                        <span>
+                            Practical exercises
+                        </span>
+                    </li>
+
+                    <li>
+                        <i data-lucide="clipboard-check"></i>
+                        <span>
+                            Assessments
+                        </span>
+                    </li>
+
+                    <li>
+                        <i data-lucide="award"></i>
+                        <span>
+                            Course certificate
+                        </span>
+                    </li>
+
+                    <li>
+                        <i data-lucide="headphones"></i>
+                        <span>
+                            Learning support
+                        </span>
+                    </li>
+
+                    <li>
+                        <i data-lucide="infinity"></i>
+                        <span>
+                            Practice access
+                        </span>
+                    </li>
+
+                </ul>
+
+
+                <div class="secure-enrollment">
+
+                    <i data-lucide="shield-check"></i>
+
+                    <span>
+                        Secure enrollment
+                    </span>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RELATED COURSES
+====================================================== -->
+
+<section class="related-courses-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    Continue Learning
+                </span>
+
+                <h2>
+                    Related Courses
+                </h2>
+
+            </div>
+
+
+            <a
+                href="courses.html"
+                class="text-link"
+            >
+                View All Courses
+                <i data-lucide="arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="related-courses-grid">
+
+
+            <article class="related-course-card">
+
+                <div class="related-course-image">
+
+                    <img
+                        src="../assets/images/msoffice.jpg"
+                        alt="MS Office course"
+                    >
+
+                    <span>
+                        MS Office
+                    </span>
+
+                </div>
+
+
+                <div class="related-course-body">
+
+                    <div class="small-rating">
+                        ★★★★★
+                        <span>4.8</span>
+                    </div>
+
+                    <h3>
+                        MS Office Essentials
+                    </h3>
+
+                    <p>
+                        Learn practical Word, Excel and PowerPoint skills.
+                    </p>
+
+                    <a href="course-detail.html?course=ms-office">
+                        View Course
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="related-course-card">
+
+                <div class="related-course-image">
+
+                    <img
+                        src="../assets/images/advExcel.jpg"
+                        alt="Advanced Excel course"
+                    >
+
+                    <span>
+                        Excel
+                    </span>
+
+                </div>
+
+
+                <div class="related-course-body">
+
+                    <div class="small-rating">
+                        ★★★★★
+                        <span>4.9</span>
+                    </div>
+
+                    <h3>
+                        Advanced Excel
+                    </h3>
+
+                    <p>
+                        Build useful Excel skills for office and data work.
+                    </p>
+
+                    <a href="course-detail.html?course=excel">
+                        View Course
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="related-course-card">
+
+                <div class="related-course-image">
+
+                    <img
+                        src="../assets/images/tally.jpg"
+                        alt="Tally Prime course"
+                    >
+
+                    <span>
+                        Tally
+                    </span>
+
+                </div>
+
+
+                <div class="related-course-body">
+
+                    <div class="small-rating">
+                        ★★★★★
+                        <span>4.8</span>
+                    </div>
+
+                    <h3>
+                        Tally Prime
+                    </h3>
+
+                    <p>
+                        Learn accounting workflows and practical Tally usage.
+                    </p>
+
+                    <a href="course-detail.html?course=tally">
+                        View Course
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+====================================================== -->
+
+<section class="course-final-cta">
+
+    <div class="container">
+
+        <div class="course-final-inner">
+
+            <div>
+
+                <span>
+                    Start Your Learning Journey
+                </span>
+
+                <h2>
+                    Build practical skills that help you move forward.
+                </h2>
+
+            </div>
+
+
+            <div class="final-actions">
+
+                <a
+                    href="courses.html"
+                    class="btn btn-primary"
+                >
+                    Explore Courses
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="btn btn-outline"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="brand footer-logo"
+                    >
+
+                        <span class="brand-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </span>
+
+                        <span class="brand-text">
+                            Skill<span>Forge</span>
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Modern computer education and learning
+                        platform designed to help students build
+                        practical skills and career confidence.
+                    </p>
+
+
+                   <div class="social-links">
+
+                        <a href="#"
+                            aria-label="Facebook">
+                         <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L258.2 544L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96z"/></svg>
+                        </a>
+
+                        <a href="#"
+                            aria-label="LinkedIn">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z"/></svg>
+                        </a>
+
+                        <a href="#"
+                            aria-label="Instagram">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M290.4 275.7C274 286 264.5 304.5 265.5 323.8C266.6 343.2 278.2 360.4 295.6 368.9C313.1 377.3 333.8 375.5 349.6 364.3C366 354 375.5 335.5 374.5 316.2C373.4 296.8 361.8 279.6 344.4 271.1C326.9 262.7 306.2 264.5 290.4 275.7zM432.7 207.3C427.5 202.1 421.2 198 414.3 195.3C396.2 188.2 356.7 188.5 331.2 188.8C327.1 188.8 323.3 188.9 320 188.9C316.7 188.9 312.8 188.9 308.6 188.8C283.1 188.5 243.8 188.1 225.7 195.3C218.8 198 212.6 202.1 207.3 207.3C202 212.5 198 218.8 195.3 225.7C188.2 243.8 188.6 283.4 188.8 308.9C188.8 313 188.9 316.8 188.9 320C188.9 323.2 188.9 327 188.8 331.1C188.6 356.6 188.2 396.2 195.3 414.3C198 421.2 202.1 427.4 207.3 432.7C212.5 438 218.8 442 225.7 444.7C243.8 451.8 283.3 451.5 308.8 451.2C312.9 451.2 316.7 451.1 320 451.1C323.3 451.1 327.2 451.1 331.4 451.2C356.9 451.5 396.2 451.9 414.3 444.7C421.2 442 427.4 437.9 432.7 432.7C438 427.5 442 421.2 444.7 414.3C451.9 396.3 451.5 356.9 451.2 331.3C451.2 327.1 451.1 323.2 451.1 319.9C451.1 316.6 451.1 312.8 451.2 308.5C451.5 283 451.9 243.6 444.7 225.5C442 218.6 437.9 212.4 432.7 207.1L432.7 207.3zM365.6 251.8C383.7 263.9 396.2 282.7 400.5 304C404.8 325.3 400.3 347.5 388.2 365.6C382.2 374.6 374.5 382.2 365.6 388.2C356.7 394.2 346.6 398.3 336 400.4C314.7 404.6 292.5 400.2 274.4 388.1C256.3 376 243.8 357.2 239.5 335.9C235.2 314.6 239.7 292.4 251.7 274.3C263.7 256.2 282.6 243.7 303.9 239.4C325.2 235.1 347.4 239.6 365.5 251.6L365.6 251.6zM394.8 250.5C391.7 248.4 389.2 245.4 387.7 241.9C386.2 238.4 385.9 234.6 386.6 230.8C387.3 227 389.2 223.7 391.8 221C394.4 218.3 397.9 216.5 401.6 215.8C405.3 215.1 409.2 215.4 412.7 216.9C416.2 218.4 419.2 220.8 421.3 223.9C423.4 227 424.5 230.7 424.5 234.5C424.5 237 424 239.5 423.1 241.8C422.2 244.1 420.7 246.2 419 248C417.3 249.8 415.1 251.2 412.8 252.2C410.5 253.2 408 253.7 405.5 253.7C401.7 253.7 398 252.6 394.9 250.5L394.8 250.5zM544 160C544 124.7 515.3 96 480 96L160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160zM453 453C434.3 471.7 411.6 477.6 386 478.9C359.6 480.4 280.4 480.4 254 478.9C228.4 477.6 205.7 471.7 187 453C168.3 434.3 162.4 411.6 161.2 386C159.7 359.6 159.7 280.4 161.2 254C162.5 228.4 168.3 205.7 187 187C205.7 168.3 228.5 162.4 254 161.2C280.4 159.7 359.6 159.7 386 161.2C411.6 162.5 434.3 168.3 453 187C471.7 205.7 477.6 228.4 478.8 254C480.3 280.3 480.3 359.4 478.8 385.9C477.5 411.5 471.7 434.2 453 452.9L453 453z"/></svg>
+                        </a>
+
+                        <a href="#"
+                            aria-label="YouTube">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/></svg>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="courses.html">
+                        Courses
+                    </a>
+
+                    <a href="faculty.html">
+                        Faculty
+                    </a>
+
+                    <a href="batches.html">
+                        Batches
+                    </a>
+
+                    <a href="fees.html">
+                        Fees
+                    </a>
+
+                </div>
+
+
+                <!-- Courses -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Popular Courses
+                    </h3>
+
+                    <a href="course-detail.html?course=basic-computing">
+                        Basic Computing
+                    </a>
+
+                    <a href="course-detail.html?course=ms-office">
+                        MS Office
+                    </a>
+
+                    <a href="course-detail.html?course=tally-prime">
+                        Tally Prime
+                    </a>
+
+                    <a href="course-detail.html?course=advanced-excel">
+                        Advanced Excel
+                    </a>
+
+                    <a href="course-detail.html?course=typing">
+                        Typing Skills
+                    </a>
+
+                    <a href="course-detail.html?course=web-development">
+                        Web Development
+                    </a>
+
+                </div>
+
+
+                <!-- Student -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Student Portal
+                    </h3>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="student-dashboard.html">
+                        My Dashboard
+                    </a>
+
+                    <a href="practice.html">
+                        Practice
+                    </a>
+
+                    <a href="typing-test.html">
+                        Typing Test
+                    </a>
+
+                    <a href="progress.html">
+                        Track Progress
+                    </a>
+
+                    <a href="certificates.html">
+                        Certificates
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-contact">
+
+                <div>
+                    <i data-lucide="map-pin"></i>
+                    <span>
+                        Chennai, Tamil Nadu, India
+                    </span>
+                </div>
+
+                <div>
+                    <i data-lucide="phone"></i>
+                    <span>
+                        +91 98765 43210
+                    </span>
+                </div>
+
+                <div>
+                    <i data-lucide="mail"></i>
+                    <span>
+                        hello@skillforge.in
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 SkillForge. All rights reserved.
+                </p>
+
+                <div>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+<!-- Toast -->
+<div
+    class="course-toast"
+    id="courseToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Common JS -->
+<script src="../assets/js/main.js"></script>
+
+
+
+</body>
+</html>

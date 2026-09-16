@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SkillForge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+
+    <!-- RTL -->
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="container navbar">
+
+
+        <!-- Brand -->
+
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="SkillForge Home">
+
+            <span class="brand-icon">
+                <i data-lucide="graduation-cap"></i>
+            </span>
+
+            <span class="brand-text">
+                Skill<span>Forge</span>
+            </span>
+
+        </a>
+
+
+        <!-- Search -->
+
+        <div class="header-search">
+
+            <form
+                class="search-form"
+                id="globalSearch">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="search"
+                    placeholder="Search courses..."
+                    aria-label="Search courses">
+
+                <button
+                    type="submit"
+                    aria-label="Search">
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Desktop Navigation -->
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation">
+
+            <a
+                href="../index.html"
+                class="nav-link">
+
+                Home
+
+            </a>
+
+            <a
+                href="home2.html"
+                class="nav-link active">
+
+                Home 2
+
+            </a>
+
+            <a
+                href="about.html"
+                class="nav-link">
+
+                About
+
+            </a>
+
+            <a
+                href="courses.html"
+                class="nav-link">
+
+                Courses
+
+            </a>
+
+            <a
+                href="blog.html"
+                class="nav-link">
+
+                Blog
+
+            </a>
+
+            <a
+                href="contact.html"
+                class="nav-link">
+
+                Contact
+
+            </a>
+
+        </nav>
+
+
+        <!-- Actions -->
+
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle dark mode"
+                aria-pressed="false">
+
+                <i
+                    data-lucide="moon"
+                    id="themeIcon"></i>
+
+            </button>
+
+
+            <button
+                class="icon-button"
+                id="rtlToggle"
+                type="button"
+                aria-label="Toggle RTL"
+                aria-pressed="false">
+
+                <i data-lucide="languages"></i>
+
+            </button>
+
+
+            <a
+                href="login.html"
+                class="login-link">
+
+                Login
+
+            </a>
+
+
+            <a
+                href="signup.html"
+                class="btn btn-primary btn-small">
+
+                Sign Up
+
+            </a>
+
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i data-lucide="menu"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mobile Navigation -->
+
+    <nav
+        class="mobile-nav"
+        id="mobileNav">
+
+        <div class="container mobile-nav-content">
+
+            <a
+                href="../index.html"
+                class="mobile-nav-link">
+
+                Home
+
+            </a>
+
+            <a
+                href="home-2.html"
+                class="mobile-nav-link ">
+
+                Home 2
+
+            </a>
+
+            <a
+                href="about.html"
+                class="mobile-nav-link">
+
+                About
+
+            </a>
+
+            <a
+                href="courses.html"
+                class="mobile-nav-link">
+
+                Courses
+
+            </a>
+
+            <a
+                href="blog.html"
+                class="mobile-nav-link">
+
+                Blog
+
+            </a>
+
+            <a
+                href="contact.html"
+                class="mobile-nav-link">
+
+                Contact
+
+            </a>
+
+
+            <div class="mobile-nav-buttons">
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline">
+
+                    Login
+
+                </a>
+
+                <a
+                    href="signup.html"
+                    class="btn btn-primary">
+
+                    Sign Up
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= MOBILE NAV ================= -->
+
+<div class="mobile-nav" id="mobileNav">
+
+    <a href="../index.html">Home</a>
+    <a href="home2.html">Home 2</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="mobile-nav-buttons">
+        <a href="login.html" class="login-btn active">Login</a>
+        <a href="signup.html" class="signup-btn">Sign Up</a>
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN SECTION ================= -->
+
+<main class="login-page">
+
+    <div class="login-bg-shape login-shape-one"></div>
+    <div class="login-bg-shape login-shape-two"></div>
+
+    <div class="container">
+
+        <div class="login-wrapper">
+
+            <!-- Left Content -->
+            <div class="login-content">
+
+                <span class="section-badge">
+                    <i class="fa-solid fa-lock"></i>
+                    Welcome Back
+                </span>
+
+                <h1>
+                    Continue Your
+                    <span>Learning Journey</span>
+                </h1>
+
+                <p>
+                    Login to your SkillForge account and continue
+                    learning, track your progress, access courses,
+                    and build the skills you need for your career.
+                </p>
+
+                <div class="login-features">
+
+                    <div class="login-feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <div>
+                            <h3>Access Your Courses</h3>
+                            <p>Continue learning from where you stopped.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="login-feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div>
+                            <h3>Track Your Progress</h3>
+                            <p>Monitor your learning and achievements.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="login-feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+
+                        <div>
+                            <h3>Earn Certificates</h3>
+                            <p>Complete courses and showcase your skills.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Login Card -->
+            <div class="login-card">
+
+                <div class="login-card-header">
+
+                    <div class="login-card-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h2>Welcome Back!</h2>
+
+                    <p>
+                        Login to access your SkillForge account
+                    </p>
+
+                </div>
+
+
+                <!-- Message -->
+                <div
+                    class="login-message"
+                    id="loginMessage"
+                ></div>
+
+
+                <form id="loginForm" novalidate>
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+                        <small
+                            class="field-error"
+                            id="emailError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <a
+                                href="#"
+                                id="forgotPassword"
+                            >
+                                Forgot Password?
+                            </a>
+
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                                aria-label="Show password"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="field-error"
+                            id="passwordError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+                    <div class="remember-row">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-submit-btn"
+                        id="loginSubmitBtn"
+                    >
+                        <span>Login</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+                <div class="login-divider">
+                    <span>OR</span>
+                </div>
+
+
+                <!-- Signup -->
+                <div class="signup-link">
+
+                    <p>
+                        Don't have an account?
+                        <a href="signup.html">
+                            Create an account
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="brand">
+
+                    <span class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Skill<span>Forge</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Modern computer education and practical
+                    career training for students, beginners
+                    and professionals.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+                <a href="instructors.html">
+                    Faculty
+                </a>
+
+                <a href="batches.html">
+                    Batches
+                </a>
+
+                <a href="fees.html">
+                    Fees
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Popular Courses
+                </h3>
+
+                <a href="course-detail.html?course=basic-computing">
+                    Basic Computing
+                </a>
+
+                <a href="course-detail.html?course=ms-office">
+                    MS Office
+                </a>
+
+                <a href="course-detail.html?course=tally">
+                    Tally Prime
+                </a>
+
+                <a href="course-detail.html?course=advanced-excel">
+                    Advanced Excel
+                </a>
+
+                <a href="typing-test.html">
+                    Typing Practice
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Student Portal
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="student-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="typing-test.html">
+                    Practice
+                </a>
+
+                <a href="progress.html">
+                    Progress
+                </a>
+
+                <a href="certificates.html">
+                    Certificates
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-contact">
+
+            <div>
+
+                <i data-lucide="map-pin"></i>
+
+                <span>
+                    Chennai, Tamil Nadu
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i data-lucide="phone"></i>
+
+                <span>
+                    +91 98765 43210
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i data-lucide="mail"></i>
+
+                <span>
+                    hello@skillforge.in
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SkillForge. All rights reserved.
+            </p>
+
+            <div>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Common JS -->
+<script src="../assets/js/main.js"></script>
+
+
+
+</body>
+</html>

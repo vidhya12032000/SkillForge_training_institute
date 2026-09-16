@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Read SkillForge articles about computer skills, Tally, MS Office, Excel, typing, digital skills and career development.">
+
+    <meta name="keywords"
+        content="computer education blog, Excel tips, Tally tips, MS Office, typing tips, digital skills, career tips">
+
+    <meta name="author" content="SkillForge">
+    <meta name="theme-color" content="#f97316">
+
+    <title>Blog | SkillForge - Computer Education & Career Skills</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container">
+
+            <nav class="navbar" aria-label="Main navigation">
+
+                <!-- Brand -->
+                <a href="../index.html"
+                    class="brand"
+                    aria-label="SkillForge Home">
+
+                    <span class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Skill<span>Forge</span>
+                    </span>
+
+                </a>
+
+
+                <!-- Search -->
+                <div class="header-search">
+
+                    <form class="search-form"
+                        id="globalSearchForm"
+                        role="search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="globalSearch"
+                            placeholder="Search courses..."
+                            aria-label="Search courses">
+
+                        <button type="submit"
+                            aria-label="Search">
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+
+                    <a href="../index.html"
+                        class="nav-link">
+                        Home
+                    </a>
+
+                    <a href="home2.html"
+                        class="nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html"
+                        class="nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html"
+                        class="nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html"
+                        class="nav-link active">
+                        Blog
+                    </a>
+
+                    <a href="contact.html"
+                        class="nav-link">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+
+                    <!-- Theme -->
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                        aria-pressed="false"
+                        title="Toggle theme">
+
+                        <i data-lucide="sun"
+                            id="themeIcon"></i>
+
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="icon-button rtl-button"
+                        id="rtlToggle"
+                        type="button"
+                        aria-label="Switch to right-to-left layout"
+                        aria-pressed="false"
+                        title="Toggle RTL">
+
+                        <i data-lucide="languages"></i>
+
+                    </button>
+
+
+                    <!-- Login -->
+                    <a href="login.html"
+                        class="login-link">
+                        Login
+                    </a>
+
+
+                    <!-- Sign Up -->
+                    <a href="signup.html"
+                        class="btn btn-primary btn-small">
+                        Sign Up
+                    </a>
+
+
+                    <!-- Mobile Menu -->
+                    <button
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNav">
+
+                        <i data-lucide="menu"></i>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav"
+            id="mobileNav">
+
+            <div class="container">
+
+                <div class="mobile-nav-content">
+
+                    <a href="../index.html"
+                        class="mobile-nav-link">
+                        Home
+                    </a>
+
+                    <a href="home2.html"
+                        class="mobile-nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html"
+                        class="mobile-nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html"
+                        class="mobile-nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html"
+                        class="mobile-nav-link active">
+                        Blog
+                    </a>
+
+                    <a href="contact.html"
+                        class="mobile-nav-link">
+                        Contact
+                    </a>
+
+
+                    <div class="mobile-nav-buttons">
+
+                        <a href="login.html"
+                            class="btn btn-outline">
+                            Login
+                        </a>
+
+                        <a href="signup.html"
+                            class="btn btn-primary">
+                            Sign Up
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main>
+
+        <!-- =====================================================
+             BLOG HERO
+        ====================================================== -->
+
+        <section class="blog-hero">
+
+            <div class="blog-hero-shape blog-shape-one"></div>
+            <div class="blog-hero-shape blog-shape-two"></div>
+
+            <div class="container">
+
+                <div class="blog-hero-content reveal">
+
+                    <span class="section-eyebrow">
+                        SkillForge Blog
+                    </span>
+
+                    <h1>
+                        Learn More.
+                        <span>Grow Faster.</span>
+                    </h1>
+
+                    <p>
+                        Practical tips, learning resources and career
+                        guidance to help you build useful computer skills
+                        with confidence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BLOG CONTROLS
+        ====================================================== -->
+
+        <section class="blog-controls-section">
+
+            <div class="container">
+
+                <div class="blog-controls reveal">
+
+                    <!-- Search -->
+                    <div class="blog-search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="blogSearch"
+                            placeholder="Search articles..."
+                            aria-label="Search articles">
+
+                    </div>
+
+
+                    <!-- Category Filter -->
+                    <div class="blog-categories"
+                        role="group"
+                        aria-label="Blog categories">
+
+                        <button
+                            class="blog-filter active"
+                            data-category="all"
+                            type="button">
+                            All
+                        </button>
+
+                        <button
+                            class="blog-filter"
+                            data-category="computer"
+                            type="button">
+                            Computer Skills
+                        </button>
+
+                        <button
+                            class="blog-filter"
+                            data-category="excel"
+                            type="button">
+                            Excel
+                        </button>
+
+                        <button
+                            class="blog-filter"
+                            data-category="tally"
+                            type="button">
+                            Tally
+                        </button>
+
+                        <button
+                            class="blog-filter"
+                            data-category="career"
+                            type="button">
+                            Career
+                        </button>
+
+                        <button
+                            class="blog-filter"
+                            data-category="typing"
+                            type="button">
+                            Typing
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FEATURED ARTICLE
+        ====================================================== -->
+
+        <section class="section featured-blog-section">
+
+            <div class="container">
+
+                <article class="featured-blog-card reveal">
+
+                    <div class="featured-blog-image">
+
+                        <img
+                            src="../assets/images/class.jpg"
+                            alt="Students learning computer skills"
+                            loading="lazy">
+
+                        <span class="featured-badge">
+                            Featured
+                        </span>
+
+                    </div>
+
+
+                    <div class="featured-blog-content">
+
+                        <div class="blog-meta">
+
+                            <span>
+                                <i data-lucide="calendar"></i>
+                                September 10, 2026
+                            </span>
+
+                            <span>
+                                <i data-lucide="clock"></i>
+                                6 min read
+                            </span>
+
+                        </div>
+
+
+                        <span class="blog-category">
+                            Career
+                        </span>
+
+
+                        <h2>
+                            How to Build Practical Computer Skills
+                            for Today's Workplace
+                        </h2>
+
+
+                        <p>
+                            Discover the essential computer skills that
+                            can help students and job seekers become more
+                            confident in everyday academic and professional
+                            tasks.
+                        </p>
+
+
+                        <div class="featured-blog-footer">
+
+                            <div class="blog-author">
+
+                                <img
+                                    src="../assets/images/profile2.jpg"
+                                    alt="SkillForge trainer">
+
+                                <div>
+                                    <strong>
+                                        SkillForge Team
+                                    </strong>
+
+                                    <span>
+                                        Learning & Career
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <a href="blog-detail.html?post=computer-skills"
+                                class="btn btn-primary">
+
+                                Read Article
+
+                                <i data-lucide="arrow-up-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BLOG ARTICLES
+        ====================================================== -->
+
+        <section class="section blog-section">
+
+            <div class="container">
+
+                <div class="section-header centered reveal">
+
+                    <span class="section-eyebrow">
+                        Latest Articles
+                    </span>
+
+                    <h2 class="section-heading">
+                        Practical Knowledge for Your Growth
+                    </h2>
+
+                    <p>
+                        Explore simple and useful articles covering
+                        computer skills, workplace tools and career
+                        development.
+                    </p>
+
+                </div>
+
+
+                <div class="blog-grid"
+                    id="blogGrid">
+
+
+                    <!-- Article 1 -->
+                    <article
+                        class="blog-card reveal"
+                        data-category="computer"
+                        data-title="Essential Computer Skills Every Beginner Should Learn">
+
+                        <div class="blog-card-image">
+
+                            <img
+                                src="../assets/images/basicComputing.jpg"
+                                alt="Basic computer skills"
+                                loading="lazy">
+
+                            <span class="blog-card-category">
+                                Computer Skills
+                            </span>
+
+                        </div>
+
+
+                        <div class="blog-card-content">
+
+                            <div class="blog-meta">
+
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Sep 08, 2026
+                                </span>
+
+                                <span>
+                                    5 min read
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Essential Computer Skills Every Beginner
+                                Should Learn
+                            </h3>
+
+                            <p>
+                                Learn the basic computer concepts,
+                                files, folders, internet and email skills
+                                useful for everyday work.
+                            </p>
+
+
+                            <a href="blog-detail.html?post=computer-basics"
+                                class="blog-read-link">
+
+                                Read More
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Article 2 -->
+                    <article
+                        class="blog-card reveal"
+                        data-category="excel"
+                        data-title="Excel Skills That Can Improve Workplace Productivity">
+
+                        <div class="blog-card-image">
+
+                            <img
+                                src="../assets/images/advExcel.jpg"
+                                alt="Advanced Excel skills"
+                                loading="lazy">
+
+                            <span class="blog-card-category">
+                                Excel
+                            </span>
+
+                        </div>
+
+
+                        <div class="blog-card-content">
+
+                            <div class="blog-meta">
+
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Sep 06, 2026
+                                </span>
+
+                                <span>
+                                    7 min read
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Excel Skills That Can Improve Workplace
+                                Productivity
+                            </h3>
+
+                            <p>
+                                Understand formulas, sorting, filtering,
+                                pivot tables and dashboards for practical
+                                workplace tasks.
+                            </p>
+
+
+                            <a href="blog-detail.html?post=excel-productivity"
+                                class="blog-read-link">
+
+                                Read More
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Article 3 -->
+                    <article
+                        class="blog-card reveal"
+                        data-category="tally"
+                        data-title="Why Tally Prime Skills Matter for Accounting Jobs">
+
+                        <div class="blog-card-image">
+
+                            <img
+                                src="../assets/images/tally.jpg"
+                                alt="Tally Prime training"
+                                loading="lazy">
+
+                            <span class="blog-card-category">
+                                Tally
+                            </span>
+
+                        </div>
+
+
+                        <div class="blog-card-content">
+
+                            <div class="blog-meta">
+
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Sep 04, 2026
+                                </span>
+
+                                <span>
+                                    6 min read
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Why Tally Prime Skills Matter for
+                                Accounting Jobs
+                            </h3>
+
+                            <p>
+                                Explore the practical Tally concepts
+                                beginners can learn for accounting and
+                                business-related workplace tasks.
+                            </p>
+
+
+                            <a href="blog-detail.html?post=tally-career"
+                                class="blog-read-link">
+
+                                Read More
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Article 4 -->
+                    <article
+                        class="blog-card reveal"
+                        data-category="typing"
+                        data-title="How to Improve Typing Speed and Accuracy">
+
+                        <div class="blog-card-image">
+
+                            <img
+                                src="../assets/images/videoframe_2867.png"
+                                alt="Typing practice"
+                                loading="lazy">
+
+                            <span class="blog-card-category">
+                                Typing
+                            </span>
+
+                        </div>
+
+
+                        <div class="blog-card-content">
+
+                            <div class="blog-meta">
+
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Sep 02, 2026
+                                </span>
+
+                                <span>
+                                    4 min read
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                How to Improve Typing Speed and Accuracy
+                            </h3>
+
+                            <p>
+                                Learn simple practice methods to improve
+                                typing speed while maintaining accuracy
+                                and consistency.
+                            </p>
+
+
+                            <a href="blog-detail.html?post=typing-speed"
+                                class="blog-read-link">
+
+                                Read More
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Article 5 -->
+                    <article
+                        class="blog-card reveal"
+                        data-category="career"
+                        data-title="How to Prepare for Your First IT Interview">
+
+                        <div class="blog-card-image">
+
+                            <img
+                                src="../assets/images/webdev.jpg"
+                                alt="IT career preparation"
+                                loading="lazy">
+
+                            <span class="blog-card-category">
+                                Career
+                            </span>
+
+                        </div>
+
+
+                        <div class="blog-card-content">
+
+                            <div class="blog-meta">
+
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Aug 30, 2026
+                                </span>
+
+                                <span>
+                                    8 min read
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                How to Prepare for Your First IT Interview
+                            </h3>
+
+                            <p>
+                                A practical guide to preparing projects,
+                                technical concepts, communication and
+                                common interview questions.
+                            </p>
+
+
+                            <a href="blog-detail.html?post=it-interview"
+                                class="blog-read-link">
+
+                                Read More
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Article 6 -->
+                    <article
+                        class="blog-card reveal"
+                        data-category="computer"
+                        data-title="Digital Skills Every Student Should Develop">
+
+                        <div class="blog-card-image">
+
+                            <img
+                                src="../assets/images/msoffice.jpg"
+                                alt="Digital skills learning"
+                                loading="lazy">
+
+                            <span class="blog-card-category">
+                                Computer Skills
+                            </span>
+
+                        </div>
+
+
+                        <div class="blog-card-content">
+
+                            <div class="blog-meta">
+
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Aug 27, 2026
+                                </span>
+
+                                <span>
+                                    5 min read
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Digital Skills Every Student Should Develop
+                            </h3>
+
+                            <p>
+                                Build confidence with documents,
+                                presentations, online tools, digital
+                                communication and workplace technology.
+                            </p>
+
+
+                            <a href="blog-detail.html?post=digital-skills"
+                                class="blog-read-link">
+
+                                Read More
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Empty State -->
+
+                <div class="blog-empty"
+                    id="blogEmpty"
+                    hidden>
+
+                    <div class="blog-empty-icon">
+                        <i data-lucide="search-x"></i>
+                    </div>
+
+                    <h3>
+                        No articles found
+                    </h3>
+
+                    <p>
+                        Try another search term or choose a different
+                        category.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        id="resetBlog">
+
+                        Reset Filters
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             NEWSLETTER
+        ====================================================== -->
+
+        <section class="blog-newsletter-section">
+
+            <div class="container">
+
+                <div class="blog-newsletter reveal">
+
+                    <div class="newsletter-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+
+                    <div class="newsletter-content">
+
+                        <span class="section-eyebrow">
+                            Stay Updated
+                        </span>
+
+                        <h2>
+                            Get New Learning Tips
+                        </h2>
+
+                        <p>
+                            Subscribe for practical computer tips,
+                            career guidance and new SkillForge articles.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        class="newsletter-form"
+                        id="newsletterForm"
+                        novalidate>
+
+                        <label
+                            for="newsletterEmail"
+                            class="sr-only">
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            Subscribe
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+
+                    <p
+                        class="newsletter-message"
+                        id="newsletterMessage"
+                        aria-live="polite">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="section cta-section">
+
+            <div class="container">
+
+                <div class="cta-box reveal">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            Keep Learning
+                        </span>
+
+                        <h2>
+                            Ready to Build Your Next Skill?
+                        </h2>
+
+                        <p>
+                            Explore SkillForge courses and turn
+                            knowledge into practical skills.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-buttons">
+
+                        <a href="courses.html"
+                            class="btn btn-primary">
+
+                            Explore Courses
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </a>
+
+                        <a href="contact.html"
+                            class="btn btn-outline">
+
+                            Contact Us
+
+                            <i data-lucide="message-circle"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="brand">
+
+                    <span class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Skill<span>Forge</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Modern computer education and practical
+                    career training for students, beginners
+                    and professionals.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+                <a href="instructors.html">
+                    Faculty
+                </a>
+
+                <a href="batches.html">
+                    Batches
+                </a>
+
+                <a href="fees.html">
+                    Fees
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Popular Courses
+                </h3>
+
+                <a href="course-detail.html?course=basic-computing">
+                    Basic Computing
+                </a>
+
+                <a href="course-detail.html?course=ms-office">
+                    MS Office
+                </a>
+
+                <a href="course-detail.html?course=tally">
+                    Tally Prime
+                </a>
+
+                <a href="course-detail.html?course=advanced-excel">
+                    Advanced Excel
+                </a>
+
+                <a href="typing-test.html">
+                    Typing Practice
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Student Portal
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="student-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="typing-test.html">
+                    Practice
+                </a>
+
+                <a href="progress.html">
+                    Progress
+                </a>
+
+                <a href="certificates.html">
+                    Certificates
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-contact">
+
+            <div>
+
+                <i data-lucide="map-pin"></i>
+
+                <span>
+                    Chennai, Tamil Nadu
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i data-lucide="phone"></i>
+
+                <span>
+                    +91 98765 43210
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i data-lucide="mail"></i>
+
+                <span>
+                    hello@skillforge.in
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SkillForge. All rights reserved.
+            </p>
+
+            <div>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <!-- Back To Top -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top">
+
+        <i data-lucide="arrow-up"></i>
+
+    </button>
+
+
+    <!-- Common JS -->
+    <script src="../assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>

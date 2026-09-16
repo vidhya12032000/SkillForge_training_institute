@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upcoming Batches | SkillForge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    >
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+
+    <!-- RTL -->
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="container navbar">
+
+
+        <!-- Brand -->
+
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="SkillForge Home">
+
+            <span class="brand-icon">
+                <i data-lucide="graduation-cap"></i>
+            </span>
+
+            <span class="brand-text">
+                Skill<span>Forge</span>
+            </span>
+
+        </a>
+
+
+        <!-- Search -->
+
+        <div class="header-search">
+
+            <form
+                class="search-form"
+                id="globalSearch">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="search"
+                    placeholder="Search courses..."
+                    aria-label="Search courses">
+
+                <button
+                    type="submit"
+                    aria-label="Search">
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Desktop Navigation -->
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation">
+
+            <a
+                href="../index.html"
+                class="nav-link">
+
+                Home
+
+            </a>
+
+            <a
+                href="home2.html"
+                class="nav-link active">
+
+                Home 2
+
+            </a>
+
+            <a
+                href="about.html"
+                class="nav-link">
+
+                About
+
+            </a>
+
+            <a
+                href="courses.html"
+                class="nav-link">
+
+                Courses
+
+            </a>
+
+            <a
+                href="blog.html"
+                class="nav-link">
+
+                Blog
+
+            </a>
+
+            <a
+                href="contact.html"
+                class="nav-link">
+
+                Contact
+
+            </a>
+
+        </nav>
+
+
+        <!-- Actions -->
+
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle dark mode"
+                aria-pressed="false">
+
+                <i
+                    data-lucide="moon"
+                    id="themeIcon"></i>
+
+            </button>
+
+
+            <button
+                class="icon-button"
+                id="rtlToggle"
+                type="button"
+                aria-label="Toggle RTL"
+                aria-pressed="false">
+
+                <i data-lucide="languages"></i>
+
+            </button>
+
+
+            <a
+                href="login.html"
+                class="login-link">
+
+                Login
+
+            </a>
+
+
+            <a
+                href="signup.html"
+                class="btn btn-primary btn-small">
+
+                Sign Up
+
+            </a>
+
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <i data-lucide="menu"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mobile Navigation -->
+
+    <nav
+        class="mobile-nav"
+        id="mobileNav">
+
+        <div class="container mobile-nav-content">
+
+            <a
+                href="../index.html"
+                class="mobile-nav-link">
+
+                Home
+
+            </a>
+
+            <a
+                href="home-2.html"
+                class="mobile-nav-link active">
+
+                Home 2
+
+            </a>
+
+            <a
+                href="about.html"
+                class="mobile-nav-link">
+
+                About
+
+            </a>
+
+            <a
+                href="courses.html"
+                class="mobile-nav-link">
+
+                Courses
+
+            </a>
+
+            <a
+                href="blog.html"
+                class="mobile-nav-link">
+
+                Blog
+
+            </a>
+
+            <a
+                href="contact.html"
+                class="mobile-nav-link">
+
+                Contact
+
+            </a>
+
+
+            <div class="mobile-nav-buttons">
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline">
+
+                    Login
+
+                </a>
+
+                <a
+                    href="signup.html"
+                    class="btn btn-primary">
+
+                    Sign Up
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ==================================================
+     MOBILE NAV
+================================================== -->
+
+<div class="mobile-nav" id="mobileNav">
+
+    <a href="../index.html">Home</a>
+
+    <a href="home2.html">Home 2</a>
+
+    <a href="about.html">About</a>
+
+    <a href="courses.html">Courses</a>
+
+    <a href="blog.html">Blog</a>
+
+    <a href="contact.html">Contact</a>
+
+    <div class="mobile-nav-buttons">
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+        <a href="signup.html" class="signup-btn">
+            Sign Up
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     BATCHES HERO
+================================================== -->
+
+<main>
+
+<section class="batches-hero">
+
+    <div class="container">
+
+        <div class="batches-hero-content">
+
+            <span class="section-badge">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                Upcoming Batches
+
+            </span>
+
+
+            <h1>
+
+                Start Learning With Our
+                <span>Upcoming Batches</span>
+
+            </h1>
+
+
+            <p>
+
+                Choose a batch that fits your schedule and
+                start building practical technology skills
+                with expert instructors.
+
+            </p>
+
+
+            <div class="batches-hero-actions">
+
+                <a
+                    href="#upcomingBatches"
+                    class="primary-btn"
+                >
+
+                    View Batches
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="secondary-btn"
+                >
+
+                    Talk to Us
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     BATCH FILTER
+================================================== -->
+
+<section class="batch-filter-section">
+
+    <div class="container">
+
+        <div class="batch-filter">
+
+            <div class="filter-heading">
+
+                <span>
+                    Find Your Batch
+                </span>
+
+                <h2>
+                    Explore Available Batches
+                </h2>
+
+            </div>
+
+
+            <div class="batch-filter-buttons">
+
+                <button
+                    class="batch-filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="batch-filter-btn"
+                    data-filter="frontend"
+                >
+                    Frontend
+                </button>
+
+                <button
+                    class="batch-filter-btn"
+                    data-filter="fullstack"
+                >
+                    Full Stack
+                </button>
+
+                <button
+                    class="batch-filter-btn"
+                    data-filter="backend"
+                >
+                    Backend
+                </button>
+
+                <button
+                    class="batch-filter-btn"
+                    data-filter="database"
+                >
+                    Database
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     UPCOMING BATCHES
+================================================== -->
+
+<section
+    class="upcoming-batches section-padding"
+    id="upcomingBatches"
+>
+
+    <div class="container">
+
+        <div class="section-heading-center">
+
+            <span class="section-label">
+                Join Our Classes
+            </span>
+
+            <h2>
+                Upcoming Batches
+            </h2>
+
+            <p>
+                Choose a course and reserve your seat
+                for the upcoming learning cycle.
+            </p>
+
+        </div>
+
+
+        <div class="batch-grid">
+
+
+            <!-- React -->
+
+            <article
+                class="batch-card"
+                data-category="frontend"
+            >
+
+                <div class="batch-card-top">
+
+                    <span class="batch-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Enrolling
+                    </span>
+
+                    <span class="batch-seats">
+                        12 Seats Left
+                    </span>
+
+                </div>
+
+
+                <div class="batch-course-icon react-icon">
+
+                    <i class="fa-brands fa-react"></i>
+
+                </div>
+
+
+                <span class="batch-category">
+                    Frontend Development
+                </span>
+
+
+                <h3>
+                    React JS Development
+                </h3>
+
+
+                <p>
+                    Learn React, Hooks, Router, Context,
+                    API integration and modern frontend development.
+                </p>
+
+
+                <div class="batch-info-list">
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <span>
+                            Sep 28, 2026
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            7:00 PM - 9:00 PM
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span>
+                            Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="batch-card-footer">
+
+                    <div class="batch-price">
+
+                        <small>
+                            Course Fee
+                        </small>
+
+                        <strong>
+                            ₹12,999
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="course-detail.html"
+                        class="batch-join-btn"
+                    >
+                        Join Batch
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Java Full Stack -->
+
+            <article
+                class="batch-card"
+                data-category="fullstack"
+            >
+
+                <div class="batch-card-top">
+
+                    <span class="batch-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Enrolling
+                    </span>
+
+                    <span class="batch-seats">
+                        8 Seats Left
+                    </span>
+
+                </div>
+
+
+                <div class="batch-course-icon java-icon">
+
+                    <i class="fa-brands fa-java"></i>
+
+                </div>
+
+
+                <span class="batch-category">
+                    Full Stack Development
+                </span>
+
+
+                <h3>
+                    Java Full Stack Development
+                </h3>
+
+
+                <p>
+                    Master Core Java, Spring Boot, REST APIs,
+                    PostgreSQL and full stack development.
+                </p>
+
+
+                <div class="batch-info-list">
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <span>
+                            Oct 05, 2026
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            6:30 PM - 8:30 PM
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span>
+                            Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="batch-card-footer">
+
+                    <div class="batch-price">
+
+                        <small>
+                            Course Fee
+                        </small>
+
+                        <strong>
+                            ₹18,999
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="course-detail.html"
+                        class="batch-join-btn"
+                    >
+                        Join Batch
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Node -->
+
+            <article
+                class="batch-card"
+                data-category="backend"
+            >
+
+                <div class="batch-card-top">
+
+                    <span class="batch-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Enrolling
+                    </span>
+
+                    <span class="batch-seats">
+                        15 Seats Left
+                    </span>
+
+                </div>
+
+
+                <div class="batch-course-icon node-icon">
+
+                    <i class="fa-brands fa-node-js"></i>
+
+                </div>
+
+
+                <span class="batch-category">
+                    Backend Development
+                </span>
+
+
+                <h3>
+                    Node.js & Express
+                </h3>
+
+
+                <p>
+                    Build backend applications using Node.js,
+                    Express, REST APIs, authentication and databases.
+                </p>
+
+
+                <div class="batch-info-list">
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <span>
+                            Oct 12, 2026
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            7:00 PM - 9:00 PM
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span>
+                            Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="batch-card-footer">
+
+                    <div class="batch-price">
+
+                        <small>
+                            Course Fee
+                        </small>
+
+                        <strong>
+                            ₹10,999
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="course-detail.html"
+                        class="batch-join-btn"
+                    >
+                        Join Batch
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PostgreSQL -->
+
+            <article
+                class="batch-card"
+                data-category="database"
+            >
+
+                <div class="batch-card-top">
+
+                    <span class="batch-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Enrolling
+                    </span>
+
+                    <span class="batch-seats">
+                        20 Seats Left
+                    </span>
+
+                </div>
+
+
+                <div class="batch-course-icon database-icon">
+
+                    <i class="fa-solid fa-database"></i>
+
+                </div>
+
+
+                <span class="batch-category">
+                    Database
+                </span>
+
+
+                <h3>
+                    PostgreSQL & SQL
+                </h3>
+
+
+                <p>
+                    Learn SQL queries, joins, relationships,
+                    database design, PostgreSQL and optimization.
+                </p>
+
+
+                <div class="batch-info-list">
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <span>
+                            Oct 18, 2026
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            10:00 AM - 12:00 PM
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span>
+                            Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="batch-card-footer">
+
+                    <div class="batch-price">
+
+                        <small>
+                            Course Fee
+                        </small>
+
+                        <strong>
+                            ₹7,999
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="course-detail.html"
+                        class="batch-join-btn"
+                    >
+                        Join Batch
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     BATCH SCHEDULE
+================================================== -->
+
+<section class="batch-schedule section-padding">
+
+    <div class="container">
+
+        <div class="section-heading-center">
+
+            <span class="section-label">
+                Flexible Learning
+            </span>
+
+            <h2>
+                Choose Your Learning Schedule
+            </h2>
+
+            <p>
+                Different schedules to fit your daily routine.
+            </p>
+
+        </div>
+
+
+        <div class="schedule-grid">
+
+
+            <div class="schedule-card">
+
+                <div class="schedule-icon">
+
+                    <i class="fa-solid fa-sun"></i>
+
+                </div>
+
+                <h3>
+                    Weekday Morning
+                </h3>
+
+                <p>
+                    Monday - Friday
+                </p>
+
+                <strong>
+                    10:00 AM - 12:00 PM
+                </strong>
+
+                <span>
+                    Suitable for full-time learners
+                </span>
+
+            </div>
+
+
+            <div class="schedule-card featured">
+
+                <span class="popular-badge">
+                    Popular
+                </span>
+
+                <div class="schedule-icon">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </div>
+
+                <h3>
+                    Weekday Evening
+                </h3>
+
+                <p>
+                    Monday - Friday
+                </p>
+
+                <strong>
+                    7:00 PM - 9:00 PM
+                </strong>
+
+                <span>
+                    Suitable for working professionals
+                </span>
+
+            </div>
+
+
+            <div class="schedule-card">
+
+                <div class="schedule-icon">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                </div>
+
+                <h3>
+                    Weekend
+                </h3>
+
+                <p>
+                    Saturday & Sunday
+                </p>
+
+                <strong>
+                    10:00 AM - 1:00 PM
+                </strong>
+
+                <span>
+                    Suitable for busy learners
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     WHY JOIN
+================================================== -->
+
+<section class="batch-benefits section-padding">
+
+    <div class="container">
+
+        <div class="section-heading-center">
+
+            <span class="section-label">
+                Learn With SkillForge
+            </span>
+
+            <h2>
+                What You Get With Every Batch
+            </h2>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+                <h3>
+                    Expert Instructors
+                </h3>
+
+                <p>
+                    Learn concepts through practical examples
+                    and instructor guidance.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h3>
+                    Hands-on Projects
+                </h3>
+
+                <p>
+                    Build real-world projects and strengthen
+                    your development skills.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+
+                <h3>
+                    Doubt Support
+                </h3>
+
+                <p>
+                    Get guidance and support when you are
+                    stuck while learning.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+
+                <h3>
+                    Course Certificate
+                </h3>
+
+                <p>
+                    Receive a certificate after successfully
+                    completing your course.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     CTA
+================================================== -->
+
+<section class="batches-cta">
+
+    <div class="container">
+
+        <div class="batches-cta-content">
+
+            <div>
+
+                <span>
+                    Ready to Start?
+                </span>
+
+                <h2>
+                    Reserve Your Seat in the Next Batch
+                </h2>
+
+                <p>
+                    Start learning practical technology skills
+                    and move one step closer to your career goals.
+                </p>
+
+            </div>
+
+
+            <a
+                href="signup.html"
+                class="cta-btn"
+            >
+
+                Create Account
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="brand">
+
+                    <span class="brand-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Skill<span>Forge</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Modern computer education and practical
+                    career training for students, beginners
+                    and professionals.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+                <a href="instructors.html">
+                    Faculty
+                </a>
+
+                <a href="batches.html">
+                    Batches
+                </a>
+
+                <a href="fees.html">
+                    Fees
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Popular Courses
+                </h3>
+
+                <a href="course-detail.html?course=basic-computing">
+                    Basic Computing
+                </a>
+
+                <a href="course-detail.html?course=ms-office">
+                    MS Office
+                </a>
+
+                <a href="course-detail.html?course=tally">
+                    Tally Prime
+                </a>
+
+                <a href="course-detail.html?course=advanced-excel">
+                    Advanced Excel
+                </a>
+
+                <a href="typing-test.html">
+                    Typing Practice
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Student Portal
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="student-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="typing-test.html">
+                    Practice
+                </a>
+
+                <a href="progress.html">
+                    Progress
+                </a>
+
+                <a href="certificates.html">
+                    Certificates
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-contact">
+
+            <div>
+
+                <i data-lucide="map-pin"></i>
+
+                <span>
+                    Chennai, Tamil Nadu
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i data-lucide="phone"></i>
+
+                <span>
+                    +91 98765 43210
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i data-lucide="mail"></i>
+
+                <span>
+                    hello@skillforge.in
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SkillForge. All rights reserved.
+            </p>
+
+            <div>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Common JS -->
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
