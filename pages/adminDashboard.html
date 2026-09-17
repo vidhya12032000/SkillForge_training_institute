@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillForge | Admin Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/admin-dashboard.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="#" class="brand">
+                <span class="brand-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </span>
+
+                <span>
+                    <strong>SkillForge</strong>
+                    <small>Admin Panel</small>
+                </span>
+            </a>
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar">
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- ADMIN PROFILE -->
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                VM
+            </div>
+
+            <div class="admin-profile-info">
+                <strong>Vidhya M</strong>
+                <span>Super Admin</span>
+            </div>
+
+            <span class="online-dot"></span>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-heading">MAIN MENU</p>
+
+            <a href="#dashboard"
+               class="nav-link active"
+               data-section="dashboard">
+
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="#students"
+               class="nav-link"
+               data-section="students">
+
+                <i data-lucide="users"></i>
+                <span>Students</span>
+
+                <span class="nav-count">1248</span>
+
+            </a>
+
+
+            <a href="#courses"
+               class="nav-link"
+               data-section="courses">
+
+                <i data-lucide="book-open"></i>
+                <span>Courses</span>
+
+            </a>
+
+
+            <a href="#instructors"
+               class="nav-link"
+               data-section="instructors">
+
+                <i data-lucide="user-round-check"></i>
+                <span>Instructors</span>
+
+            </a>
+
+
+            <a href="#batches"
+               class="nav-link"
+               data-section="batches">
+
+                <i data-lucide="calendar-days"></i>
+                <span>Batches</span>
+
+            </a>
+
+
+            <p class="nav-heading second-heading">
+                MANAGEMENT
+            </p>
+
+
+            <a href="#payments"
+               class="nav-link"
+               data-section="payments">
+
+                <i data-lucide="credit-card"></i>
+                <span>Payments</span>
+
+                <span class="nav-count warning">8</span>
+
+            </a>
+
+
+            <a href="#attendance"
+               class="nav-link"
+               data-section="attendance">
+
+                <i data-lucide="clipboard-check"></i>
+                <span>Attendance</span>
+
+            </a>
+
+
+            <a href="#certificates"
+               class="nav-link"
+               data-section="certificates">
+
+                <i data-lucide="award"></i>
+                <span>Certificates</span>
+
+            </a>
+
+
+            <a href="#blog"
+               class="nav-link"
+               data-section="blog">
+
+                <i data-lucide="file-text"></i>
+                <span>Blog</span>
+
+            </a>
+
+
+            <a href="#messages"
+               class="nav-link"
+               data-section="messages">
+
+                <i data-lucide="messages-square"></i>
+                <span>Messages</span>
+
+                <span class="nav-count danger">5</span>
+
+            </a>
+
+
+            <p class="nav-heading second-heading">
+                SYSTEM
+            </p>
+
+
+            <a href="#settings"
+               class="nav-link"
+               data-section="settings">
+
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- HELP -->
+
+        <div class="sidebar-help">
+
+            <div class="help-icon">
+                <i data-lucide="headphones"></i>
+            </div>
+
+            <div>
+                <strong>Need Help?</strong>
+                <p>Contact SkillForge support</p>
+            </div>
+
+        </div>
+
+
+        <!-- LOGOUT -->
+
+        <button
+            type="button"
+            class="logout-btn"
+            id="logoutBtn">
+
+            <i data-lucide="log-out"></i>
+
+            <span>Logout</span>
+
+        </button>
+
+    </aside>
+
+
+    <!-- OVERLAY -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    type="button"
+                    class="menu-btn"
+                    id="menuBtn">
+
+                    <i data-lucide="menu"></i>
+
+                </button>
+
+
+                <div>
+                    <h1 id="pageTitle">Dashboard</h1>
+
+                    <p class="breadcrumb">
+                        SkillForge / <span id="breadcrumbText">Dashboard</span>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <!-- SEARCH -->
+
+                <div class="global-search">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="search"
+                        id="globalSearch"
+                        placeholder="Search students, courses..."
+                        autocomplete="off">
+
+                    <kbd>Ctrl K</kbd>
+
+                </div>
+
+
+                <!-- THEME -->
+
+                <button
+                    type="button"
+                    class="top-icon-btn"
+                    id="themeToggle"
+                    title="Toggle theme">
+
+                    <i
+                        data-lucide="moon"
+                        id="themeIcon">
+                    </i>
+
+                </button>
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    type="button"
+                    class="top-icon-btn notification-btn"
+                    id="notificationBtn">
+
+                    <i data-lucide="bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="top-profile">
+
+                    <div class="top-avatar">
+                        VM
+                    </div>
+
+                    <div class="top-profile-text">
+                        <strong>Vidhya M</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section
+                class="dashboard-section active"
+                id="dashboard">
+
+
+                <!-- WELCOME -->
+
+                <div class="welcome-banner">
+
+                    <div class="welcome-content">
+
+                        <span class="welcome-label">
+                            <i data-lucide="sparkles"></i>
+                            Welcome back, Admin
+                        </span>
+
+                        <h2>
+                            Manage your learning platform
+                            with confidence.
+                        </h2>
+
+                        <p>
+                            Monitor students, courses, instructors,
+                            payments and overall learning activity
+                            from one powerful dashboard.
+                        </p>
+
+                        <div class="welcome-actions">
+
+                            <button
+                                class="primary-btn"
+                                data-go="students">
+
+                                <i data-lucide="users"></i>
+                                Manage Students
+
+                            </button>
+
+                            <button
+                                class="outline-light-btn"
+                                data-go="courses">
+
+                                <i data-lucide="book-open"></i>
+                                View Courses
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="welcome-illustration">
+
+                        <div class="floating-circle circle-one"></div>
+                        <div class="floating-circle circle-two"></div>
+
+                        <i data-lucide="graduation-cap"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STAT CARDS -->
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i data-lucide="users"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Total Students</span>
+
+                            <h3>1,248</h3>
+
+                            <small class="positive">
+                                <i data-lucide="trending-up"></i>
+                                12.5% this month
+                            </small>
+
+                        </div>
+
+                        <div class="stat-menu">
+                            <i data-lucide="more-horizontal"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            <i data-lucide="book-open"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Active Courses</span>
+
+                            <h3>24</h3>
+
+                            <small class="positive">
+                                <i data-lucide="trending-up"></i>
+                                4 new courses
+                            </small>
+
+                        </div>
+
+                        <div class="stat-menu">
+                            <i data-lucide="more-horizontal"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i data-lucide="indian-rupee"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Total Revenue</span>
+
+                            <h3>₹4.82L</h3>
+
+                            <small class="positive">
+                                <i data-lucide="trending-up"></i>
+                                18.2% this month
+                            </small>
+
+                        </div>
+
+                        <div class="stat-menu">
+                            <i data-lucide="more-horizontal"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i data-lucide="user-round-check"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Instructors</span>
+
+                            <h3>38</h3>
+
+                            <small class="neutral">
+                                3 new this month
+                            </small>
+
+                        </div>
+
+                        <div class="stat-menu">
+                            <i data-lucide="more-horizontal"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHART + ACTIVITY -->
+
+                <div class="dashboard-two-column">
+
+
+                    <!-- REVENUE CHART -->
+
+                    <div class="content-card chart-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Revenue Overview</h3>
+                                <p>Monthly revenue performance</p>
+                            </div>
+
+                            <select class="period-select">
+                                <option>Last 6 months</option>
+                                <option>Last 12 months</option>
+                                <option>This year</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div class="chart-y-axis">
+                                <span>₹80K</span>
+                                <span>₹60K</span>
+                                <span>₹40K</span>
+                                <span>₹20K</span>
+                                <span>₹0</span>
+                            </div>
+
+
+                            <div class="fake-chart">
+
+                                <div class="chart-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+
+                                <svg
+                                    viewBox="0 0 700 260"
+                                    preserveAspectRatio="none">
+
+                                    <defs>
+
+                                        <linearGradient
+                                            id="chartGradient"
+                                            x1="0"
+                                            y1="0"
+                                            x2="0"
+                                            y2="1">
+
+                                            <stop
+                                                offset="0%"
+                                                stop-opacity=".25"/>
+
+                                            <stop
+                                                offset="100%"
+                                                stop-opacity="0"/>
+
+                                        </linearGradient>
+
+                                    </defs>
+
+                                    <path
+                                        d="M0 205
+                                           C70 180 80 190 125 165
+                                           S200 130 245 145
+                                           S315 100 350 120
+                                           S420 80 470 105
+                                           S535 65 575 80
+                                           S650 35 700 55
+                                           L700 260
+                                           L0 260 Z"
+                                        fill="url(#chartGradient)"/>
+
+                                    <path
+                                        d="M0 205
+                                           C70 180 80 190 125 165
+                                           S200 130 245 145
+                                           S315 100 350 120
+                                           S420 80 470 105
+                                           S535 65 575 80
+                                           S650 35 700 55"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="4"/>
+
+                                </svg>
+
+
+                                <div class="chart-months">
+                                    <span>Apr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                    <span>Sep</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <div class="content-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Recent Activity</h3>
+                                <p>Latest platform activities</p>
+                            </div>
+
+                            <button class="text-btn">
+                                View all
+                            </button>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-avatar orange">
+                                    AR
+                                </div>
+
+                                <div class="activity-info">
+                                    <strong>Arun Kumar</strong>
+                                    <p>Enrolled in Full Stack Development</p>
+                                    <small>5 min ago</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-avatar blue">
+                                    PS
+                                </div>
+
+                                <div class="activity-info">
+                                    <strong>Priya S</strong>
+                                    <p>Completed Excel Advanced course</p>
+                                    <small>28 min ago</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-avatar green">
+                                    VK
+                                </div>
+
+                                <div class="activity-info">
+                                    <strong>Vignesh K</strong>
+                                    <p>Payment received ₹12,500</p>
+                                    <small>1 hour ago</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-avatar purple">
+                                    RM
+                                </div>
+
+                                <div class="activity-info">
+                                    <strong>Ramya M</strong>
+                                    <p>Certificate generated</p>
+                                    <small>2 hours ago</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STUDENTS + QUICK ACTIONS -->
+
+                <div class="dashboard-two-column bottom-grid">
+
+
+                    <!-- STUDENTS -->
+
+                    <div class="content-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Recent Students</h3>
+                                <p>Recently registered students</p>
+                            </div>
+
+                            <button
+                                class="text-btn"
+                                id="manageStudentsBtn">
+
+                                View all
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="table-wrapper">
+
+                            <table class="data-table">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Course</th>
+                                        <th>Joined</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="studentsTable">
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="student-cell">
+
+                                                <div class="student-avatar">
+                                                    AK
+                                                </div>
+
+                                                <div>
+                                                    <strong>
+                                                        Arun Kumar
+                                                    </strong>
+
+                                                    <span>
+                                                        arun@gmail.com
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>Full Stack Development</td>
+
+                                        <td>Sep 15, 2026</td>
+
+                                        <td>
+                                            <span class="status active">
+                                                Active
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button class="row-action">
+                                                <i data-lucide="more-horizontal"></i>
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="student-cell">
+
+                                                <div class="student-avatar blue">
+                                                    PS
+                                                </div>
+
+                                                <div>
+                                                    <strong>
+                                                        Priya S
+                                                    </strong>
+
+                                                    <span>
+                                                        priya@gmail.com
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>Advanced Excel</td>
+
+                                        <td>Sep 14, 2026</td>
+
+                                        <td>
+                                            <span class="status active">
+                                                Active
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button class="row-action">
+                                                <i data-lucide="more-horizontal"></i>
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="student-cell">
+
+                                                <div class="student-avatar green">
+                                                    VK
+                                                </div>
+
+                                                <div>
+                                                    <strong>
+                                                        Vignesh K
+                                                    </strong>
+
+                                                    <span>
+                                                        vignesh@gmail.com
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>Python Programming</td>
+
+                                        <td>Sep 13, 2026</td>
+
+                                        <td>
+                                            <span class="status pending">
+                                                Pending
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <button class="row-action">
+                                                <i data-lucide="more-horizontal"></i>
+                                            </button>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="content-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Quick Actions</h3>
+                                <p>Frequently used actions</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-action-grid">
+
+
+                            <button
+                                class="quick-action"
+                                data-go="students">
+
+                                <span class="quick-icon orange">
+                                    <i data-lucide="user-plus"></i>
+                                </span>
+
+                                <span>
+                                    <strong>Add Student</strong>
+                                    <small>Create new student</small>
+                                </span>
+
+                                <i
+                                    data-lucide="chevron-right"
+                                    class="quick-arrow">
+                                </i>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action"
+                                data-go="courses">
+
+                                <span class="quick-icon blue">
+                                    <i data-lucide="plus"></i>
+                                </span>
+
+                                <span>
+                                    <strong>Add Course</strong>
+                                    <small>Create new course</small>
+                                </span>
+
+                                <i
+                                    data-lucide="chevron-right"
+                                    class="quick-arrow">
+                                </i>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action"
+                                data-go="batches">
+
+                                <span class="quick-icon green">
+                                    <i data-lucide="calendar-plus"></i>
+                                </span>
+
+                                <span>
+                                    <strong>Create Batch</strong>
+                                    <small>Schedule new batch</small>
+                                </span>
+
+                                <i
+                                    data-lucide="chevron-right"
+                                    class="quick-arrow">
+                                </i>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action"
+                                data-go="certificates">
+
+                                <span class="quick-icon purple">
+                                    <i data-lucide="award"></i>
+                                </span>
+
+                                <span>
+                                    <strong>Certificates</strong>
+                                    <small>Manage certificates</small>
+                                </span>
+
+                                <i
+                                    data-lucide="chevron-right"
+                                    class="quick-arrow">
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STUDENTS
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="students">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            STUDENT MANAGEMENT
+                        </span>
+
+                        <h2>Students</h2>
+
+                        <p>
+                            Manage student registrations,
+                            courses and learning progress.
+                        </p>
+                    </div>
+
+                    <button
+                        class="primary-btn"
+                        id="addStudentBtn">
+
+                        <i data-lucide="user-plus"></i>
+                        Add Student
+
+                    </button>
+
+                </div>
+
+
+                <div class="stats-grid small-stats">
+
+                    <div class="mini-stat">
+                        <span>Total Students</span>
+                        <strong>1,248</strong>
+                    </div>
+
+                    <div class="mini-stat">
+                        <span>Active</span>
+                        <strong>1,106</strong>
+                    </div>
+
+                    <div class="mini-stat">
+                        <span>New This Month</span>
+                        <strong>142</strong>
+                    </div>
+
+                    <div class="mini-stat">
+                        <span>Completed</span>
+                        <strong>386</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="content-card large-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>All Students</h3>
+                            <p>1,248 registered students</p>
+                        </div>
+
+                        <div class="table-search">
+
+                            <i data-lucide="search"></i>
+
+                            <input
+                                type="search"
+                                id="studentSearch"
+                                placeholder="Search student...">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Course</th>
+                                    <th>Batch</th>
+                                    <th>Progress</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <div class="student-cell">
+                                            <div class="student-avatar">AK</div>
+                                            <div>
+                                                <strong>Arun Kumar</strong>
+                                                <span>arun@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>Full Stack Development</td>
+                                    <td>FS-SEP-01</td>
+
+                                    <td>
+                                        <div class="progress-cell">
+                                            <div class="progress">
+                                                <span style="width:78%"></span>
+                                            </div>
+                                            <small>78%</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="row-action">
+                                            <i data-lucide="eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="student-cell">
+                                            <div class="student-avatar blue">PS</div>
+                                            <div>
+                                                <strong>Priya S</strong>
+                                                <span>priya@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>Advanced Excel</td>
+                                    <td>EXL-AUG-04</td>
+
+                                    <td>
+                                        <div class="progress-cell">
+                                            <div class="progress">
+                                                <span style="width:92%"></span>
+                                            </div>
+                                            <small>92%</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="row-action">
+                                            <i data-lucide="eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="student-cell">
+                                            <div class="student-avatar green">VK</div>
+                                            <div>
+                                                <strong>Vignesh K</strong>
+                                                <span>vignesh@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>Python Programming</td>
+                                    <td>PY-SEP-02</td>
+
+                                    <td>
+                                        <div class="progress-cell">
+                                            <div class="progress">
+                                                <span style="width:45%"></span>
+                                            </div>
+                                            <small>45%</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="row-action">
+                                            <i data-lucide="eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 COURSES
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="courses">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">LEARNING</span>
+
+                        <h2>Courses</h2>
+
+                        <p>
+                            Create and manage SkillForge courses.
+                        </p>
+                    </div>
+
+                    <button class="primary-btn">
+                        <i data-lucide="plus"></i>
+                        Add Course
+                    </button>
+
+                </div>
+
+
+                <div class="course-grid">
+
+
+                    <article class="course-card">
+
+                        <div class="course-icon orange">
+                            <i data-lucide="code-2"></i>
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Development
+                            </span>
+
+                            <h3>Full Stack Development</h3>
+
+                            <p>
+                                HTML, CSS, JavaScript, React,
+                                Node.js, Express and databases.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    324 students
+                                </span>
+
+                                <strong>₹18,999</strong>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="course-card">
+
+                        <div class="course-icon blue">
+                            <i data-lucide="table-2"></i>
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Office Skills
+                            </span>
+
+                            <h3>Advanced Excel</h3>
+
+                            <p>
+                                Formulas, dashboards, PivotTables,
+                                charts and data analysis.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    218 students
+                                </span>
+
+                                <strong>₹7,999</strong>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="course-card">
+
+                        <div class="course-icon green">
+                            <i data-lucide="terminal"></i>
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Programming
+                            </span>
+
+                            <h3>Python Programming</h3>
+
+                            <p>
+                                Python fundamentals, OOP,
+                                APIs and real-world projects.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    186 students
+                                </span>
+
+                                <strong>₹9,999</strong>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="course-card">
+
+                        <div class="course-icon purple">
+                            <i data-lucide="keyboard"></i>
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Computer Skills
+                            </span>
+
+                            <h3>Professional Typing</h3>
+
+                            <p>
+                                Improve typing speed, accuracy
+                                and keyboard confidence.
+                            </p>
+
+                            <div class="course-footer">
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    156 students
+                                </span>
+
+                                <strong>₹3,999</strong>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 INSTRUCTORS
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="instructors">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">TEAM</span>
+
+                        <h2>Instructors</h2>
+
+                        <p>
+                            Manage trainers and their assigned courses.
+                        </p>
+                    </div>
+
+                    <button class="primary-btn">
+                        <i data-lucide="user-plus"></i>
+                        Add Instructor
+                    </button>
+
+                </div>
+
+
+                <div class="instructor-grid">
+
+
+                    <div class="instructor-card">
+
+                        <div class="instructor-avatar">
+                            SK
+                        </div>
+
+                        <h3>Sathish Kumar</h3>
+
+                        <p>Full Stack Development</p>
+
+                        <div class="instructor-stats">
+                            <span>
+                                <strong>324</strong>
+                                Students
+                            </span>
+
+                            <span>
+                                <strong>4.9</strong>
+                                Rating
+                            </span>
+                        </div>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="instructor-card">
+
+                        <div class="instructor-avatar blue">
+                            RP
+                        </div>
+
+                        <h3>Ramya Priya</h3>
+
+                        <p>Excel & Office Skills</p>
+
+                        <div class="instructor-stats">
+                            <span>
+                                <strong>218</strong>
+                                Students
+                            </span>
+
+                            <span>
+                                <strong>4.8</strong>
+                                Rating
+                            </span>
+                        </div>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="instructor-card">
+
+                        <div class="instructor-avatar green">
+                            AJ
+                        </div>
+
+                        <h3>Arun Joseph</h3>
+
+                        <p>Python Programming</p>
+
+                        <div class="instructor-stats">
+                            <span>
+                                <strong>186</strong>
+                                Students
+                            </span>
+
+                            <span>
+                                <strong>4.7</strong>
+                                Rating
+                            </span>
+                        </div>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BATCHES
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="batches">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">SCHEDULE</span>
+
+                        <h2>Batches</h2>
+
+                        <p>
+                            Manage upcoming and active training batches.
+                        </p>
+                    </div>
+
+                    <button class="primary-btn">
+                        <i data-lucide="calendar-plus"></i>
+                        Create Batch
+                    </button>
+
+                </div>
+
+
+                <div class="content-card large-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Active Batches</h3>
+                            <p>Current training schedules</p>
+                        </div>
+
+                        <button class="text-btn">
+                            View Calendar
+                        </button>
+
+                    </div>
+
+
+                    <div class="batch-grid">
+
+
+                        <div class="batch-card">
+
+                            <div class="batch-top">
+                                <span class="batch-code">
+                                    FS-SEP-01
+                                </span>
+
+                                <span class="status active">
+                                    Ongoing
+                                </span>
+                            </div>
+
+                            <h3>Full Stack Development</h3>
+
+                            <div class="batch-info">
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Sep 01 - Dec 30
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    42 students
+                                </span>
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    10:00 AM - 12:00 PM
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="batch-card">
+
+                            <div class="batch-top">
+                                <span class="batch-code">
+                                    EXL-SEP-02
+                                </span>
+
+                                <span class="status active">
+                                    Ongoing
+                                </span>
+                            </div>
+
+                            <h3>Advanced Excel</h3>
+
+                            <div class="batch-info">
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Sep 10 - Nov 20
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    28 students
+                                </span>
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    2:00 PM - 4:00 PM
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="batch-card">
+
+                            <div class="batch-top">
+                                <span class="batch-code">
+                                    PY-OCT-01
+                                </span>
+
+                                <span class="status upcoming">
+                                    Upcoming
+                                </span>
+                            </div>
+
+                            <h3>Python Programming</h3>
+
+                            <div class="batch-info">
+                                <span>
+                                    <i data-lucide="calendar"></i>
+                                    Oct 01 - Dec 15
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    35 students
+                                </span>
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    6:00 PM - 8:00 PM
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PAYMENTS
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="payments">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">FINANCE</span>
+
+                        <h2>Payments</h2>
+
+                        <p>
+                            Track course payments and transactions.
+                        </p>
+                    </div>
+
+                    <button class="secondary-btn">
+                        <i data-lucide="download"></i>
+                        Export Report
+                    </button>
+
+                </div>
+
+
+                <div class="stats-grid small-stats">
+
+                    <div class="mini-stat">
+                        <span>Total Revenue</span>
+                        <strong>₹4.82L</strong>
+                    </div>
+
+                    <div class="mini-stat">
+                        <span>This Month</span>
+                        <strong>₹82.4K</strong>
+                    </div>
+
+                    <div class="mini-stat">
+                        <span>Pending</span>
+                        <strong>₹18.6K</strong>
+                    </div>
+
+                    <div class="mini-stat">
+                        <span>Transactions</span>
+                        <strong>428</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="content-card large-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Recent Transactions</h3>
+                            <p>Latest payment activity</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Transaction</th>
+                                    <th>Student</th>
+                                    <th>Course</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>#SF-20260917</td>
+                                    <td>Vignesh K</td>
+                                    <td>Python Programming</td>
+                                    <td><strong>₹9,999</strong></td>
+                                    <td>Sep 17, 2026</td>
+                                    <td>
+                                        <span class="status active">
+                                            Paid
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#SF-20260916</td>
+                                    <td>Priya S</td>
+                                    <td>Advanced Excel</td>
+                                    <td><strong>₹7,999</strong></td>
+                                    <td>Sep 16, 2026</td>
+                                    <td>
+                                        <span class="status active">
+                                            Paid
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#SF-20260915</td>
+                                    <td>Arun Kumar</td>
+                                    <td>Full Stack Development</td>
+                                    <td><strong>₹18,999</strong></td>
+                                    <td>Sep 15, 2026</td>
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ATTENDANCE
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="attendance">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">TRACKING</span>
+
+                        <h2>Attendance</h2>
+
+                        <p>
+                            Monitor daily student attendance.
+                        </p>
+                    </div>
+
+                    <button class="secondary-btn">
+                        <i data-lucide="download"></i>
+                        Download Report
+                    </button>
+
+                </div>
+
+
+                <div class="attendance-overview">
+
+                    <div class="attendance-card">
+                        <span>Today's Attendance</span>
+                        <strong>92%</strong>
+                        <div class="progress">
+                            <span style="width:92%"></span>
+                        </div>
+                    </div>
+
+                    <div class="attendance-card">
+                        <span>Present</span>
+                        <strong>1,148</strong>
+                        <small>out of 1,248 students</small>
+                    </div>
+
+                    <div class="attendance-card">
+                        <span>Absent</span>
+                        <strong>72</strong>
+                        <small>5.8% of students</small>
+                    </div>
+
+                    <div class="attendance-card">
+                        <span>Late</span>
+                        <strong>28</strong>
+                        <small>2.2% of students</small>
+                    </div>
+
+                </div>
+
+
+                <div class="content-card empty-friendly">
+
+                    <div class="empty-icon">
+                        <i data-lucide="clipboard-check"></i>
+                    </div>
+
+                    <h3>Attendance records are ready</h3>
+
+                    <p>
+                        Select a batch and date to view detailed
+                        attendance records.
+                    </p>
+
+                    <button class="primary-btn">
+                        View Attendance
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CERTIFICATES
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="certificates">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">ACHIEVEMENTS</span>
+
+                        <h2>Certificates</h2>
+
+                        <p>
+                            Manage student course completion certificates.
+                        </p>
+                    </div>
+
+                    <button class="primary-btn">
+                        <i data-lucide="award"></i>
+                        Generate Certificate
+                    </button>
+
+                </div>
+
+
+                <div class="certificate-grid">
+
+                    <div class="certificate-stat">
+                        <i data-lucide="award"></i>
+                        <span>Issued</span>
+                        <strong>386</strong>
+                    </div>
+
+                    <div class="certificate-stat">
+                        <i data-lucide="clock"></i>
+                        <span>Pending</span>
+                        <strong>24</strong>
+                    </div>
+
+                    <div class="certificate-stat">
+                        <i data-lucide="download"></i>
+                        <span>Downloads</span>
+                        <strong>352</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BLOG
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="blog">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">CONTENT</span>
+
+                        <h2>Blog Management</h2>
+
+                        <p>
+                            Create and manage SkillForge learning content.
+                        </p>
+                    </div>
+
+                    <button class="primary-btn">
+                        <i data-lucide="pen-line"></i>
+                        Create Post
+                    </button>
+
+                </div>
+
+
+                <div class="blog-admin-grid">
+
+                    <article class="blog-admin-card">
+
+                        <span class="blog-tag">
+                            Career
+                        </span>
+
+                        <h3>
+                            How to Start a Career in Web Development
+                        </h3>
+
+                        <p>
+                            Published Sep 15, 2026
+                        </p>
+
+                        <div>
+                            <span>1,248 views</span>
+                            <span>24 comments</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="blog-admin-card">
+
+                        <span class="blog-tag blue">
+                            Excel
+                        </span>
+
+                        <h3>
+                            10 Excel Skills Every Job Seeker Needs
+                        </h3>
+
+                        <p>
+                            Published Sep 12, 2026
+                        </p>
+
+                        <div>
+                            <span>982 views</span>
+                            <span>16 comments</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="blog-admin-card">
+
+                        <span class="blog-tag green">
+                            Typing
+                        </span>
+
+                        <h3>
+                            Improve Your Typing Speed in 30 Days
+                        </h3>
+
+                        <p>
+                            Published Sep 08, 2026
+                        </p>
+
+                        <div>
+                            <span>756 views</span>
+                            <span>12 comments</span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MESSAGES
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="messages">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">COMMUNICATION</span>
+
+                        <h2>Messages</h2>
+
+                        <p>
+                            Student and instructor communication.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="message-layout">
+
+                    <div class="message-list">
+
+                        <div class="message-item unread">
+
+                            <div class="message-avatar">
+                                AK
+                            </div>
+
+                            <div>
+                                <strong>Arun Kumar</strong>
+                                <p>
+                                    I have a question about the
+                                    Full Stack batch schedule.
+                                </p>
+                                <small>10 minutes ago</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="message-item unread">
+
+                            <div class="message-avatar blue">
+                                PS
+                            </div>
+
+                            <div>
+                                <strong>Priya S</strong>
+                                <p>
+                                    When will my certificate be generated?
+                                </p>
+                                <small>32 minutes ago</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="message-item">
+
+                            <div class="message-avatar green">
+                                VK
+                            </div>
+
+                            <div>
+                                <strong>Vignesh K</strong>
+                                <p>
+                                    Payment confirmation received.
+                                </p>
+                                <small>2 hours ago</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="message-placeholder">
+
+                        <div class="empty-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+
+                        <h3>Select a conversation</h3>
+
+                        <p>
+                            Choose a message from the list to
+                            view the conversation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="settings">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">SYSTEM</span>
+
+                        <h2>Settings</h2>
+
+                        <p>
+                            Configure your SkillForge admin preferences.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+                    <div class="settings-card">
+
+                        <div class="settings-icon">
+                            <i data-lucide="user-cog"></i>
+                        </div>
+
+                        <div>
+                            <h3>Admin Profile</h3>
+                            <p>
+                                Update administrator account details.
+                            </p>
+                        </div>
+
+                        <button class="secondary-btn">
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="settings-card">
+
+                        <div class="settings-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>Security</h3>
+                            <p>
+                                Password and security preferences.
+                            </p>
+                        </div>
+
+                        <button class="secondary-btn">
+                            Manage
+                        </button>
+
+                    </div>
+
+
+                    <div class="settings-card">
+
+                        <div class="settings-icon">
+                            <i data-lucide="bell"></i>
+                        </div>
+
+                        <div>
+                            <h3>Notifications</h3>
+                            <p>
+                                Configure dashboard notifications.
+                            </p>
+                        </div>
+
+                        <button class="secondary-btn">
+                            Configure
+                        </button>
+
+                    </div>
+
+
+                    <div class="settings-card">
+
+                        <div class="settings-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+
+                        <div>
+                            <h3>Data Management</h3>
+                            <p>
+                                Manage platform data and backups.
+                            </p>
+                        </div>
+
+                        <button class="secondary-btn">
+                            Open
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     ADD STUDENT MODAL
+========================================================== -->
+
+<div
+    class="modal"
+    id="studentModal"
+    aria-hidden="true">
+
+    <div
+        class="modal-overlay"
+        id="modalOverlay">
+    </div>
+
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <div>
+                <span class="eyebrow">STUDENT</span>
+                <h2>Add New Student</h2>
+            </div>
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modalClose">
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="studentForm">
+
+            <div class="form-group">
+
+                <label for="studentName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student name"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="studentEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    placeholder="student@example.com"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="studentCourse">
+                    Course
+                </label>
+
+                <select
+                    id="studentCourse"
+                    required>
+
+                    <option value="">
+                        Select course
+                    </option>
+
+                    <option>
+                        Full Stack Development
+                    </option>
+
+                    <option>
+                        Advanced Excel
+                    </option>
+
+                    <option>
+                        Python Programming
+                    </option>
+
+                    <option>
+                        Professional Typing
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="cancelModal">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    <i data-lucide="user-plus"></i>
+                    Add Student
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="toast"
+    id="toast">
+
+    <i data-lucide="check-circle"></i>
+
+    <span id="toastMessage">
+        Success
+    </span>
+
+</div>
+
+
+<!-- LUCIDE -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<script src="../assets/js/admin-dashboard.js"></script>
+
+</body>
+</html>

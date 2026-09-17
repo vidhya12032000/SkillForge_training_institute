@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Dashboard | SkillForge</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Dashboard CSS -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/student-dashboard.css"
+    >
+</head>
+
+<body>
+
+<div class="student-app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="student-sidebar" id="studentSidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>SkillForge</h2>
+                <span>Student Portal</span>
+            </div>
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+                <i data-lucide="x"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Student Profile -->
+
+        <div class="sidebar-profile">
+
+            <div class="student-avatar">
+                VM
+            </div>
+
+            <div class="profile-info">
+                <strong id="sidebarStudentName">
+                    Vidhya M
+                </strong>
+
+                <span>
+                    Student
+                </span>
+            </div>
+
+            <span class="online-dot"></span>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="student-navigation">
+
+            <p class="nav-label">
+                MAIN MENU
+            </p>
+
+            <a
+                href="#dashboard"
+                class="student-nav-link active"
+                data-section="dashboard"
+                data-title="Dashboard"
+            >
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="#courses"
+                class="student-nav-link"
+                data-section="courses"
+                data-title="My Courses"
+            >
+                <i data-lucide="book-open"></i>
+                <span>My Courses</span>
+            </a>
+
+
+            <a
+                href="#classes"
+                class="student-nav-link"
+                data-section="classes"
+                data-title="My Classes"
+            >
+                <i data-lucide="calendar-days"></i>
+                <span>My Classes</span>
+            </a>
+
+
+            <a
+                href="#typing"
+                class="student-nav-link"
+                data-section="typing"
+                data-title="Typing Practice"
+            >
+                <i data-lucide="keyboard"></i>
+                <span>Typing Practice</span>
+            </a>
+
+
+            <a
+                href="#progress"
+                class="student-nav-link"
+                data-section="progress"
+                data-title="My Progress"
+            >
+                <i data-lucide="chart-no-axes-combined"></i>
+                <span>My Progress</span>
+            </a>
+
+
+            <a
+                href="#certificates"
+                class="student-nav-link"
+                data-section="certificates"
+                data-title="Certificates"
+            >
+                <i data-lucide="award"></i>
+                <span>Certificates</span>
+            </a>
+
+
+            <p class="nav-label second-label">
+                ACCOUNT
+            </p>
+
+
+            <a
+                href="#payments"
+                class="student-nav-link"
+                data-section="payments"
+                data-title="Payments"
+            >
+                <i data-lucide="credit-card"></i>
+                <span>Payments</span>
+            </a>
+
+
+            <a
+                href="#notifications"
+                class="student-nav-link"
+                data-section="notifications"
+                data-title="Notifications"
+            >
+                <i data-lucide="bell"></i>
+                <span>Notifications</span>
+
+                <span class="notification-count">
+                    3
+                </span>
+            </a>
+
+
+            <a
+                href="#profile"
+                class="student-nav-link"
+                data-section="profile"
+                data-title="My Profile"
+            >
+                <i data-lucide="user-round"></i>
+                <span>My Profile</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Help -->
+
+        <div class="sidebar-help">
+
+            <div class="help-icon">
+                <i data-lucide="headphones"></i>
+            </div>
+
+            <div>
+                <strong>Need Help?</strong>
+
+                <p>
+                    Contact our support team.
+                </p>
+
+                <button id="supportBtn">
+                    Get Support
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- Logout -->
+
+        <button
+            type="button"
+            class="student-logout"
+            id="studentLogout"
+        >
+            <i data-lucide="log-out"></i>
+            <span>Logout</span>
+        </button>
+
+    </aside>
+
+
+    <!-- Mobile Overlay -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="student-main">
+
+        <!-- TOP HEADER -->
+
+        <header class="student-header">
+
+            <div class="header-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div>
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Welcome back! Here's your learning overview.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <!-- Search -->
+
+                <div class="dashboard-search">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="search"
+                        id="dashboardSearch"
+                        placeholder="Search courses..."
+                    >
+
+                    <kbd>Ctrl K</kbd>
+
+                </div>
+
+
+                <!-- Theme -->
+
+                <button
+                    class="header-icon-btn"
+                    id="themeToggle"
+                    title="Toggle theme"
+                    aria-label="Toggle theme"
+                >
+                    <i
+                        data-lucide="moon"
+                        id="themeIcon"
+                    ></i>
+                </button>
+
+
+                <!-- Notifications -->
+
+                <button
+                    class="header-icon-btn notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications"
+                >
+                    <i data-lucide="bell"></i>
+
+                    <span>
+                        3
+                    </span>
+                </button>
+
+
+                <!-- Profile -->
+
+                <button
+                    class="header-profile"
+                    id="profileBtn"
+                >
+
+                    <div class="header-avatar">
+                        VM
+                    </div>
+
+                    <div class="header-user">
+
+                        <strong id="headerStudentName">
+                            Vidhya M
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             DASHBOARD SECTION
+        ====================================================== -->
+
+        <section
+            class="student-section active"
+            id="dashboard"
+        >
+
+            <!-- Welcome Banner -->
+
+            <div class="welcome-banner">
+
+                <div class="welcome-content">
+
+                    <span class="welcome-tag">
+                        <i data-lucide="sparkles"></i>
+                        Keep Learning
+                    </span>
+
+                    <h2>
+                        Welcome back,
+                        <span id="welcomeStudentName">
+                            Vidhya
+                        </span>! 👋
+                    </h2>
+
+                    <p>
+                        You're making great progress.
+                        Continue your learning journey and
+                        reach your next milestone.
+                    </p>
+
+                    <button
+                        class="primary-btn"
+                        data-action="courses"
+                    >
+                        Continue Learning
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="welcome-illustration">
+
+                    <div class="floating-card card-one">
+                        <i data-lucide="trophy"></i>
+                        <span>12 Achievements</span>
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <i data-lucide="zap"></i>
+                        <span>7 Day Streak</span>
+                    </div>
+
+                    <div class="learning-orbit">
+
+                        <i data-lucide="graduation-cap"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Statistics -->
+
+            <div class="student-stats">
+
+                <div class="student-stat-card">
+
+                    <div class="stat-icon orange">
+                        <i data-lucide="book-open"></i>
+                    </div>
+
+                    <div>
+                        <span>Enrolled Courses</span>
+                        <strong>4</strong>
+                    </div>
+
+                    <small>
+                        Active
+                    </small>
+
+                </div>
+
+
+                <div class="student-stat-card">
+
+                    <div class="stat-icon green">
+                        <i data-lucide="circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Completed</span>
+                        <strong>2</strong>
+                    </div>
+
+                    <small>
+                        Courses
+                    </small>
+
+                </div>
+
+
+                <div class="student-stat-card">
+
+                    <div class="stat-icon blue">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div>
+                        <span>Learning Hours</span>
+                        <strong>86</strong>
+                    </div>
+
+                    <small>
+                        This month
+                    </small>
+
+                </div>
+
+
+                <div class="student-stat-card">
+
+                    <div class="stat-icon purple">
+                        <i data-lucide="award"></i>
+                    </div>
+
+                    <div>
+                        <span>Certificates</span>
+                        <strong>2</strong>
+                    </div>
+
+                    <small>
+                        Earned
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dashboard Grid -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- Continue Learning -->
+
+                <div class="dashboard-card continue-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="section-kicker">
+                                LEARNING
+                            </span>
+
+                            <h3>
+                                Continue Learning
+                            </h3>
+                        </div>
+
+                        <button
+                            class="text-btn"
+                            data-action="courses"
+                        >
+                            View All
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="course-progress-item">
+
+                        <div class="course-icon excel">
+                            <i data-lucide="table-2"></i>
+                        </div>
+
+                        <div class="course-info">
+
+                            <div class="course-title-row">
+
+                                <strong>
+                                    Advanced Excel
+                                </strong>
+
+                                <span>
+                                    78%
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Module 6 of 8
+                            </p>
+
+                            <div class="progress-bar">
+                                <span style="width: 78%"></span>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="round-action"
+                            title="Continue course"
+                        >
+                            <i data-lucide="play"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="course-progress-item">
+
+                        <div class="course-icon typing">
+                            <i data-lucide="keyboard"></i>
+                        </div>
+
+                        <div class="course-info">
+
+                            <div class="course-title-row">
+
+                                <strong>
+                                    Professional Typing
+                                </strong>
+
+                                <span>
+                                    86%
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Module 9 of 10
+                            </p>
+
+                            <div class="progress-bar">
+                                <span style="width: 86%"></span>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="round-action"
+                            title="Continue course"
+                        >
+                            <i data-lucide="play"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="course-progress-item">
+
+                        <div class="course-icon tally">
+                            <i data-lucide="calculator"></i>
+                        </div>
+
+                        <div class="course-info">
+
+                            <div class="course-title-row">
+
+                                <strong>
+                                    Tally Prime
+                                </strong>
+
+                                <span>
+                                    54%
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Module 5 of 10
+                            </p>
+
+                            <div class="progress-bar">
+                                <span style="width: 54%"></span>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="round-action"
+                            title="Continue course"
+                        >
+                            <i data-lucide="play"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Upcoming Classes -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="section-kicker">
+                                SCHEDULE
+                            </span>
+
+                            <h3>
+                                Upcoming Classes
+                            </h3>
+                        </div>
+
+                        <button
+                            class="icon-link"
+                            data-action="classes"
+                            title="View classes"
+                        >
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-date">
+
+                            <strong>
+                                17
+                            </strong>
+
+                            <span>
+                                SEP
+                            </span>
+
+                        </div>
+
+                        <div class="class-info">
+
+                            <strong>
+                                Advanced Excel
+                            </strong>
+
+                            <p>
+                                <i data-lucide="clock-3"></i>
+                                10:00 AM – 11:30 AM
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                Room 204
+                            </p>
+
+                        </div>
+
+                        <button class="join-btn">
+                            Join
+                        </button>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-date">
+
+                            <strong>
+                                18
+                            </strong>
+
+                            <span>
+                                SEP
+                            </span>
+
+                        </div>
+
+                        <div class="class-info">
+
+                            <strong>
+                                Tally Prime
+                            </strong>
+
+                            <p>
+                                <i data-lucide="clock-3"></i>
+                                11:00 AM – 12:30 PM
+                            </p>
+
+                            <p>
+                                <i data-lucide="video"></i>
+                                Online Class
+                            </p>
+
+                        </div>
+
+                        <button class="join-btn">
+                            Join
+                        </button>
+
+                    </div>
+
+
+                    <div class="class-item">
+
+                        <div class="class-date">
+
+                            <strong>
+                                20
+                            </strong>
+
+                            <span>
+                                SEP
+                            </span>
+
+                        </div>
+
+                        <div class="class-info">
+
+                            <strong>
+                                Typing Practice
+                            </strong>
+
+                            <p>
+                                <i data-lucide="clock-3"></i>
+                                02:00 PM – 03:00 PM
+                            </p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Lab 102
+                            </p>
+
+                        </div>
+
+                        <button class="join-btn">
+                            Join
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Typing Performance -->
+
+                <div class="dashboard-card typing-performance">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="section-kicker">
+                                PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Typing Performance
+                            </h3>
+                        </div>
+
+                        <button
+                            class="text-btn"
+                            data-action="typing"
+                        >
+                            Practice
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="typing-metrics">
+
+                        <div class="typing-main">
+
+                            <div class="speed-circle">
+
+                                <strong>
+                                    48
+                                </strong>
+
+                                <span>
+                                    WPM
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Current Speed
+                                </strong>
+
+                                <p>
+                                    +8% from last week
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accuracy-box">
+
+                            <span>
+                                Accuracy
+                            </span>
+
+                            <strong>
+                                96%
+                            </strong>
+
+                            <div class="mini-progress">
+                                <span style="width:96%"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="typing-footer">
+
+                        <div>
+                            <span>Best Speed</span>
+                            <strong>55 WPM</strong>
+                        </div>
+
+                        <div>
+                            <span>Total Tests</span>
+                            <strong>42</strong>
+                        </div>
+
+                        <div>
+                            <span>Practice Time</span>
+                            <strong>12h</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Weekly Activity -->
+
+                <div class="dashboard-card activity-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="section-kicker">
+                                ACTIVITY
+                            </span>
+
+                            <h3>
+                                Weekly Learning Activity
+                            </h3>
+                        </div>
+
+                        <select id="activityRange">
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="activity-chart">
+
+                        <div class="chart-y-axis">
+                            <span>8h</span>
+                            <span>6h</span>
+                            <span>4h</span>
+                            <span>2h</span>
+                            <span>0h</span>
+                        </div>
+
+                        <div class="chart-area">
+
+                            <div class="chart-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="chart-bars">
+
+                                <div class="bar-column">
+                                    <span style="height:45%"></span>
+                                    <small>Mon</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <span style="height:70%"></span>
+                                    <small>Tue</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <span style="height:55%"></span>
+                                    <small>Wed</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <span style="height:85%"></span>
+                                    <small>Thu</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <span style="height:65%"></span>
+                                    <small>Fri</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <span style="height:92%"></span>
+                                    <small>Sat</small>
+                                </div>
+
+                                <div class="bar-column">
+                                    <span style="height:40%"></span>
+                                    <small>Sun</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Grid -->
+
+            <div class="bottom-grid">
+
+                <!-- Achievements -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="section-kicker">
+                                ACHIEVEMENTS
+                            </span>
+
+                            <h3>
+                                Recent Achievements
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="achievement-list">
+
+                        <div class="achievement">
+
+                            <div class="achievement-icon">
+                                <i data-lucide="flame"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    7 Day Streak
+                                </strong>
+
+                                <p>
+                                    Learned every day this week
+                                </p>
+                            </div>
+
+                            <span>
+                                Today
+                            </span>
+
+                        </div>
+
+
+                        <div class="achievement">
+
+                            <div class="achievement-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Speed Master
+                                </strong>
+
+                                <p>
+                                    Reached 50+ WPM
+                                </p>
+                            </div>
+
+                            <span>
+                                2 days ago
+                            </span>
+
+                        </div>
+
+
+                        <div class="achievement">
+
+                            <div class="achievement-icon">
+                                <i data-lucide="target"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Accuracy Pro
+                                </strong>
+
+                                <p>
+                                    Maintained 95% accuracy
+                                </p>
+                            </div>
+
+                            <span>
+                                5 days ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Actions -->
+
+                <div class="dashboard-card quick-actions-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="section-kicker">
+                                SHORTCUTS
+                            </span>
+
+                            <h3>
+                                Quick Actions
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <button data-action="typing">
+
+                            <span>
+                                <i data-lucide="keyboard"></i>
+                            </span>
+
+                            <strong>
+                                Start Typing
+                            </strong>
+
+                            <small>
+                                Improve your speed
+                            </small>
+
+                        </button>
+
+
+                        <button data-action="courses">
+
+                            <span>
+                                <i data-lucide="book-open"></i>
+                            </span>
+
+                            <strong>
+                                Browse Courses
+                            </strong>
+
+                            <small>
+                                Explore lessons
+                            </small>
+
+                        </button>
+
+
+                        <button data-action="certificates">
+
+                            <span>
+                                <i data-lucide="award"></i>
+                            </span>
+
+                            <strong>
+                                Certificates
+                            </strong>
+
+                            <small>
+                                View achievements
+                            </small>
+
+                        </button>
+
+
+                        <button data-action="profile">
+
+                            <span>
+                                <i data-lucide="user-round"></i>
+                            </span>
+
+                            <strong>
+                                Edit Profile
+                            </strong>
+
+                            <small>
+                                Update your details
+                            </small>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             OTHER SECTIONS
+        ====================================================== -->
+
+        <section
+            class="student-section"
+            id="courses"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        LEARNING
+                    </span>
+
+                    <h2>My Courses</h2>
+
+                    <p>
+                        Track and continue all your enrolled courses.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="empty-placeholder">
+                <i data-lucide="book-open"></i>
+                <h3>My Courses</h3>
+                <p>Course management will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <section
+            class="student-section"
+            id="classes"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        SCHEDULE
+                    </span>
+
+                    <h2>My Classes</h2>
+
+                    <p>
+                        View your upcoming and completed classes.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="empty-placeholder">
+                <i data-lucide="calendar-days"></i>
+                <h3>Class Schedule</h3>
+                <p>Your classes will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <section
+            class="student-section"
+            id="typing"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        PRACTICE
+                    </span>
+
+                    <h2>Typing Practice</h2>
+
+                    <p>
+                        Improve your typing speed and accuracy.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="empty-placeholder">
+                <i data-lucide="keyboard"></i>
+                <h3>Typing Practice</h3>
+                <p>Typing test interface will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <section
+            class="student-section"
+            id="progress"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        ANALYTICS
+                    </span>
+
+                    <h2>My Progress</h2>
+
+                    <p>
+                        Monitor your learning performance.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="empty-placeholder">
+                <i data-lucide="chart-no-axes-combined"></i>
+                <h3>Learning Progress</h3>
+                <p>Detailed progress analytics will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <section
+            class="student-section"
+            id="certificates"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        ACHIEVEMENTS
+                    </span>
+
+                    <h2>Certificates</h2>
+
+                    <p>
+                        View and download your earned certificates.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="empty-placeholder">
+                <i data-lucide="award"></i>
+                <h3>Your Certificates</h3>
+                <p>Certificates will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <section
+            class="student-section"
+            id="payments"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        ACCOUNT
+                    </span>
+
+                    <h2>Payments</h2>
+
+                    <p>
+                        View your payment history and invoices.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="empty-placeholder">
+                <i data-lucide="credit-card"></i>
+                <h3>Payment History</h3>
+                <p>Your payments and invoices will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <section
+            class="student-section"
+            id="notifications"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        UPDATES
+                    </span>
+
+                    <h2>Notifications</h2>
+
+                    <p>
+                        Stay updated with SkillForge announcements.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="empty-placeholder">
+                <i data-lucide="bell"></i>
+                <h3>No New Notifications</h3>
+                <p>Your latest updates will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <section
+            class="student-section"
+            id="profile"
+        >
+
+            <div class="section-page-header">
+
+                <div>
+                    <span class="section-kicker">
+                        ACCOUNT
+                    </span>
+
+                    <h2>My Profile</h2>
+
+                    <p>
+                        Manage your personal information.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="profile-placeholder">
+
+                <div class="large-avatar">
+                    VM
+                </div>
+
+                <div>
+                    <h3 id="profileStudentName">
+                        Vidhya M
+                    </h3>
+
+                    <p>
+                        student@skillforge.com
+                    </p>
+
+                    <button class="primary-btn">
+                        Edit Profile
+                        <i data-lucide="pencil"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Toast -->
+
+<div
+    class="student-toast"
+    id="studentToast"
+    role="status"
+    aria-live="polite"
+>
+    <i data-lucide="check-circle"></i>
+
+    <span id="studentToastMessage">
+        Action completed
+    </span>
+</div>
+
+
+<!-- Student Dashboard JS -->
+
+<script src="../assets/js/student-dashboard.html"></script>
+
+</body>
+</html>

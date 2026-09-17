@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="SkillForge Login - Login to access your learning dashboard">
 
     <title>Login | SkillForge</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-    >
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Lucide Icons -->
+    <!-- Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Common CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- Dark Mode -->
@@ -32,539 +37,745 @@
     <!-- RTL -->
     <link rel="stylesheet" href="../assets/css/rtl.css">
 
-  
+    <!-- Login Page CSS -->
+    <style>
+
+        /* =====================================================
+           LOGIN PAGE
+        ===================================================== */
+
+        .login-page {
+            min-height: calc(100vh - 160px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(249, 115, 22, 0.10),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(249, 115, 22, 0.08),
+                    transparent 30%
+                );
+
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           LOGIN CONTAINER
+        ===================================================== */
+
+        .login-container {
+            width: 100%;
+            max-width: 1100px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            background: var(--bg-color, #ffffff);
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.10);
+
+            border: 1px solid rgba(249, 115, 22, 0.10);
+        }
+
+
+        /* =====================================================
+           LEFT CONTENT
+        ===================================================== */
+
+        .login-info {
+            padding: 60px 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f97316,
+                    #ea580c
+                );
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .login-info::before {
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            top: -120px;
+            right: -100px;
+        }
+
+
+        .login-info::after {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.06);
+
+            bottom: -100px;
+            left: -80px;
+        }
+
+
+        .login-info-content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .login-info-icon {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, 0.15);
+
+            border-radius: 18px;
+
+            margin-bottom: 25px;
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        .login-info-icon i {
+            font-size: 30px;
+        }
+
+
+        .login-info h1 {
+            font-family: "Poppins", sans-serif;
+
+            font-size: 38px;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+        }
+
+
+        .login-info p {
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            opacity: 0.92;
+
+            max-width: 450px;
+        }
+
+
+        .login-features {
+            margin-top: 35px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 18px;
+        }
+
+
+        .login-feature {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-size: 15px;
+        }
+
+
+        .login-feature i {
+            width: 25px;
+            height: 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, 0.15);
+
+            border-radius: 50%;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RIGHT LOGIN FORM
+        ===================================================== */
+
+        .login-form-section {
+            padding: 60px 55px;
+
+            display: flex;
+            align-items: center;
+
+            background: var(--bg-color, #ffffff);
+        }
+
+
+        .login-form-wrapper {
+            width: 100%;
+            max-width: 430px;
+
+            margin: auto;
+        }
+
+
+        .login-heading {
+            margin-bottom: 32px;
+        }
+
+
+        .login-heading h2 {
+            font-family: "Poppins", sans-serif;
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+
+            color: var(--heading-color, #111827);
+        }
+
+
+        .login-heading p {
+            color: var(--text-color, #6b7280);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FORM GROUP
+        ===================================================== */
+
+        .login-form-group {
+            margin-bottom: 20px;
+        }
+
+
+        .login-form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: var(--heading-color, #111827);
+        }
+
+
+        .login-input-wrapper {
+            position: relative;
+        }
+
+
+        .login-input-icon {
+            position: absolute;
+
+            left: 15px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: #9ca3af;
+
+            pointer-events: none;
+        }
+
+
+        .login-input {
+            width: 100%;
+
+            height: 52px;
+
+            padding: 0 45px;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 12px;
+
+            background: #ffffff;
+
+            color: #111827;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 14px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+
+        .login-input:focus {
+            border-color: #f97316;
+
+            box-shadow:
+                0 0 0 4px rgba(249, 115, 22, 0.10);
+        }
+
+
+        .password-toggle {
+            position: absolute;
+
+            right: 15px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            border: none;
+
+            background: transparent;
+
+            color: #9ca3af;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        .password-toggle:hover {
+            color: #f97316;
+        }
+
+
+        /* =====================================================
+           ERROR MESSAGE
+        ===================================================== */
+
+        .field-error {
+            display: block;
+
+            margin-top: 6px;
+
+            font-size: 12px;
+
+            color: #dc2626;
+        }
+
+
+        .login-message {
+            display: none;
+
+            padding: 12px 14px;
+
+            margin-bottom: 20px;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        .login-message.show {
+            display: block;
+        }
+
+
+        .login-message.error {
+            color: #b91c1c;
+
+            background: #fee2e2;
+
+            border: 1px solid #fecaca;
+        }
+
+
+        .login-message.success {
+            color: #166534;
+
+            background: #dcfce7;
+
+            border: 1px solid #bbf7d0;
+        }
+
+
+        /* =====================================================
+           LOGIN OPTIONS
+        ===================================================== */
+
+        .login-options {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 25px;
+
+            font-size: 13px;
+        }
+
+
+        .remember-me {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #6b7280;
+
+            cursor: pointer;
+        }
+
+
+        .remember-me input {
+            accent-color: #f97316;
+        }
+
+
+        .forgot-password {
+            color: #f97316;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           LOGIN BUTTON
+        ===================================================== */
+
+        .login-submit-btn {
+            width: 100%;
+
+            height: 52px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: linear-gradient(
+                135deg,
+                #f97316,
+                #ea580c
+            );
+
+            color: white;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        .login-submit-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px rgba(249, 115, 22, 0.25);
+        }
+
+
+        .login-submit-btn:active {
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           ADMIN DEMO BUTTON
+        ===================================================== */
+
+        .admin-demo-btn {
+            width: 100%;
+
+            height: 50px;
+
+            margin-top: 12px;
+
+            border: 1px solid #f97316;
+
+            border-radius: 12px;
+
+            background: transparent;
+
+            color: #f97316;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            transition: 0.3s;
+        }
+
+
+        .admin-demo-btn:hover {
+            background: #fff7ed;
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =====================================================
+           DIVIDER
+        ===================================================== */
+
+        .login-divider {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin: 25px 0;
+
+            color: #9ca3af;
+
+            font-size: 12px;
+        }
+
+
+        .login-divider::before,
+        .login-divider::after {
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #e5e7eb;
+        }
+
+
+        /* =====================================================
+           SIGN UP
+        ===================================================== */
+
+        .signup-text {
+            text-align: center;
+
+            font-size: 14px;
+
+            color: #6b7280;
+        }
+
+
+        .signup-text a {
+            color: #f97316;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+
+        .signup-text a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           DEMO CREDENTIAL BOX
+        ===================================================== */
+
+        .admin-demo-info {
+            margin-top: 20px;
+
+            padding: 13px 15px;
+
+            border-radius: 10px;
+
+            background: #fff7ed;
+
+            border: 1px solid #fed7aa;
+
+            font-size: 12px;
+
+            color: #9a3412;
+
+            line-height: 1.6;
+        }
+
+
+        .admin-demo-info strong {
+            color: #7c2d12;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .login-container {
+                grid-template-columns: 1fr;
+
+                max-width: 600px;
+            }
+
+
+            .login-info {
+                padding: 45px 35px;
+            }
+
+
+            .login-info h1 {
+                font-size: 32px;
+            }
+
+
+            .login-form-section {
+                padding: 45px 35px;
+            }
+        }
+
+
+        @media (max-width: 576px) {
+
+            .login-page {
+                padding: 40px 15px;
+            }
+
+
+            .login-info {
+                padding: 35px 25px;
+            }
+
+
+            .login-info h1 {
+                font-size: 27px;
+            }
+
+
+            .login-info p {
+                font-size: 14px;
+            }
+
+
+            .login-features {
+                gap: 12px;
+            }
+
+
+            .login-feature {
+                font-size: 13px;
+            }
+
+
+            .login-form-section {
+                padding: 35px 25px;
+            }
+
+
+            .login-heading h2 {
+                font-size: 25px;
+            }
+
+
+            .login-options {
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 12px;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= HEADER ================= -->
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
 
-<header class="site-header" id="siteHeader">
+ <header class="site-header" id="siteHeader">
 
-    <div class="container navbar">
+        <div class="container">
 
+            <nav class="navbar" aria-label="Main navigation">
 
-        <!-- Brand -->
-
-        <a
-            href="index.html"
-            class="brand"
-            aria-label="SkillForge Home">
-
-            <span class="brand-icon">
-                <i data-lucide="graduation-cap"></i>
-            </span>
-
-            <span class="brand-text">
-                Skill<span>Forge</span>
-            </span>
-
-        </a>
-
-
-        <!-- Search -->
-
-        <div class="header-search">
-
-            <form
-                class="search-form"
-                id="globalSearch">
-
-                <i data-lucide="search"></i>
-
-                <input
-                    type="search"
-                    placeholder="Search courses..."
-                    aria-label="Search courses">
-
-                <button
-                    type="submit"
-                    aria-label="Search">
-
-                    <i data-lucide="arrow-right"></i>
-
-                </button>
-
-            </form>
-
-        </div>
-
-
-        <!-- Desktop Navigation -->
-
-        <nav
-            class="desktop-nav"
-            aria-label="Main navigation">
-
-            <a
-                href="../index.html"
-                class="nav-link">
-
-                Home
-
-            </a>
-
-            <a
-                href="home2.html"
-                class="nav-link active">
-
-                Home 2
-
-            </a>
-
-            <a
-                href="about.html"
-                class="nav-link">
-
-                About
-
-            </a>
-
-            <a
-                href="courses.html"
-                class="nav-link">
-
-                Courses
-
-            </a>
-
-            <a
-                href="blog.html"
-                class="nav-link">
-
-                Blog
-
-            </a>
-
-            <a
-                href="contact.html"
-                class="nav-link">
-
-                Contact
-
-            </a>
-
-        </nav>
-
-
-        <!-- Actions -->
-
-        <div class="header-actions">
-
-            <button
-                class="icon-button"
-                id="themeToggle"
-                type="button"
-                aria-label="Toggle dark mode"
-                aria-pressed="false">
-
-                <i
-                    data-lucide="moon"
-                    id="themeIcon"></i>
-
-            </button>
-
-
-            <button
-                class="icon-button"
-                id="rtlToggle"
-                type="button"
-                aria-label="Toggle RTL"
-                aria-pressed="false">
-
-                <i data-lucide="languages"></i>
-
-            </button>
-
-
-            <a
-                href="login.html"
-                class="login-link">
-
-                Login
-
-            </a>
-
-
-            <a
-                href="signup.html"
-                class="btn btn-primary btn-small">
-
-                Sign Up
-
-            </a>
-
-
-            <button
-                class="mobile-menu-button"
-                id="mobileMenuButton"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false">
-
-                <i data-lucide="menu"></i>
-
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <!-- Mobile Navigation -->
-
-    <nav
-        class="mobile-nav"
-        id="mobileNav">
-
-        <div class="container mobile-nav-content">
-
-            <a
-                href="../index.html"
-                class="mobile-nav-link">
-
-                Home
-
-            </a>
-
-            <a
-                href="home-2.html"
-                class="mobile-nav-link ">
-
-                Home 2
-
-            </a>
-
-            <a
-                href="about.html"
-                class="mobile-nav-link">
-
-                About
-
-            </a>
-
-            <a
-                href="courses.html"
-                class="mobile-nav-link">
-
-                Courses
-
-            </a>
-
-            <a
-                href="blog.html"
-                class="mobile-nav-link">
-
-                Blog
-
-            </a>
-
-            <a
-                href="contact.html"
-                class="mobile-nav-link">
-
-                Contact
-
-            </a>
-
-
-            <div class="mobile-nav-buttons">
-
-                <a
-                    href="login.html"
-                    class="btn btn-outline">
-
-                    Login
-
-                </a>
-
-                <a
-                    href="signup.html"
-                    class="btn btn-primary">
-
-                    Sign Up
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-</header>
-
-
-<!-- ================= MOBILE NAV ================= -->
-
-<div class="mobile-nav" id="mobileNav">
-
-    <a href="../index.html">Home</a>
-    <a href="home2.html">Home 2</a>
-    <a href="about.html">About</a>
-    <a href="courses.html">Courses</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-
-    <div class="mobile-nav-buttons">
-        <a href="login.html" class="login-btn active">Login</a>
-        <a href="signup.html" class="signup-btn">Sign Up</a>
-    </div>
-
-</div>
-
-
-<!-- ================= LOGIN SECTION ================= -->
-
-<main class="login-page">
-
-    <div class="login-bg-shape login-shape-one"></div>
-    <div class="login-bg-shape login-shape-two"></div>
-
-    <div class="container">
-
-        <div class="login-wrapper">
-
-            <!-- Left Content -->
-            <div class="login-content">
-
-                <span class="section-badge">
-                    <i class="fa-solid fa-lock"></i>
-                    Welcome Back
-                </span>
-
-                <h1>
-                    Continue Your
-                    <span>Learning Journey</span>
-                </h1>
-
-                <p>
-                    Login to your SkillForge account and continue
-                    learning, track your progress, access courses,
-                    and build the skills you need for your career.
-                </p>
-
-                <div class="login-features">
-
-                    <div class="login-feature">
-                        <div class="feature-icon">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-
-                        <div>
-                            <h3>Access Your Courses</h3>
-                            <p>Continue learning from where you stopped.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="login-feature">
-                        <div class="feature-icon">
-                            <i class="fa-solid fa-chart-line"></i>
-                        </div>
-
-                        <div>
-                            <h3>Track Your Progress</h3>
-                            <p>Monitor your learning and achievements.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="login-feature">
-                        <div class="feature-icon">
-                            <i class="fa-solid fa-certificate"></i>
-                        </div>
-
-                        <div>
-                            <h3>Earn Certificates</h3>
-                            <p>Complete courses and showcase your skills.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Login Card -->
-            <div class="login-card">
-
-                <div class="login-card-header">
-
-                    <div class="login-card-icon">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-
-                    <h2>Welcome Back!</h2>
-
-                    <p>
-                        Login to access your SkillForge account
-                    </p>
-
-                </div>
-
-
-                <!-- Message -->
-                <div
-                    class="login-message"
-                    id="loginMessage"
-                ></div>
-
-
-                <form id="loginForm" novalidate>
-
-                    <!-- Email -->
-                    <div class="form-group">
-
-                        <label for="loginEmail">
-                            Email Address
-                        </label>
-
-                        <div class="input-wrapper">
-
-                            <i class="fa-solid fa-envelope"></i>
-
-                            <input
-                                type="email"
-                                id="loginEmail"
-                                name="email"
-                                placeholder="Enter your email"
-                                autocomplete="email"
-                            >
-
-                        </div>
-
-                        <small
-                            class="field-error"
-                            id="emailError"
-                        ></small>
-
-                    </div>
-
-
-                    <!-- Password -->
-                    <div class="form-group">
-
-                        <div class="label-row">
-
-                            <label for="loginPassword">
-                                Password
-                            </label>
-
-                            <a
-                                href="#"
-                                id="forgotPassword"
-                            >
-                                Forgot Password?
-                            </a>
-
-                        </div>
-
-                        <div class="input-wrapper">
-
-                            <i class="fa-solid fa-lock"></i>
-
-                            <input
-                                type="password"
-                                id="loginPassword"
-                                name="password"
-                                placeholder="Enter your password"
-                                autocomplete="current-password"
-                            >
-
-                            <button
-                                type="button"
-                                class="password-toggle"
-                                id="passwordToggle"
-                                aria-label="Show password"
-                            >
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-
-                        </div>
-
-                        <small
-                            class="field-error"
-                            id="passwordError"
-                        ></small>
-
-                    </div>
-
-
-                    <!-- Remember Me -->
-                    <div class="remember-row">
-
-                        <label class="checkbox-label">
-
-                            <input
-                                type="checkbox"
-                                id="rememberMe"
-                            >
-
-                            <span>
-                                Remember me
-                            </span>
-
-                        </label>
-
-                    </div>
-
-
-                    <!-- Login Button -->
-                    <button
-                        type="submit"
-                        class="login-submit-btn"
-                        id="loginSubmitBtn"
-                    >
-                        <span>Login</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-
-                </form>
-
-
-                <!-- Divider -->
-                <div class="login-divider">
-                    <span>OR</span>
-                </div>
-
-
-                <!-- Signup -->
-                <div class="signup-link">
-
-                    <p>
-                        Don't have an account?
-                        <a href="signup.html">
-                            Create an account
-                        </a>
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="site-footer">
-
-    <div class="container">
-
-
-        <div class="footer-grid">
-
-
-            <div class="footer-brand">
-
-                <a
-                    href="index.html"
-                    class="brand">
+                <!-- Brand -->
+                <a href="../index.html"
+                    class="brand"
+                    aria-label="SkillForge Home">
 
                     <span class="brand-icon">
                         <i data-lucide="graduation-cap"></i>
@@ -577,45 +788,673 @@
                 </a>
 
 
-                <p>
-                    Modern computer education and practical
-                    career training for students, beginners
-                    and professionals.
-                </p>
+                <!-- Search -->
+                <div class="header-search">
+
+                    <form class="search-form"
+                        id="globalSearchForm"
+                        role="search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="globalSearch"
+                            placeholder="Search courses..."
+                            aria-label="Search courses">
+
+                        <button type="submit"
+                            aria-label="Search">
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
 
 
-                <div class="social-links">
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
 
-                    <a
-                        href="#"
-                        aria-label="Facebook">
+                    <a href="../index.html"
+                        class="nav-link">
+                        Home
+                    </a>
 
-                        <i class="fa-brands fa-facebook-f"></i>
+                    <a href="home2.html"
+                        class="nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html"
+                        class="nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html"
+                        class="nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html"
+                        class="nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html"
+                        class="nav-link">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+
+                    <!-- Theme -->
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                        aria-pressed="false"
+                        title="Toggle theme">
+
+                        <i data-lucide="sun"
+                            id="themeIcon"></i>
+
+                    </button>
+
+
+                    <!-- RTL -->
+                    <button
+                        class="icon-button rtl-button"
+                        id="rtlToggle"
+                        type="button"
+                        aria-label="Switch to right-to-left layout"
+                        aria-pressed="false"
+                        title="Toggle RTL">
+
+                      <span>RTL</span>
+
+                    </button>
+
+
+                    <!-- Login -->
+                    <a href="login.html"
+                        class="login-link">
+
+                        Login
 
                     </a>
 
-                    <a
-                        href="#"
-                        aria-label="Instagram">
 
-                        <i class="fa-brands fa-instagram"></i>
+                    <!-- Sign Up -->
+                    <a href="signup.html"
+                        class="btn btn-primary btn-small active">
 
-                    </a>
-
-                    <a
-                        href="#"
-                        aria-label="LinkedIn">
-
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        Sign Up
 
                     </a>
 
+
+                    <!-- Mobile Menu -->
+                    <button
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNav">
+
+                        <i data-lucide="menu"></i>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav"
+            id="mobileNav">
+
+            <div class="container">
+
+                <div class="mobile-nav-content">
+
+                    <a href="../index.html"
+                        class="mobile-nav-link">
+                        Home
+                    </a>
+
+                    <a href="home2.html"
+                        class="mobile-nav-link">
+                        Home 2
+                    </a>
+
+                    <a href="about.html"
+                        class="mobile-nav-link">
+                        About
+                    </a>
+
+                    <a href="courses.html"
+                        class="mobile-nav-link">
+                        Courses
+                    </a>
+
+                    <a href="blog.html"
+                        class="mobile-nav-link">
+                        Blog
+                    </a>
+
+                    <a href="contact.html"
+                        class="mobile-nav-link">
+                        Contact
+                    </a>
+
+
+                    <div class="mobile-nav-buttons">
+
+                        <a href="login.html"
+                            class="btn btn-outline">
+                            Login
+                        </a>
+
+                        <a href="signup.html"
+                            class="btn btn-primary">
+                            Sign Up
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN LOGIN CONTENT
+    ===================================================== -->
+
+    <main class="login-page">
+
+        <div class="login-container">
+
+
+            <!-- =================================================
+                 LEFT SIDE
+            ================================================= -->
+
+            <section class="login-info">
+
+                <div class="login-info-content">
+
+                    <div class="login-info-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <h1>
+                        Welcome Back to SkillForge
+                    </h1>
+
+
+                    <p>
+                        Continue your learning journey,
+                        practice your skills, track your
+                        progress and achieve your career goals
+                        with SkillForge.
+                    </p>
+
+
+                    <div class="login-features">
+
+                        <div class="login-feature">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Access your enrolled courses
+                            </span>
+
+                        </div>
+
+
+                        <div class="login-feature">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Practice typing and computer skills
+                            </span>
+
+                        </div>
+
+
+                        <div class="login-feature">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Track your learning progress
+                            </span>
+
+                        </div>
+
+
+                        <div class="login-feature">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Download course certificates
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RIGHT SIDE
+            ================================================= -->
+
+            <section class="login-form-section">
+
+                <div class="login-form-wrapper">
+
+
+                    <!-- Heading -->
+
+                    <div class="login-heading">
+
+                        <h2>
+                            Login to Your Account
+                        </h2>
+
+                        <p>
+                            Enter your credentials to continue.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Message -->
+
+                    <div
+                        class="login-message"
+                        id="loginMessage">
+                    </div>
+
+
+                    <!-- Login Form -->
+
+                    <form
+                        id="loginForm"
+                        novalidate>
+
+
+                        <!-- Email -->
+
+                        <div class="login-form-group">
+
+                            <label for="loginEmail">
+                                Email Address
+                            </label>
+
+
+                            <div class="login-input-wrapper">
+
+                                <i class="fa-regular fa-envelope login-input-icon"></i>
+
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    name="email"
+                                    class="login-input"
+                                    placeholder="Enter your email"
+                                    autocomplete="email">
+
+                            </div>
+
+
+                            <span
+                                class="field-error"
+                                id="emailError">
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- Password -->
+
+                        <div class="login-form-group">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+
+                            <div class="login-input-wrapper">
+
+                                <i class="fa-solid fa-lock login-input-icon"></i>
+
+
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    name="password"
+                                    class="login-input"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password">
+
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="passwordToggle"
+                                    aria-label="Show password">
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <span
+                                class="field-error"
+                                id="passwordError">
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- Options -->
+
+                        <div class="login-options">
+
+                            <label class="remember-me">
+
+                                <input
+                                    type="checkbox"
+                                    id="rememberMe">
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+
+                            <a
+                                href="forgot-password.html"
+                                class="forgot-password">
+
+                                Forgot Password?
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Login Button -->
+
+                        <button
+                            type="submit"
+                            class="login-submit-btn"
+                            id="loginSubmitBtn">
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                            <span>
+                                Login
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- Admin Demo -->
+
+                        <button
+                            type="button"
+                            class="admin-demo-btn"
+                            id="adminDemoBtn">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <span>
+                                Admin Demo
+                            </span>
+
+                        </button>
+
+
+                    </form>
+
+
+
+                    <!-- Demo Information -->
+
+                    <div class="admin-demo-info">
+
+                        <strong>
+                            Admin Demo
+                        </strong>
+
+                        <br>
+
+                        Click the
+                        <strong>Admin Demo</strong>
+                        button to automatically fill the
+                        administrator login credentials.
+
+                    </div>
+
+
+
+                    <!-- Divider -->
+
+                    <div class="login-divider">
+
+                        OR
+
+                    </div>
+
+
+
+                    <!-- Signup -->
+
+                    <div class="signup-text">
+
+                        Don't have an account?
+
+                        <a href="signup.html">
+                            Create an Account
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+        <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
                     <a
-                        href="#"
-                        aria-label="YouTube">
+                        href="../index.html"
+                        class="brand">
 
-                        <i class="fa-brands fa-youtube"></i>
+                        <span class="brand-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </span>
 
+                        <span class="brand-text">
+                            Skill<span>Forge</span>
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        Modern computer education and practical
+                        career training for students, beginners
+                        and professionals.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="#"
+                            aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="courses.html">
+                        Courses
+                    </a>
+
+                    <a href="instructors.html">
+                        Faculty
+                    </a>
+
+                    <a href="batches.html">
+                        Batches
+                    </a>
+
+                    <a href="fees.html">
+                        Fees
+                    </a>
+
+                </div>
+
+
+                <!-- Popular Courses -->
+                <div class="footer-column">
+
+                    <h3>
+                        Popular Courses
+                    </h3>
+
+                    <a href="course-detail.html?course=basic-computing">
+                        Basic Computing
+                    </a>
+
+                    <a href="course-detail.html?course=ms-office">
+                        MS Office
+                    </a>
+
+                    <a href="course-detail.html?course=tally">
+                        Tally Prime
+                    </a>
+
+                    <a href="course-detail.html?course=advanced-excel">
+                        Advanced Excel
+                    </a>
+
+                    <a href="typing-test.html">
+                        Typing Practice
+                    </a>
+
+                </div>
+
+
+                <!-- Student Portal -->
+                <div class="footer-column">
+
+                    <h3>
+                        Student Portal
+                    </h3>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="student-dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="typing-test.html">
+                        Practice
+                    </a>
+
+                    <a href="progress.html">
+                        Progress
+                    </a>
+
+                    <a href="certificates.html">
+                        Certificates
                     </a>
 
                 </div>
@@ -623,166 +1462,394 @@
             </div>
 
 
+            <!-- Footer Contact -->
+            <div class="footer-contact">
 
-            <div class="footer-column">
+                <div>
 
-                <h3>
-                    Quick Links
-                </h3>
+                    <i data-lucide="map-pin"></i>
 
-                <a href="about.html">
-                    About
-                </a>
+                    <span>
+                        Chennai, Tamil Nadu
+                    </span>
 
-                <a href="courses.html">
-                    Courses
-                </a>
-
-                <a href="instructors.html">
-                    Faculty
-                </a>
-
-                <a href="batches.html">
-                    Batches
-                </a>
-
-                <a href="fees.html">
-                    Fees
-                </a>
-
-            </div>
+                </div>
 
 
+                <div>
 
-            <div class="footer-column">
+                    <i data-lucide="phone"></i>
 
-                <h3>
-                    Popular Courses
-                </h3>
+                    <span>
+                        +91 98765 43210
+                    </span>
 
-                <a href="course-detail.html?course=basic-computing">
-                    Basic Computing
-                </a>
+                </div>
 
-                <a href="course-detail.html?course=ms-office">
-                    MS Office
-                </a>
 
-                <a href="course-detail.html?course=tally">
-                    Tally Prime
-                </a>
+                <div>
 
-                <a href="course-detail.html?course=advanced-excel">
-                    Advanced Excel
-                </a>
+                    <i data-lucide="mail"></i>
 
-                <a href="typing-test.html">
-                    Typing Practice
-                </a>
+                    <span>
+                        hello@skillforge.in
+                    </span>
+
+                </div>
 
             </div>
 
 
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
 
-            <div class="footer-column">
+                <p>
+                    © 2026 SkillForge. All rights reserved.
+                </p>
 
-                <h3>
-                    Student Portal
-                </h3>
+                <div>
 
-                <a href="login.html">
-                    Login
-                </a>
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
 
-                <a href="student-dashboard.html">
-                    Dashboard
-                </a>
+                    <a href="terms.html">
+                        Terms
+                    </a>
 
-                <a href="typing-test.html">
-                    Practice
-                </a>
-
-                <a href="progress.html">
-                    Progress
-                </a>
-
-                <a href="certificates.html">
-                    Certificates
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-
-
-        <div class="footer-contact">
-
-            <div>
-
-                <i data-lucide="map-pin"></i>
-
-                <span>
-                    Chennai, Tamil Nadu
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <i data-lucide="phone"></i>
-
-                <span>
-                    +91 98765 43210
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <i data-lucide="mail"></i>
-
-                <span>
-                    hello@skillforge.in
-                </span>
-
-            </div>
-
-        </div>
+    </footer>
 
 
 
-        <div class="footer-bottom">
+    <!-- =====================================================
+         LOGIN JAVASCRIPT
+    ===================================================== -->
 
-            <p>
-                © 2026 SkillForge. All rights reserved.
-            </p>
+    <script>
 
-            <div>
+        document.addEventListener("DOMContentLoaded", function () {
 
-                <a href="privacy-policy.html">
-                    Privacy Policy
-                </a>
+            /* =================================================
+               ELEMENTS
+            ================================================= */
 
-                <a href="terms.html">
-                    Terms
-                </a>
+            const loginForm =
+                document.getElementById("loginForm");
 
-            </div>
+            const emailInput =
+                document.getElementById("loginEmail");
 
-        </div>
+            const passwordInput =
+                document.getElementById("loginPassword");
 
-    </div>
+            const emailError =
+                document.getElementById("emailError");
 
-</footer>
+            const passwordError =
+                document.getElementById("passwordError");
+
+            const loginMessage =
+                document.getElementById("loginMessage");
+
+            const adminDemoBtn =
+                document.getElementById("adminDemoBtn");
+
+            const passwordToggle =
+                document.getElementById("passwordToggle");
 
 
-<!-- Common JS -->
-<script src="../assets/js/main.js"></script>
+
+            /* =================================================
+               ADMIN CREDENTIALS
+            ================================================= */
+
+            const ADMIN_EMAIL =
+                "admin@skillforge.com";
+
+            const ADMIN_PASSWORD =
+                "admin123";
 
 
+
+            /* =================================================
+               ADMIN DEMO BUTTON
+            ================================================= */
+
+            adminDemoBtn.addEventListener("click", function () {
+
+                emailInput.value = ADMIN_EMAIL;
+
+                passwordInput.value = ADMIN_PASSWORD;
+
+                emailError.textContent = "";
+
+                passwordError.textContent = "";
+
+                loginMessage.className =
+                    "login-message show success";
+
+                loginMessage.textContent =
+                    "Admin demo credentials filled. Click Login to continue.";
+
+                emailInput.focus();
+
+            });
+
+
+
+            /* =================================================
+               SHOW / HIDE PASSWORD
+            ================================================= */
+
+            passwordToggle.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        passwordInput.type === "password"
+                    ) {
+
+                        passwordInput.type = "text";
+
+                        passwordToggle.innerHTML =
+                            '<i class="fa-regular fa-eye-slash"></i>';
+
+                        passwordToggle.setAttribute(
+                            "aria-label",
+                            "Hide password"
+                        );
+
+                    } else {
+
+                        passwordInput.type = "password";
+
+                        passwordToggle.innerHTML =
+                            '<i class="fa-regular fa-eye"></i>';
+
+                        passwordToggle.setAttribute(
+                            "aria-label",
+                            "Show password"
+                        );
+
+                    }
+
+                }
+            );
+
+
+
+            /* =================================================
+               LOGIN FORM
+            ================================================= */
+
+            loginForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    /* Clear old errors */
+
+                    emailError.textContent = "";
+
+                    passwordError.textContent = "";
+
+                    loginMessage.className =
+                        "login-message";
+
+                    loginMessage.textContent = "";
+
+
+                    const email =
+                        emailInput.value.trim().toLowerCase();
+
+                    const password =
+                        passwordInput.value;
+
+
+                    let isValid = true;
+
+
+
+                    /* =================================================
+                       EMAIL VALIDATION
+                    ================================================= */
+
+                    if (!email) {
+
+                        emailError.textContent =
+                            "Email address is required.";
+
+                        isValid = false;
+
+                    } else if (
+                        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+                    ) {
+
+                        emailError.textContent =
+                            "Please enter a valid email address.";
+
+                        isValid = false;
+
+                    }
+
+
+
+                    /* =================================================
+                       PASSWORD VALIDATION
+                    ================================================= */
+
+                    if (!password) {
+
+                        passwordError.textContent =
+                            "Password is required.";
+
+                        isValid = false;
+
+                    }
+
+
+
+                    if (!isValid) {
+                        return;
+                    }
+
+
+
+                    /* =================================================
+                       ADMIN LOGIN
+                    ================================================= */
+
+                    if (
+                        email === ADMIN_EMAIL &&
+                        password === ADMIN_PASSWORD
+                    ) {
+
+                        /* Save admin session */
+
+                        localStorage.setItem(
+                            "skillforge-user",
+                            JSON.stringify({
+                                email: email,
+                                role: "admin"
+                            })
+                        );
+
+
+                        localStorage.setItem(
+                            "skillforge-login-time",
+                            new Date().toISOString()
+                        );
+
+
+                        /* Success message */
+
+                        loginMessage.className =
+                            "login-message show success";
+
+                        loginMessage.textContent =
+                            "Admin login successful. Opening dashboard...";
+
+
+                        /* Redirect */
+
+                        setTimeout(function () {
+
+                            window.location.href =
+                                "adminDashboard.html";
+
+                        }, 700);
+
+
+                        return;
+                    }
+
+
+
+                    /* =================================================
+                       DEMO STUDENT LOGIN
+                    ================================================= */
+
+                    if (
+                        email === "student@skillforge.com" &&
+                        password === "student123"
+                    ) {
+
+                        localStorage.setItem(
+                            "skillforge-user",
+                            JSON.stringify({
+                                email: email,
+                                role: "student"
+                            })
+                        );
+
+
+                        localStorage.setItem(
+                            "skillforge-login-time",
+                            new Date().toISOString()
+                        );
+
+
+                        loginMessage.className =
+                            "login-message show success";
+
+                        loginMessage.textContent =
+                            "Login successful. Opening student dashboard...";
+
+
+                        setTimeout(function () {
+
+                            window.location.href =
+                                "student-dashboard.html";
+
+                        }, 700);
+
+
+                        return;
+                    }
+
+
+
+                    /* =================================================
+                       INVALID LOGIN
+                    ================================================= */
+
+                    loginMessage.className =
+                        "login-message show error";
+
+                    loginMessage.textContent =
+                        "Invalid email or password. Please check your credentials.";
+
+                }
+            );
+
+
+
+            /* =================================================
+               LUCIDE ICONS
+            ================================================= */
+
+            if (typeof lucide !== "undefined") {
+                lucide.createIcons();
+            }
+
+        });
+
+    </script>
+
+
+
+    <!-- Existing Main JS -->
+
+    <script src="../assets/js/main.js"></script>
 
 </body>
+
 </html>

@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function initTheme() {
 
     const themeToggle = document.getElementById("themeToggle");
-    const themeIcon = document.getElementById("themeIcon");
 
     if (!themeToggle) return;
 
@@ -76,27 +75,25 @@ function initTheme() {
 
     function applyTheme(theme) {
 
+        // Apply theme
         document.documentElement.setAttribute(
             "data-theme",
             theme
         );
 
+        // Accessibility
         themeToggle.setAttribute(
             "aria-pressed",
             String(theme === "dark")
         );
 
-        if (themeIcon) {
+        // Change icon
+        themeToggle.innerHTML =
+            theme === "dark"
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
 
-            // Dark mode = show sun
-            // Light mode = show moon
-            themeIcon.setAttribute(
-                "data-lucide",
-                theme === "dark" ? "sun" : "moon"
-            );
-
-        }
-
+        // Render Lucide icon
         if (typeof lucide !== "undefined") {
             lucide.createIcons();
         }
@@ -104,8 +101,6 @@ function initTheme() {
     }
 
 }
-
-
 /* =========================================
    RTL
 ========================================= */
@@ -5064,357 +5059,331 @@ document.addEventListener("DOMContentLoaded", () => {
    SKILLFORGE LOGIN
 ========================================= */
 
+/* =====================================================
+   SKILLFORGE LOGIN JS
+===================================================== */
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    const loginForm = document.getElementById("loginForm");
+    initLucide();
 
-    const emailInput = document.getElementById("loginEmail");
-    const passwordInput = document.getElementById("loginPassword");
+    initAdminDemo();
 
-    const emailError = document.getElementById("emailError");
-    const passwordError = document.getElementById("passwordError");
+    initLogin();
 
-    const loginMessage = document.getElementById("loginMessage");
-
-    const passwordToggle =
-        document.getElementById("passwordToggle");
-
-    const rememberMe =
-        document.getElementById("rememberMe");
-
-    const loginSubmitBtn =
-        document.getElementById("loginSubmitBtn");
-
-    const forgotPassword =
-        document.getElementById("forgotPassword");
-
-
-    /* =========================================
-       SHOW / HIDE PASSWORD
-    ========================================= */
-
-    passwordToggle.addEventListener("click", () => {
-
-        const isPassword =
-            passwordInput.type === "password";
-
-        passwordInput.type =
-            isPassword ? "text" : "password";
-
-        passwordToggle.innerHTML = isPassword
-            ? '<i class="fa-solid fa-eye-slash"></i>'
-            : '<i class="fa-solid fa-eye"></i>';
-
-        passwordToggle.setAttribute(
-            "aria-label",
-            isPassword
-                ? "Hide password"
-                : "Show password"
-        );
-    });
-
-
-    /* =========================================
-       REMEMBERED EMAIL
-    ========================================= */
-
-    const rememberedEmail =
-        localStorage.getItem("skillforgeRememberedEmail");
-
-    if (rememberedEmail) {
-        emailInput.value = rememberedEmail;
-        rememberMe.checked = true;
-    }
-
-
-    /* =========================================
-       CLEAR ERRORS
-    ========================================= */
-
-    function clearErrors() {
-
-        emailError.textContent = "";
-        passwordError.textContent = "";
-
-        emailInput.classList.remove("input-error");
-        passwordInput.classList.remove("input-error");
-    }
-
-
-    /* =========================================
-       SHOW MESSAGE
-    ========================================= */
-
-    function showMessage(message, type) {
-
-        loginMessage.textContent = message;
-
-        loginMessage.className =
-            `login-message ${type}`;
-    }
-
-
-    /* =========================================
-       VALIDATE EMAIL
-    ========================================= */
-
-    function isValidEmail(email) {
-
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-
-    /* =========================================
-       LOGIN FORM
-    ========================================= */
-
-    loginForm.addEventListener("submit", (event) => {
-
-        event.preventDefault();
-
-        clearErrors();
-
-        loginMessage.className = "login-message";
-        loginMessage.textContent = "";
-
-        const email =
-            emailInput.value.trim().toLowerCase();
-
-        const password =
-            passwordInput.value;
-
-
-        let isValid = true;
-
-
-        /* -------------------------
-           Email Validation
-        ------------------------- */
-
-        if (!email) {
-
-            emailError.textContent =
-                "Please enter your email address.";
-
-            isValid = false;
-
-        } else if (!isValidEmail(email)) {
-
-            emailError.textContent =
-                "Please enter a valid email address.";
-
-            isValid = false;
-        }
-
-
-        /* -------------------------
-           Password Validation
-        ------------------------- */
-
-        if (!password) {
-
-            passwordError.textContent =
-                "Please enter your password.";
-
-            isValid = false;
-        }
-
-
-        if (!isValid) {
-            return;
-        }
-
-
-        /* =========================================
-           GET REGISTERED USERS
-        ========================================= */
-
-        const users =
-            JSON.parse(
-                localStorage.getItem("skillforgeUsers")
-            ) || [];
-
-
-        /* =========================================
-           FIND USER
-        ========================================= */
-
-        const user = users.find(
-            (item) =>
-                item.email.toLowerCase() === email
-        );
-
-
-        if (!user) {
-
-            showMessage(
-                "No account found with this email. Please sign up first.",
-                "error"
-            );
-
-            return;
-        }
-
-
-        /* =========================================
-           CHECK PASSWORD
-        ========================================= */
-
-        if (user.password !== password) {
-
-            showMessage(
-                "Incorrect password. Please try again.",
-                "error"
-            );
-
-            return;
-        }
-
-
-        /* =========================================
-           REMEMBER ME
-        ========================================= */
-
-        if (rememberMe.checked) {
-
-            localStorage.setItem(
-                "skillforgeRememberedEmail",
-                email
-            );
-
-        } else {
-
-            localStorage.removeItem(
-                "skillforgeRememberedEmail"
-            );
-        }
-
-
-        /* =========================================
-           SAVE LOGIN SESSION
-        ========================================= */
-
-        const loggedInUser = {
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            phone: user.phone,
-            course: user.course
-        };
-
-
-        localStorage.setItem(
-            "skillforgeCurrentUser",
-            JSON.stringify(loggedInUser)
-        );
-
-
-        /* =========================================
-           SUCCESS
-        ========================================= */
-
-        showMessage(
-            `Welcome back, ${user.name}! Login successful.`,
-            "success"
-        );
-
-
-        loginSubmitBtn.disabled = true;
-
-        loginSubmitBtn.innerHTML = `
-            <span>Login Successful</span>
-            <i class="fa-solid fa-check"></i>
-        `;
-
-
-        /* =========================================
-           REDIRECT
-        ========================================= */
-
-        setTimeout(() => {
-
-            window.location.href =
-                "student-dashboard.html";
-
-        }, 1000);
-
-    });
-
-
-    /* =========================================
-       FORGOT PASSWORD
-    ========================================= */
-
-    forgotPassword.addEventListener("click", (event) => {
-
-        event.preventDefault();
-
-        const email =
-            emailInput.value.trim().toLowerCase();
-
-
-        if (!email) {
-
-            showMessage(
-                "Enter your email address first.",
-                "error"
-            );
-
-            emailInput.focus();
-
-            return;
-        }
-
-
-        if (!isValidEmail(email)) {
-
-            showMessage(
-                "Please enter a valid email address.",
-                "error"
-            );
-
-            emailInput.focus();
-
-            return;
-        }
-
-
-        const users =
-            JSON.parse(
-                localStorage.getItem("skillforgeUsers")
-            ) || [];
-
-
-        const user = users.find(
-            (item) =>
-                item.email.toLowerCase() === email
-        );
-
-
-        if (!user) {
-
-            showMessage(
-                "No account found with this email.",
-                "error"
-            );
-
-            return;
-        }
-
-
-        /*
-         * Static frontend demo:
-         * We don't actually send an email.
-         */
-
-        showMessage(
-            "Password reset functionality will be connected to the backend.",
-            "success"
-        );
-    });
+    initPasswordToggle();
 
 });
 
+
+
+/* =====================================================
+   LUCIDE
+===================================================== */
+
+function initLucide() {
+
+    if (typeof lucide !== "undefined") {
+
+        lucide.createIcons();
+
+    }
+
+}
+
+
+
+/* =====================================================
+   ADMIN DEMO
+===================================================== */
+
+function initAdminDemo() {
+
+    const adminDemoBtn =
+        document.getElementById("adminDemoBtn");
+
+    const emailInput =
+        document.getElementById("email");
+
+    const passwordInput =
+        document.getElementById("password");
+
+
+    if (
+        !adminDemoBtn ||
+        !emailInput ||
+        !passwordInput
+    ) {
+
+        return;
+
+    }
+
+
+    adminDemoBtn.addEventListener(
+        "click",
+        () => {
+
+
+            /*
+             * Demo Admin Credentials
+             */
+
+            emailInput.value =
+                "admin@skillforge.com";
+
+            passwordInput.value =
+                "admin123";
+
+
+            /*
+             * Remove previous error
+             */
+
+            const message =
+                document.getElementById(
+                    "loginMessage"
+                );
+
+            if (message) {
+
+                message.textContent = "";
+
+                message.className =
+                    "login-message";
+
+            }
+
+
+            /*
+             * Focus Login Button
+             */
+
+            document
+                .querySelector(".login-btn")
+                ?.focus();
+
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+function initLogin() {
+
+    const loginForm =
+        document.getElementById("loginForm");
+
+
+    if (!loginForm) return;
+
+
+    loginForm.addEventListener(
+        "submit",
+        (event) => {
+
+            event.preventDefault();
+
+
+            const emailInput =
+                document.getElementById("email");
+
+            const passwordInput =
+                document.getElementById("password");
+
+
+            const email =
+                emailInput.value.trim();
+
+            const password =
+                passwordInput.value;
+
+
+            const message =
+                document.getElementById(
+                    "loginMessage"
+                );
+
+
+            /*
+             * Demo Admin Credentials
+             */
+
+            const adminEmail =
+                "admin@skillforge.com";
+
+            const adminPassword =
+                "admin123";
+
+
+            /* ==============================
+               ADMIN LOGIN
+            ============================== */
+
+            if (
+                email === adminEmail &&
+                password === adminPassword
+            ) {
+
+
+                /*
+                 * Store logged-in user
+                 */
+
+                localStorage.setItem(
+                    "skillforge-user",
+                    JSON.stringify({
+                        role: "admin",
+                        email: adminEmail
+                    })
+                );
+
+
+                /*
+                 * Optional login timestamp
+                 */
+
+                localStorage.setItem(
+                    "skillforge-login-time",
+                    new Date().toISOString()
+                );
+
+
+                /*
+                 * Success message
+                 */
+
+                if (message) {
+
+                    message.textContent =
+                        "Login successful! Redirecting...";
+
+                    message.className =
+                        "login-message success";
+
+                }
+
+
+                /*
+                 * Redirect Admin
+                 */
+
+                setTimeout(() => {
+
+                    window.location.href =
+                        "admin/dashboard.html";
+
+                }, 500);
+
+
+                return;
+
+            }
+
+
+            /* ==============================
+               INVALID LOGIN
+            ============================== */
+
+            if (message) {
+
+                message.textContent =
+                    "Invalid email or password.";
+
+                message.className =
+                    "login-message error";
+
+            }
+
+
+            passwordInput.focus();
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   PASSWORD SHOW / HIDE
+===================================================== */
+
+function initPasswordToggle() {
+
+    const toggleButton =
+        document.getElementById(
+            "togglePassword"
+        );
+
+    const passwordInput =
+        document.getElementById(
+            "password"
+        );
+
+    const passwordIcon =
+        document.getElementById(
+            "passwordIcon"
+        );
+
+
+    if (
+        !toggleButton ||
+        !passwordInput
+    ) {
+
+        return;
+
+    }
+
+
+    toggleButton.addEventListener(
+        "click",
+        () => {
+
+            const isPassword =
+                passwordInput.type === "password";
+
+
+            passwordInput.type =
+                isPassword
+                    ? "text"
+                    : "password";
+
+
+            toggleButton.setAttribute(
+                "aria-label",
+                isPassword
+                    ? "Hide password"
+                    : "Show password"
+            );
+
+
+            if (passwordIcon) {
+
+                passwordIcon.setAttribute(
+                    "data-lucide",
+                    isPassword
+                        ? "eye-off"
+                        : "eye"
+                );
+
+            }
+
+
+            initLucide();
+
+        }
+    );
+
+};
 
 /* ==================================================
    BATCH FILTER

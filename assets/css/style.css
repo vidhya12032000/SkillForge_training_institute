@@ -13398,3 +13398,374 @@ body.dark-mode .signup-message.error {
     }
 
 }
+
+/* =========================================
+   TERMS & CONDITIONS
+========================================= */
+
+.terms-hero {
+    padding: 90px 0;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(249, 115, 22, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(249, 115, 22, 0.08),
+            transparent 35%
+        );
+}
+
+.page-hero-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.page-hero h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(36px, 5vw, 60px);
+    margin-bottom: 18px;
+}
+
+.page-hero p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    opacity: 0.75;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.breadcrumb svg {
+    width: 16px;
+}
+
+.breadcrumb a {
+    color: #f97316;
+}
+
+
+/* Layout */
+
+.terms-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* Sidebar */
+
+.terms-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.terms-sidebar-card {
+    padding: 25px;
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    border-radius: 18px;
+    background: var(--card-bg, #f4a2a2);
+}
+
+.terms-sidebar-card h3 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 18px;
+}
+
+.terms-sidebar-card a {
+    display: block;
+    padding: 10px 0;
+    color: inherit;
+    opacity: 0.7;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.terms-sidebar-card a:hover {
+    color: #f97316;
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+
+/* Content */
+
+.terms-content {
+    max-width: 850px;
+}
+
+.terms-intro {
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.18);
+    margin-bottom: 45px;
+}
+
+.terms-date {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #f97316;
+}
+
+.terms-intro h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.terms-intro p,
+.terms-block p {
+    line-height: 1.85;
+    opacity: 0.78;
+}
+
+
+/* Individual Sections */
+
+.terms-block {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 20px;
+    padding: 35px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    scroll-margin-top: 100px;
+}
+
+.terms-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.terms-block h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.terms-block h3 {
+    font-size: 17px;
+    margin: 22px 0 12px;
+}
+
+.terms-block ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.terms-block li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    opacity: 0.78;
+}
+
+.terms-block a {
+    color: #f97316;
+    font-weight: 600;
+}
+
+
+/* Info Box */
+
+.terms-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(249, 115, 22, 0.08);
+    border-left: 4px solid #f97316;
+}
+
+.terms-note svg {
+    flex-shrink: 0;
+    color: #f97316;
+    margin-top: 3px;
+}
+
+.terms-note p {
+    margin: 0;
+}
+
+
+/* Contact Card */
+
+.terms-contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(249, 115, 22, 0.08);
+}
+
+.terms-contact-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f97316;
+    color: white;
+}
+
+.terms-contact-card h3 {
+    margin: 0 0 8px;
+}
+
+.terms-contact-card p {
+    margin-bottom: 12px;
+}
+
+.terms-contact-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terms-contact-card a svg {
+    width: 16px;
+}
+
+
+/* Agreement */
+
+.terms-agreement {
+    display: flex;
+    gap: 18px;
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(249, 115, 22, 0.25);
+    background: rgba(249, 115, 22, 0.06);
+}
+
+.terms-agreement > svg {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    color: #f97316;
+}
+
+.terms-agreement h3 {
+    margin-bottom: 8px;
+}
+
+.terms-agreement p {
+    margin: 0;
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .terms-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .terms-sidebar {
+        position: static;
+    }
+
+    .terms-sidebar-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px 20px;
+    }
+
+    .terms-sidebar-card h3 {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .terms-hero {
+        padding: 65px 0;
+    }
+
+    .terms-block {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .terms-number {
+        width: 42px;
+        height: 42px;
+    }
+
+    .terms-sidebar-card {
+        grid-template-columns: 1fr;
+    }
+
+    .terms-contact-card {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-hero h1 {
+        font-size: 34px;
+    }
+
+    .terms-intro h2 {
+        font-size: 27px;
+    }
+
+    .terms-block h2 {
+        font-size: 21px;
+    }
+
+    .terms-agreement {
+        flex-direction: column;
+    }
+
+}
