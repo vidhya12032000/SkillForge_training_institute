@@ -116,13 +116,23 @@ html[data-theme="dark"] .search-form input::placeholder {
    ========================================================= */
 
 html[data-theme="dark"] .btn-outline {
-    color: var(--text-primary);
-    border-color: var(--border-color);
+    color: var(--primary);
+    background: var(--white);
+    border-color: var(--primary);
 }
 
 html[data-theme="dark"] .btn-outline:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+    color: var(--white);
+    background: var(--primary);
+}
+
+/* Extra specificity insurance for the mobile menu Login pill —
+   forces visibility even if something else conflicts */
+html[data-theme="dark"] .mobile-nav-buttons .btn-outline,
+html[data-theme="dark"] .mobile-nav-buttons a.btn-outline {
+    color: #f97316 !important;
+    background: #ffffff !important;
+    border-color: #f97316 !important;
 }
 
 
@@ -382,4 +392,458 @@ html[data-theme="dark"] .back-to-top {
 html[data-theme="dark"] ::selection {
     background: var(--primary);
     color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK MODE FIXES - ADDITIONAL
+   Fixes for hardcoded white backgrounds that don't flip
+   with the theme, causing white-on-white invisibility.
+   ========================================================= */
+
+/* Hamburger menu button (was using var(--white) bg + 
+   var(--text-primary) icon color -> both near-white in dark mode) */
+html[data-theme="dark"] .mobile-menu-button {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+/* Home hero + Home2 hero floating cards */
+html[data-theme="dark"] .floating-card,
+html[data-theme="dark"] .about-floating-card,
+html[data-theme="dark"] .course-hero-card {
+    background: rgba(15, 23, 42, 0.94);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .floating-card strong,
+html[data-theme="dark"] .about-floating-card strong,
+html[data-theme="dark"] .course-hero-card strong {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .floating-card span,
+html[data-theme="dark"] .about-floating-card small,
+html[data-theme="dark"] .course-hero-card span {
+    color: var(--text-muted);
+}
+
+/* Footer social icons */
+html[data-theme="dark"] .social-links a {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+/* Icon buttons in header (search/cart icons etc) */
+html[data-theme="dark"] .icon-button {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+/* Course card wishlist heart button */
+html[data-theme="dark"] .course-wishlist {
+    background: rgba(15, 23, 42, 0.85);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--text-secondary);
+}
+
+/* Category / badge pills that used solid white background */
+html[data-theme="dark"] .course-category,
+html[data-theme="dark"] .home2-course-image span,
+html[data-theme="dark"] .related-image span,
+html[data-theme="dark"] .related-course-image span,
+html[data-theme="dark"] .blog-card-category {
+    background: rgba(15, 23, 42, 0.9);
+    color: var(--text-primary);
+}
+
+/* Signup / Login / Batches / Terms pages —
+   these use their own local custom properties
+   (--heading-color, --text-color, --card-bg, --input-bg)
+   which are never redefined for dark mode, so they were
+   always falling back to their light default values. */
+
+html[data-theme="dark"] .signup-page,
+html[data-theme="dark"] .login-page,
+html[data-theme="dark"] .batches-hero,
+html[data-theme="dark"] .batch-filter-section,
+html[data-theme="dark"] .batch-schedule,
+html[data-theme="dark"] .batches-cta,
+html[data-theme="dark"] .terms-hero {
+    background-color: var(--bg-primary);
+}
+
+html[data-theme="dark"] .signup-card,
+html[data-theme="dark"] .login-card,
+html[data-theme="dark"] .terms-sidebar-card,
+html[data-theme="dark"] .batch-card,
+html[data-theme="dark"] .schedule-card,
+html[data-theme="dark"] .benefit-card {
+    --card-bg: #1e293b;
+    --heading-color: #f8fafc;
+    --text-color: #cbd5e1;
+    --input-bg: #0f172a;
+
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .signup-card-header p,
+html[data-theme="dark"] .login-card-header p,
+html[data-theme="dark"] .password-hint,
+html[data-theme="dark"] .login-content > p,
+html[data-theme="dark"] .signup-intro > p {
+    color: var(--text-color, var(--text-secondary));
+}
+
+html[data-theme="dark"] .input-wrapper input,
+html[data-theme="dark"] .input-wrapper select,
+html[data-theme="dark"] .textarea-wrapper textarea {
+    background: #0f172a;
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .input-wrapper input::placeholder,
+html[data-theme="dark"] .textarea-wrapper textarea::placeholder {
+    color: var(--text-muted);
+}
+
+/* Secondary buttons on signup/login/batches that used
+   var(--card-bg, #ffffff) fallback */
+html[data-theme="dark"] .secondary-btn {
+    background: var(--bg-secondary);
+    color: var(--primary);
+}
+
+/* Batch filter buttons */
+html[data-theme="dark"] .batch-filter-btn {
+    color: var(--text-muted);
+    border-color: var(--border-color);
+}
+
+/* Terms sidebar had a literal hardcoded fallback color
+   (--card-bg, #f4a2a2) which is a pink swatch, not a
+   real theme token — force it to the dark surface color */
+html[data-theme="dark"] .terms-sidebar-card {
+    background: #1e293b;
+}
+
+
+/* =========================================================
+   DARK MODE FIXES - ROUND 2
+   Same root cause as process-item screenshot bug:
+   background: var(--white) is hardcoded and never flips,
+   while the h3/text inside picks up var(--text-primary)
+   which DOES flip to near-white -> invisible heading on
+   a still-white card.
+   ========================================================= */
+
+/* "How It Works" process steps (Choose a Course, Enroll,
+   Learn & Practice, Get Certified) */
+html[data-theme="dark"] .process-item {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .process-item h3 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .process-item p {
+    color: var(--text-muted);
+}
+
+/* Home page stats bar (Students / Courses / Instructors / etc.) 
+   container itself was solid white; child stat-item numbers
+   and labels use default text color which flips to light. */
+html[data-theme="dark"] .stats-grid {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .stat-item {
+    border-right-color: var(--border-color) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+html[data-theme="dark"] .stat-item strong {
+    color: var(--text-primary);
+}
+
+/* Home page final CTA box — gradient had a literal #ffffff
+   stop, and the heading text flips to near-white on it */
+html[data-theme="dark"] .cta-box {
+    background: linear-gradient(135deg, var(--primary-light), var(--bg-secondary));
+    border-color: var(--border-color);
+}
+
+/* Course detail "curriculum module" header rows and lesson
+   rows use var(--bg-secondary)/var(--bg-primary) already,
+   so they auto-adapt — but double-check module-lessons text
+   contrast explicitly since it nests several text colors */
+html[data-theme="dark"] .module-header {
+    background: var(--bg-tertiary);
+}
+
+html[data-theme="dark"] .module-header:hover {
+    background: var(--primary-light);
+}
+
+
+/* =========================================================
+   DARK MODE FIXES - ROUND 3
+   ========================================================= */
+
+/* Home2 "Learning Paths For You" cards — same white-card
+   bug as process-item, just a differently-named class */
+html[data-theme="dark"] .home2-path-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .home2-path-card h3 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .home2-path-card p {
+    color: var(--text-muted);
+}
+
+/* Home2 "Their Experience" testimonial cards — the original
+   fix below only targeted the home-page class names
+   (.testimonial-card / .testimonial-name), which don't
+   exist verbatim here, so Home2's cards were never covered */
+html[data-theme="dark"] .home2-testimonial-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .home2-testimonial-card > p {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .home2-testimonial-author strong {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .home2-testimonial-author span {
+    color: var(--text-muted);
+}
+
+/* Correcting the ORIGINAL home-page testimonial fix too —
+   .testimonial-name never existed in style.css, the real
+   selector for the author's name is .testimonial-author strong */
+html[data-theme="dark"] .testimonial-author strong {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .testimonial-author span {
+    color: var(--text-muted);
+}
+
+/* Mobile menu "Login" pill (.btn-light) — solid white bg,
+   text stayed on a static color that reads faint on small
+   screenshots; force it to the brighter, unambiguous orange */
+html[data-theme="dark"] .btn-light {
+    color: var(--primary);
+    background: var(--white);
+}
+
+html[data-theme="dark"] .btn-light:hover {
+    color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   SPACING: prevent sticky floating header from covering
+   section headings when the page auto-scrolls to an anchor
+   (e.g. nav link jump, or in-page hash links). This does
+   NOT change the header's normal floating/overlap look while
+   the user is actively scrolling past a section — that part
+   is by design for a translucent sticky pill header.
+   ========================================================= */
+
+.home2-path-section .section-heading,
+.home2-testimonial-section .section-heading,
+.section-header,
+.section-header.centered,
+h1, h2 {
+    scroll-margin-top: 110px;
+}
+
+
+/* =========================================================
+   DARK MODE FIXES - ROUND 4 (Home2 batch/instructor cards)
+   ========================================================= */
+
+/* Upcoming Batches cards on Home2 (Morning/Afternoon/Evening) */
+html[data-theme="dark"] .home2-batch-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .home2-batch-time strong {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .home2-batch-time span {
+    color: var(--text-muted);
+}
+
+/* Home2 instructor card */
+html[data-theme="dark"] .home2-instructor-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .home2-instructor-info h3 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .home2-instructor-info p {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] .home2-instructor-rating strong {
+    color: var(--text-primary);
+}
+
+/* Home2 "Popular Courses" cards (MS Office, Tally Prime,
+   Advanced Excel, Basic Computing) — same hardcoded
+   var(--white) card background bug */
+html[data-theme="dark"] .home2-course-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .home2-course-card h3 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .home2-course-card p {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] .home2-course-meta {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   LOGIN PAGE (login.html)
+   This page ships its own inline <style> block that never
+   references the site's shared CSS variables — every color
+   is hardcoded (#ffffff, #111827, #6b7280 etc.), so none of
+   the .login-card / .signup-card fixes above ever applied
+   here. These selectors match login.html's ACTUAL classes.
+   Using html[data-theme="dark"] gives enough specificity to
+   beat the inline <style> block regardless of load order.
+   ========================================================= */
+
+html[data-theme="dark"] .login-container {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .login-form-section {
+    background: var(--bg-secondary);
+}
+
+html[data-theme="dark"] .login-heading h2 {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .login-heading p {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .login-form-group label {
+    color: var(--text-primary);
+}
+
+html[data-theme="dark"] .login-input {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+html[data-theme="dark"] .login-input::placeholder {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] .login-input-icon {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] .remember-me {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .login-divider {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] .login-divider::before,
+html[data-theme="dark"] .login-divider::after {
+    background: var(--border-color);
+}
+
+html[data-theme="dark"] .signup-text {
+    color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .admin-demo-btn {
+    background: transparent;
+    color: var(--primary);
+}
+
+html[data-theme="dark"] .admin-demo-btn:hover {
+    background: var(--primary-light);
+}
+
+html[data-theme="dark"] .admin-demo-info {
+    background: var(--primary-light);
+    border-color: var(--primary-soft);
+    color: #fdba74;
+}
+
+html[data-theme="dark"] .admin-demo-info strong {
+    color: #fed7aa;
+}
+
+html[data-theme="dark"] .login-message.error {
+    background: rgba(220, 38, 38, 0.15);
+    color: #fca5a5;
+    border-color: rgba(220, 38, 38, 0.35);
+}
+
+html[data-theme="dark"] .login-message.success {
+    background: rgba(22, 163, 74, 0.15);
+    color: #86efac;
+    border-color: rgba(22, 163, 74, 0.35);
+}
+
+html[data-theme="dark"] .field-error {
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   DARK MODE FIXES - ROUND 5
+   These "final CTA" boxes use background: var(--text-primary)
+   as a trick to always look dark (since --text-primary is a
+   dark navy in light mode). But in dark mode --text-primary
+   flips to near-white, turning the box light while its
+   heading text stays hardcoded white -> invisible heading.
+   Force these to a fixed dark background regardless of theme.
+   ========================================================= */
+
+html[data-theme="dark"] .contact-final-inner,
+html[data-theme="dark"] .final-cta-inner,
+html[data-theme="dark"] .course-final-inner {
+    background: #020617;
 }
