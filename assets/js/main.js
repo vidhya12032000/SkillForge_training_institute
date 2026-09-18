@@ -5523,3 +5523,134 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+/* =========================================
+   GLOBAL SEARCH
+========================================= */
+
+function initGlobalSearch() {
+
+    const searchForm = document.querySelector(".search-form");
+    const searchInput = document.getElementById("globalSearch");
+
+    if (!searchForm || !searchInput) return;
+
+
+    // Search data
+    const searchItems = [
+
+        {
+            keywords: ["basic", "computing", "computer", "fundamentals"],
+            url: "course-detail.html?course=basic-computing"
+        },
+
+        {
+            keywords: ["ms office", "office", "word", "powerpoint"],
+            url: "course-detail.html?course=ms-office"
+        },
+
+        {
+            keywords: ["tally", "tally prime", "accounting", "gst"],
+            url: "course-detail.html?course=tally-prime"
+        },
+
+        {
+            keywords: ["excel", "advanced excel", "spreadsheet"],
+            url: "course-detail.html?course=advanced-excel"
+        },
+
+        {
+            keywords: ["typing", "typing skills", "speed", "accuracy"],
+            url: "course-detail.html?course=typing"
+        },
+
+        {
+            keywords: ["web", "web development", "html", "css", "javascript"],
+            url: "course-detail.html?course=web-development"
+        },
+
+        {
+            keywords: ["courses", "course"],
+            url: "pages/courses.html"
+        },
+
+        {
+            keywords: ["about", "about us"],
+            url: "pages/about.html"
+        },
+
+        {
+            keywords: ["blog", "blogs", "articles"],
+            url: "pages/blog.html"
+        },
+
+        {
+            keywords: ["contact", "contact us", "support"],
+            url: "pages/contact.html"
+        },
+
+        {
+            keywords: ["login", "sign in"],
+            url: "pages/login.html"
+        },
+
+        {
+            keywords: ["signup", "sign up", "register"],
+            url: "pages/signup.html"
+        },
+
+        {
+            keywords: ["typing test", "test typing"],
+            url: "pages/typing-test.html"
+        }
+
+    ];
+
+
+    searchForm.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const searchTerm = searchInput.value
+            .trim()
+            .toLowerCase();
+
+        // Empty search
+        if (!searchTerm) {
+
+            searchInput.focus();
+
+            return;
+
+        }
+
+
+        // Find matching result
+        const result = searchItems.find(item =>
+
+            item.keywords.some(keyword =>
+                keyword.includes(searchTerm) ||
+                searchTerm.includes(keyword)
+            )
+
+        );
+
+
+        // Navigate if result found
+        if (result) {
+
+            window.location.href = result.url;
+
+        } else {
+
+            alert(
+                `No results found for "${searchInput.value.trim()}".`
+            );
+
+        }
+
+    });
+
+}
