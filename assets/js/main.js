@@ -155,6 +155,12 @@ function initRTL() {
             String(direction === "rtl")
         );
 
+         // Toggle text
+    rtlToggle.textContent =
+        direction === "rtl"
+            ? "LTR"
+            : "RTL";
+
     }
 
 }
