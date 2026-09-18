@@ -5654,3 +5654,311 @@ function initGlobalSearch() {
     });
 
 }
+
+
+
+// ========================================
+// SKILLFORGE CERTIFICATE JS
+// ========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ----------------------------------------
+    // Certificate Data
+    // ----------------------------------------
+
+    const certificateData = {
+        studentName: "Vidhya M",
+        courseName: "Full Stack Web Development",
+        certificateId: "SF-2026-001",
+        completionDate: "September 18, 2026"
+    };
+
+
+    // ----------------------------------------
+    // Get Certificate Elements
+    // ----------------------------------------
+
+    const studentNameElement =
+        document.getElementById("studentName");
+
+    const courseNameElement =
+        document.getElementById("courseName");
+
+    const certificateIdElement =
+        document.getElementById("certificateId");
+
+    const completionDateElement =
+        document.getElementById("completionDate");
+
+
+    // ----------------------------------------
+    // Display Certificate Data
+    // ----------------------------------------
+
+    if (studentNameElement) {
+        studentNameElement.textContent =
+            certificateData.studentName;
+    }
+
+    if (courseNameElement) {
+        courseNameElement.textContent =
+            certificateData.courseName;
+    }
+
+    if (certificateIdElement) {
+        certificateIdElement.textContent =
+            certificateData.certificateId;
+    }
+
+    if (completionDateElement) {
+        completionDateElement.textContent =
+            certificateData.completionDate;
+    }
+
+
+    // ----------------------------------------
+    // Print Certificate
+    // ----------------------------------------
+
+    const printButton =
+        document.getElementById("printCertificate");
+
+    if (printButton) {
+
+        printButton.addEventListener("click", () => {
+
+            window.print();
+
+        });
+
+    }
+
+
+    // ----------------------------------------
+    // Download Certificate
+    // ----------------------------------------
+
+    const downloadButton =
+        document.getElementById("downloadCertificate");
+
+    if (downloadButton) {
+
+        downloadButton.addEventListener("click", () => {
+
+            alert(
+                "In the print window, choose 'Save as PDF' to download your certificate."
+            );
+
+            window.print();
+
+        });
+
+    }
+
+
+    // ----------------------------------------
+    // Lucide Icons
+    // ----------------------------------------
+
+    if (typeof lucide !== "undefined") {
+
+        lucide.createIcons();
+
+    }
+
+});
+
+
+
+
+// =====================================================
+// SKILLFORGE FACULTY PAGE
+// =====================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // -------------------------------------------------
+    // Faculty Filter
+    // -------------------------------------------------
+
+    const filterButtons =
+        document.querySelectorAll(".faculty-filter");
+
+    const facultyCards =
+        document.querySelectorAll(".faculty-card");
+
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const selectedCategory =
+                button.dataset.filter;
+
+
+            // Remove active from all buttons
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+
+            // Add active to clicked button
+            button.classList.add("active");
+
+
+            // Filter cards
+            facultyCards.forEach(card => {
+
+                const cardCategory =
+                    card.dataset.category;
+
+
+                if (
+                    selectedCategory === "all" ||
+                    cardCategory === selectedCategory
+                ) {
+
+                    card.classList.remove("hidden");
+
+                } else {
+
+                    card.classList.add("hidden");
+
+                }
+
+            });
+
+
+            // Re-render Lucide icons
+            if (typeof lucide !== "undefined") {
+                lucide.createIcons();
+            }
+
+        });
+
+    });
+
+
+    // -------------------------------------------------
+    // View Profile Buttons
+    // -------------------------------------------------
+
+    const profileButtons =
+        document.querySelectorAll(".faculty-view-btn");
+
+
+    profileButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const facultyName =
+                button.dataset.name;
+
+            alert(
+                `${facultyName}'s profile page will be available soon.`
+            );
+
+        });
+
+    });
+
+
+    // -------------------------------------------------
+    // Lucide Icons
+    // -------------------------------------------------
+
+    if (typeof lucide !== "undefined") {
+
+        lucide.createIcons();
+
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ============================
+       SIDEBAR SMOOTH SCROLL
+    ============================ */
+
+    const menuLinks = document.querySelectorAll(".privacy-menu-link");
+
+    menuLinks.forEach(link => {
+
+        link.addEventListener("click", event => {
+
+            event.preventDefault();
+
+            const targetId = link.getAttribute("href");
+
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+
+                targetSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /* ============================
+       ACTIVE SECTION
+    ============================ */
+
+    const sections = document.querySelectorAll(".privacy-block");
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    const currentId = entry.target.id;
+
+                    menuLinks.forEach(link => {
+
+                        link.classList.remove("active");
+
+                        if (
+                            link.getAttribute("href") ===
+                            `#${currentId}`
+                        ) {
+                            link.classList.add("active");
+                        }
+
+                    });
+
+                }
+
+            });
+
+        },
+        {
+            rootMargin: "-120px 0px -60% 0px",
+            threshold: 0
+        }
+    );
+
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+
+    /* ============================
+       LUCIDE ICONS
+    ============================ */
+
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+    }
+
+});
